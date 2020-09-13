@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Presentación de prueba</title>
+		<base href="../" />
+		<link rel="stylesheet" href="reveal/reset.css" />
+		<link rel="stylesheet" href="reveal/reveal.css" />
+		<link rel="stylesheet" href="reveal/theme/pawTheme.css" id="theme" />
+		<link rel="stylesheet" href="style/paw.css" id="theme" />
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link
+			rel="stylesheet"
+			href="reveal/plugin/highlight/monokai.css"
+			id="highlight-theme"
+		/>
+	</head>
+	<body>
+		<header class="paw-encabezado">
+			<img src="images/logoPAW.svg" alt="" />
+			<h2 class="paw-asignatura">PAW</h2>
+			<h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+		</header>
+		<div class="reveal">
+			<div class="slides">
+				<section class="paw-presentacion">
+					<div class="paw-logo">
+						<img src="images/logoPAW.svg" alt="" />
+					</div>
+					<div class="paw-asignatura">
+						<h1>PAW</h1>
+					</div>
+					<div class="paw-comision">
+						<h2>Lic. en Sistemas de Información</h2>
+					</div>
+					<div class="paw-autor">
+						<p class="paw-speaker">Speaker:</p>
+						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
+						<address>
+							<a href="mailto:pcchale@gmail.com">pcchale@gmail.com</a>
+						</address>
+					</div>
+					<div class="paw-tituloContenido">
+						<h1>Introducción al maquetado</h1>
+					</div>
+				</section>
+				<section>
+					<section>
+						<h2>Índice de contenidos:</h2>
+						<ol class="paw-indice">
+							<li class="fragment grow fade-in-then-semi-out">
+								<a href="#/maquetadoWeb">Maquetado web</a>
+							</li>
+							<li class="fragment grow fade-in-then-semi-out">
+								<a href="#/wireframes">Un poco de diseño</a>
+							</li>
+							<li class="fragment grow fade-in-then-semi-out">
+								<a href="#/estandares">Estandares Web</a>
+							</li>
+							<li class="fragment grow fade-in-then-semi-out">
+								<a href="#/lenguajes">Lenguajes de Maquetado</a>
+							</li>
+						</ol>
+					</section>
+				</section>
+				<section id="maquetadoWeb"><h1>Maquetado Web</h1></section>
+				<section id="ia">
+					<section><h2>La estructura de la información</h2></section>
+					<section>
+						<blockquote>
+							El estudio de la organización de la información <br />
+							con el objetivo de permitir al usuario <br />
+							encontrar su vía de navegación <br />
+							hacia el conocimiento y <br />
+							la comprensión de la información
+						</blockquote>
+					</section>
+					<section>
+						<h2>
+							Arquitectura de la informacion (<abbr
+								title="Information Architecture"
+								>AI</abbr
+							>)
+						</h2>
+						<blockquote>
+							El arte y la ciencia de estructurar y clasificar <br />
+							sitios web e intranets con el fin de <br />
+							ayudar a los usuarios a encontrar y manejar la información.
+						</blockquote>
+						<footer>[Rosenfeld, Morville & Arango]</footer>
+					</section>
+					<section>
+						<p>¿como se organiza la información de un sitio web?</p>
+						<p>Disciplina que evoluciona desde el Diseño Editorial</p>
+						<p>
+							El maquetado es una forma de indicar <br />
+							<strong>información sobre el contenido</strong>, que no es lo
+							mismo que él contenido
+						</p>
+						markup is a way to indicate information about the content that is
+						distinct from the content
+					</section>
+					<section>
+						<img src="Maquetado/images/maquetado1.svg" alt="" height="600" />
+					</section>
+					<section>
+						Pensar en nuestros usuarios: Humanos UX Usabilidad Accesibilidad
+						Bots Objetivo El contenido llegue a nuestro publico objetivo
+					</section>
+
+					<section>
+						Buscar Patrones Generar componentes Reutilizar bloques
+					</section>
+					<section>
+						No importa como se ve Nos centramos en lo que representa ese
+						contenido
+					</section>
+				</section>
+				<section id="wireframes">
+					<section><h2>Wireframes / Mockups</h2></section>
+					<section>Analisis -> <strong>Diseño</strong> -> Desarrollo</section>
+					<section>
+						<h2>Un wireframe o prototipo</h2>
+						<p>
+							un boceto donde se representa visualmente,<br />
+							de una forma sencilla y esquemática <br />
+							la estructura de una página web.
+						</p>
+					</section>
+					<section>
+						No pensamos en:
+						<ul>
+							<li>colores</li>
+							<li>tipografías</li>
+							<li>elementos gráficos / decorativos</li>
+						</ul>
+						Lo importante es centrarse en la funcionalidad del sitio y la
+						experiencia del usuario. La prioridad son los contenidos de la web.
+					</section>
+					<section>
+						Ventajas Rápidos y baratos de crear Detectar y corregir los
+						problemas antes permiten exponerlos rápidamente a feedback y
+						resolver problemas básicos relacionados con la usabilidad y
+						funcionalidades propuestas. Mejoras sencillas Mejor usabilidad
+					</section>
+				</section>
+				<section id="estandares">
+					<section><h2>La W3C y WHATWG</h2></section>
+					<section id="w3c">
+						<h2>World Wide Web Consorsium</h2>
+						<div class="fragment fade-up">
+							<h3>Objetivos</h3>
+							<p>
+								La Web sea accesible a nivel Universal, sin importar la
+								discapacidad, el lenguaje o la cultura
+							</p>
+						</div>
+						<div class="fragment fade-up">
+							<h3>Que hace?</h3>
+							<strong>Recomendaciones</strong>
+							<p>
+								Documento que especifica el papel que desempeña una tecnologia,
+								las reglas de sintaxis, etc.
+							</p>
+						</div>
+						<footer>
+							<a href="http://www.w3.org/">http://www.w3.org/</a>
+						</footer>
+					</section>
+					<section id="WhatWG">
+						<h2>Web Hyperttext Application <br />Technology Working Group</h2>
+						<div class="fragment fade-up">
+							<h3>Objetivos</h3>
+							<p>Promover la evolucion del HTML</p>
+							<p>
+								Una respuesta al W3C's. AL lento progreso en los estándares Web,
+								especialmente HTML
+							</p>
+						</div>
+						<div class="fragment fade-up">
+							<h3>Que hace?</h3>
+							<p>Living Standard development model</p>
+							<p>
+								Mantiene y desarrolla el estandar HTML y APIs para las
+								aplicaciones web
+							</p>
+						</div>
+						<footer>
+							<p><a href="http://www.whatwg.org/">http://www.whatwg.org/</a></p>
+						</footer>
+					</section>
+					<section id="colaboracion">
+						<h2>
+							W3C and WHATWG to work together to advance the open Web platform
+						</h2>
+						<div class="fragment fade-up">
+							<h3><time datetime="2019-05-28">28 de Mayo de 2019</time></h3>
+							<p>
+								Acuerdo de colaboración para desarrollar una versión de HMTL
+								unificada
+							</p>
+							<p>
+								Los borradores de revisiones de la WHATWG son consideradas como
+								Recomendaciones Candidatas de la W3C
+							</p>
+						</div>
+						<footer>
+							<p>
+								<a href="http://https://www.w3.org/2019/04/WHATWG-W3C-MOU.html">
+									http://https://www.w3.org/2019/04/WHATWG-W3C-MOU.html
+								</a>
+							</p>
+						</footer>
+					</section>
+				</section>
+				<section id="leguajesDeMarcado">
+					<section>
+						<h2>Lenguajes de Marcado</h2>
+					</section>
+					<section id="html">
+						<h2>Lenguajes de Marcado de Hipertexto</h2>
+						<p>1989 Tim Berners-Lee CERN Junto con HTTP</p>
+					</section>
+					<section id="xml">XML</section>
+					<section>Lenguajes de Marcado</section>
+					<section>Lenguajes de Marcado</section>
+				</section>
+				<section>
+					<section><h2>Navegadores y Motores de Renderizado</h2></section>
+				</section>
+				<section>
+					<section><h2>Estructura Semántica de un Documento</h2></section>
+				</section>
+			</div>
+		</div>
+
+		<script src="reveal/reveal.js"></script>
+		<script src="reveal/plugin/zoom/zoom.js"></script>
+		<script src="reveal/plugin/notes/notes.js"></script>
+		<script src="reveal/plugin/search/search.js"></script>
+		<script src="reveal/plugin/markdown/markdown.js"></script>
+		<script src="reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				width: 1920,
+				height: 1080,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [
+					RevealZoom,
+					RevealNotes,
+					RevealSearch,
+					RevealMarkdown,
+					RevealHighlight,
+				],
+			});
+		</script>
+	</body>
+</html>
