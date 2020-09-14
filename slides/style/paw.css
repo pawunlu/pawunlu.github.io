@@ -37,7 +37,7 @@ header.paw-encabezado {
 }
 
 .paw-encabezado .paw-asignatura {
-	border-bottom: var(--paw-rojo) solid 0.3rem;
+	border-bottom: var(--paw-rojo) solid 0.15rem;
 	font-size: 1.25rem;
 	padding-top: 0.2em;
 	font-family: var(--heading-font);
