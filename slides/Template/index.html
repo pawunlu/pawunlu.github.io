@@ -75,6 +75,14 @@
 					RevealHighlight,
 				],
 			});
+
+			Reveal.on("slidechanged", (event) => {
+				document.querySelector(
+					".paw-comision"
+				).innerHTML = document.querySelector(
+					".paw-tituloContenido"
+				).textContent;
+			});
 		</script>
 	</body>
 </html>

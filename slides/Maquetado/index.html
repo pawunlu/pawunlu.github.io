@@ -16,6 +16,8 @@
 			href="../reveal/plugin/highlight/monokai.css"
 			id="highlight-theme"
 		/>
+
+		<link rel="stylesheet" href="style/maquetado.css" id="slideStyle" />
 	</head>
 	<body>
 		<header class="paw-encabezado">
@@ -25,6 +27,7 @@
 		</header>
 		<div class="reveal">
 			<div class="slides">
+				<!-- Presentación -->
 				<section class="paw-presentacion">
 					<div class="paw-logo">
 						<img src="../images/logoPAW.svg" alt="" />
@@ -43,31 +46,95 @@
 						</address>
 					</div>
 					<div class="paw-tituloContenido">
-						<h1>Introducción al maquetado</h1>
+						<h1>
+							Introducción <br />
+							al maquetado
+						</h1>
 					</div>
 				</section>
-				<section>
+				<!-- Indice -->
+				<section id="indice">
+					<h2>Índice de contenidos:</h2>
+					<ol class="paw-indice">
+						<li class="fragment grow fade-in-then-semi-out">
+							<a href="#/maquetadoWeb">Maquetado web</a>
+						</li>
+						<li class="fragment grow fade-in-then-semi-out">
+							<a href="#/wireframes">Un poco de diseño</a>
+						</li>
+						<li class="fragment grow fade-in-then-semi-out">
+							<a href="#/estandares">Estandares Web</a>
+						</li>
+						<li class="fragment grow fade-in-then-semi-out">
+							<a href="#/lenguajes">Lenguajes de Maquetado</a>
+						</li>
+					</ol>
+				</section>
+				<!-- Maquetado Web -->
+				<section id="maquetadoWeb">
 					<section>
-						<h2>Índice de contenidos:</h2>
-						<ol class="paw-indice">
-							<li class="fragment grow fade-in-then-semi-out">
-								<a href="#/maquetadoWeb">Maquetado web</a>
-							</li>
-							<li class="fragment grow fade-in-then-semi-out">
-								<a href="#/wireframes">Un poco de diseño</a>
-							</li>
-							<li class="fragment grow fade-in-then-semi-out">
-								<a href="#/estandares">Estandares Web</a>
-							</li>
-							<li class="fragment grow fade-in-then-semi-out">
-								<a href="#/lenguajes">Lenguajes de Maquetado</a>
-							</li>
-						</ol>
+						<h2>Maquetado Web</h2>
+					</section>
+					<section>
+						<h2>Proyecto Web</h2>
+						<div class="paw-etapas fragment">
+							<div class="paw-analisis fragment">Análisis</div>
+							<div class="paw-flecha fragment">&rarr;</div>
+							<div class="paw-diseno fragment">Diseño</div>
+							<div class="paw-flecha fragment">&rarr;</div>
+							<div class="paw-desarrollo fragment">Desarrollo</div>
+							<div class="paw-flecha fragment">&rarr;</div>
+							<div class="paw-deploy fragment">Deploy</div>
+						</div>
+					</section>
+					<section id="proceso" data-auto-animate>
+						<h2>Proyecto Web</h2>
+						<div class="paw-development fragment">
+							<div class="paw-diseno fragment" data-id="paw-diseno">
+								<p>Diseño</p>
+							</div>
+							<div class="paw-coding fragment">
+								<div class="paw-maquetado fragment" data-id="paw-maquetado">
+									<p>Maquetado</p>
+								</div>
+								<div
+									class="paw-programacion fragment"
+									data-id="paw-programacion"
+								>
+									<p>Programación</p>
+								</div>
+								<p>Código</p>
+							</div>
+						</div>
+					</section>
+					<section id="procesoConocimietos" data-auto-animate>
+						<h2>Desarrollo Web</h2>
+						<div class="paw-development">
+							<div class="paw-diseno" data-id="paw-diseno">
+								<p>
+									Wireframes <br />
+									IA
+								</p>
+							</div>
+							<div class="paw-coding">
+								<div class="paw-maquetado" data-id="paw-maquetado">
+									<p>HTML</p>
+									<p>CSS</p>
+								</div>
+								<div class="paw-programacion" data-id="paw-programacion">
+									<p>Frontend</p>
+									<p>Backend</p>
+								</div>
+								<p>Código</p>
+							</div>
+						</div>
 					</section>
 				</section>
-				<section id="maquetadoWeb"><h1>Maquetado Web</h1></section>
+				<!-- Information Architecture -->
 				<section id="ia">
-					<section><h2>La estructura de la información</h2></section>
+					<section>
+						<h2>La estructura de la información</h2>
+					</section>
 					<section>
 						<blockquote>
 							El estudio de la organización de la información <br />
@@ -118,6 +185,7 @@
 						contenido
 					</section>
 				</section>
+				<!-- Wireframes -->
 				<section id="wireframes">
 					<section><h2>Wireframes / Mockups</h2></section>
 					<section>Analisis -> <strong>Diseño</strong> -> Desarrollo</section>
@@ -146,6 +214,7 @@
 						funcionalidades propuestas. Mejoras sencillas Mejor usabilidad
 					</section>
 				</section>
+				<!-- Lenguajes de Maquetado -->
 				<section id="estandares">
 					<section><h2>La W3C y WHATWG</h2></section>
 					<section id="w3c">
@@ -258,6 +327,12 @@
 					RevealMarkdown,
 					RevealHighlight,
 				],
+			});
+
+			Reveal.on("slidechanged", (event) => {
+				document.querySelector(
+					".paw-comision"
+				).innerHTML = document.querySelector(".present h2").textContent;
 			});
 		</script>
 	</body>

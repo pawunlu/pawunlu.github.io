@@ -1,0 +1,72 @@
+.paw-development,
+.paw-development div,
+.paw-etapas div {
+	border-radius: 50%;
+	border: 0.2rem black solid;
+	display: inline-block;
+	padding: 1rem;
+}
+
+.paw-etapas .paw-flecha {
+	border: none;
+	background-color: transparent;
+}
+
+.paw-etapas div.paw-analisis {
+	background-image: radial-gradient(
+		var(--paw-verde-claro),
+		var(--paw-verde-medio-claro)
+	);
+}
+.paw-etapas div.paw-diseno {
+	background-image: radial-gradient(
+		var(--paw-verde-medio-claro),
+		var(--paw-verde-medio-oscuro)
+	);
+}
+.paw-etapas div.paw-desarrollo {
+	background-image: radial-gradient(
+		var(--paw-verde-medio-oscuro),
+		var(--paw-verde-oscuro)
+	);
+}
+.paw-etapas div.paw-deploy {
+	background-image: radial-gradient(
+		var(--paw-amarillo-oscuro),
+		var(--paw-amarillo)
+	);
+	color: black;
+}
+
+.paw-etapas .paw-flecha {
+	font-size: 2.5rem;
+	padding: 0;
+}
+
+.paw-development p {
+	margin: 0;
+}
+.paw-development div.paw-diseno {
+	position: relative;
+	top: -2.4rem;
+}
+
+.paw-development {
+	background-color: var(--paw-verde-oscuro);
+}
+
+.paw-development .paw-diseno {
+	background-color: var(--paw-verde-medio-oscuro);
+}
+.paw-development .paw-coding {
+	background-color: var(--paw-verde-medio-claro);
+	color: black;
+}
+
+.paw-development .paw-coding .paw-maquetado {
+	background-color: var(--paw-verde-claro);
+}
+
+.paw-development .paw-coding .paw-programacion {
+	background-color: var(--paw-amarillo);
+}
