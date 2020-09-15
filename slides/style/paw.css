@@ -43,6 +43,7 @@ header.paw-encabezado {
 	font-family: var(--heading-font);
 	letter-spacing: 0.4rem;
 	color: #fff;
+	font-weight: 900;
 }
 
 .paw-encabezado .paw-comision {
@@ -79,7 +80,7 @@ header.paw-encabezado {
 		var(--paw-verde-claro) 100%
 	);
 	display: grid !important;
-	grid-template-rows: 25% 25% 15% 35%;
+	grid-template-rows: 35% 15% 15% 35%;
 	grid-template-columns: 25% 1.5fr 3fr 25%;
 }
 
@@ -140,7 +141,7 @@ header.paw-encabezado {
 	grid-row: 1;
 	grid-column: 1/4;
 	text-align: right;
-	align-self: end;
+	align-self: center;
 	margin: 1rem -1.5rem;
 }
 
@@ -197,4 +198,12 @@ header.paw-encabezado {
 .reveal li {
 	line-height: 2.5;
 	padding: 0 0.5rem;
+}
+
+/***********************
+ Estilos especificos
+************************/
+
+.paw-semi-out {
+	opacity: 0.5;
 }
