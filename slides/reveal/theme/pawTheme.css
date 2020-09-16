@@ -147,6 +147,11 @@
 .reveal strong,
 .reveal b {
 	font-weight: bold;
+
+	text-shadow: 0.05rem 0.05rem 0 var(--paw-verde-oscuro),
+		-0.05rem -0.05rem 0 var(--paw-verde-oscuro),
+		-0.05rem 0.05rem 0 var(--paw-verde-oscuro),
+		0.05rem -0.05rem 0 var(--paw-verde-oscuro);
 }
 
 .reveal em {

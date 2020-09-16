@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Presentación de prueba</title>
+		<title>PAW - Introducción al maquetado</title>
 
 		<link rel="stylesheet" href="../reveal/reset.css" />
 		<link rel="stylesheet" href="../reveal/reveal.css" />
@@ -57,10 +57,10 @@
 					<h2>Índice de contenidos:</h2>
 					<ol class="paw-indice">
 						<li class="fragment grow fade-in-then-semi-out">
-							<a href="#/maquetadoWeb">Maquetado web</a>
+							<a href="#/maquetadoWeb">Empezando un sistema web</a>
 						</li>
 						<li class="fragment grow fade-in-then-semi-out">
-							<a href="#/wireframes">Un poco de diseño</a>
+							<a href="#/wireframes">La estructura de la información</a>
 						</li>
 						<li class="fragment grow fade-in-then-semi-out">
 							<a href="#/estandares">Estandares Web</a>
@@ -87,62 +87,85 @@
 							<div class="paw-deploy fragment">Deploy</div>
 						</div>
 					</section>
+					<section id="analisis">
+						<h2>Análisis</h2>
+						<div class="fragment">
+							<h3>¿Qué vamos a hacer?</h3>
+							<p>Especificación de requerimientos</p>
+						</div>
+						<div class="fragment">
+							<h3>¿Cómo lo vamos a hacer</h3>
+							<p>¿Cómo trabaja la Competencia directa?</p>
+							<p>¿Cómo piensan nuestros usuarios objetivo?</p>
+						</div>
+					</section>
+					<section id="analisis2">
+						<h2>Análisis</h2>
+						<div class="fragment">
+							<h3>¿Puedo organizarlos en subproblemas?</h3>
+							<p>Bosquejo de Site Map</p>
+						</div>
+						<div class="fragment">
+							<h3>¿Necesito más información?</h3>
+							<p>Retroalimentación</p>
+							<p>
+								<strong
+									>Los clientes NO son expertos <br />en tecnología web</strong
+								>
+							</p>
+						</div>
+					</section>
 					<section id="proceso" data-auto-animate>
 						<h2>Proyecto Web</h2>
-						<div class="paw-development fragment">
-							<div class="paw-diseno fragment" data-id="paw-diseno">
-								<p>Diseño</p>
-							</div>
-							<div class="paw-coding fragment">
-								<p>Código</p>
-							</div>
+						<div class="paw-development fragment" data-id="paw-proyecto-web">
+							<div class="paw-diseno fragment" data-id="paw-diseno">Diseño</div>
+							<div class="paw-coding fragment" data-id="paw-codigo">Código</div>
 						</div>
 					</section>
 					<section id="proceso2" data-auto-animate>
 						<h2>Proyecto Web</h2>
-						<div class="paw-development">
-							<div class="paw-diseno" data-id="paw-diseno">
-								<p>Diseño</p>
-							</div>
-							<div class="paw-coding">
+						<div
+							class="paw-development paw-explotada"
+							data-id="paw-proyecto-web"
+						>
+							<div class="paw-diseno" data-id="paw-diseno">Diseño</div>
+							<div class="paw-coding" data-id="paw-codigo">
 								<div class="paw-maquetado fragment" data-id="paw-maquetado">
-									<p>Maquetado</p>
+									Maquetado
 								</div>
 								<div
 									class="paw-programacion fragment"
 									data-id="paw-programacion"
 								>
-									<p>Programación</p>
+									Programación
 								</div>
-								<p>Código</p>
+								Código
 							</div>
 						</div>
 					</section>
 					<section id="procesoConocimietos" data-auto-animate>
 						<h2>Desarrollo Web</h2>
-						<div class="paw-development">
+						<div
+							class="paw-development paw-explotada"
+							data-id="paw-proyecto-web"
+						>
 							<div class="paw-diseno" data-id="paw-diseno">
-								<p>
-									Wireframes <br />
-									IA
-								</p>
+								IA <br />Wireframes
 							</div>
 							<div class="paw-coding">
 								<div class="paw-maquetado" data-id="paw-maquetado">
-									<p>HTML</p>
-									<p>CSS</p>
+									HTML<br />CSS
 								</div>
 								<div class="paw-programacion" data-id="paw-programacion">
-									<p>Frontend</p>
-									<p>Backend</p>
+									Frontend<br />Backend
 								</div>
-								<p>Código</p>
+								Código
 							</div>
 						</div>
 					</section>
 				</section>
 				<!-- Information Architecture -->
-				<section id="ia">
+				<section id="estructura">
 					<section>
 						<h2>La estructura de la información</h2>
 					</section>
@@ -155,7 +178,7 @@
 							la comprensión de la información
 						</blockquote>
 					</section>
-					<section>
+					<section id="ia">
 						<h2>
 							Arquitectura de la informacion (<abbr
 								title="Information Architecture"
@@ -169,37 +192,104 @@
 						</blockquote>
 						<footer>[Rosenfeld, Morville & Arango]</footer>
 					</section>
-					<section>
-						<p>¿como se organiza la información de un sitio web?</p>
-						<p>Disciplina que evoluciona desde el Diseño Editorial</p>
+					<section id="ecologia">
+						<h2 style="margin: 1rem 0 0 0">Ecología de la información</h2>
+						<img
+							src="images/EcologiaDeLaInformacion.png"
+							alt="The infamous three circles of information architecture"
+							height="500"
+						/>
+						<footer>[Rosenfeld, Morville & Arango]</footer>
+					</section>
+					<section id="datosInformacion">
+						<h2>Datos e Información</h2>
+						<p>
+							En la web, cada pagina web es en si misma una
+							<em>base de datos</em> no esctructurados
+						</p>
+						<blockquote>
+							Los <strong>buscadores</strong> hacen consultas sobre estas
+							<em>bases de datos</em>
+						</blockquote>
+					</section>
+					<section id="buscadores">
+						<h3>¿Qué encuentran los buscadores?</h3>
+						<p>
+							No debemos preocuparnos tanto por <em>cómo se ven las cosas</em>.
+						</p>
+						<p>
+							Debemos describir y representar <br />
+							qué información contiene mi página
+						</p>
+						<p><em>Objetivo:</em> la <strong>calidad</strong> del contenido</p>
+					</section>
+					<section id="metadata">
+						<h2>METADATA</h2>
+						<ul>
+							<li>Estructura</li>
+							<li>Organización</li>
+							<li>Etiquetado</li>
+						</ul>
+						<blockquote>
+							<p>Diseño centrado en</p>
+							<h4><strong>EL USUARIO</strong></h4>
+						</blockquote>
+					</section>
+					<section id="sitemap">
+						<h2>Site Maps</h2>
+						<blockquote>
+							Los sitemaps proporcionan información <br />
+							sobre las páginas, los vídeos y otros archivos <br />
+							de un sitio web, así como sobre<br />
+							las relaciones que hay entre ellos.
+						</blockquote>
+						<footer>
+							<a
+								href="https://support.google.com/webmasters/answer/156184?hl=es"
+								>Google</a
+							>
+						</footer>
+					</section>
+					<section id="sitemap2">
+						<img src="images/sitemap.png" alt="" height="700" />
+					</section>
+					<section id="anatomia">
+						<h2>Anatomía una página web</h2>
+						<p>
+							Disciplina que evoluciona desde el
+							<strong>Diseño Editorial</strong>
+						</p>
 						<p>
 							El maquetado es una forma de indicar <br />
 							<strong>información sobre el contenido</strong>, que no es lo
 							mismo que él contenido
 						</p>
-						markup is a way to indicate information about the content that is
-						distinct from the content
 					</section>
-					<section>
+					<section id="anatomia2">
 						<img src="images/maquetado1.svg" alt="" height="600" />
 					</section>
-					<section>
-						Pensar en nuestros usuarios: Humanos UX Usabilidad Accesibilidad
-						Bots Objetivo El contenido llegue a nuestro publico objetivo
+					<section id="goals">
+						<h2>Usuarios objetivo</h2>
+						<h3>Humanos</h3>
+						<p>
+							<p><abbr title="Human Computer Interaction">HCI</abbr></p>
+							<abbr title="User Interface">UI</abbr> :
+							<abbr title="User Experience">UX</abbr> / Accesibilidad
+						</p>
+						<h3>Crawlers</h3>
+						<p>El contenido debe llegar a nuestro publico objetivo</p>
+						<h4>SEMÁNTICA</h4>
 					</section>
-
-					<section>
-						Buscar Patrones Generar componentes Reutilizar bloques
-					</section>
-					<section>
-						No importa como se ve Nos centramos en lo que representa ese
-						contenido
+					<section id="coherencia">
+						<h2>Coherencia</h2>
+						<p>Buscar Patrones</p>
+						<p>Generar componentes</p>
+						<p>Reutilizar bloques</p>
 					</section>
 				</section>
 				<!-- Wireframes -->
 				<section id="wireframes">
 					<section><h2>Wireframes / Mockups</h2></section>
-					<section>Analisis -> <strong>Diseño</strong> -> Desarrollo</section>
 					<section>
 						<h2>Un wireframe o prototipo</h2>
 						<p>

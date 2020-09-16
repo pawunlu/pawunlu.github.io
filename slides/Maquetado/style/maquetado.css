@@ -46,27 +46,53 @@
 .paw-development p {
 	margin: 0;
 }
-.paw-development div.paw-diseno {
+
+.paw-development.paw-explotada div.paw-diseno {
 	position: relative;
 	top: -2.4rem;
 }
 
 .paw-development {
-	background-color: var(--paw-verde-oscuro);
-}
-
-.paw-development .paw-diseno {
-	background-color: var(--paw-verde-medio-oscuro);
-}
-.paw-development .paw-coding {
-	background-color: var(--paw-verde-medio-claro);
+	background-image: radial-gradient(
+		var(--paw-verde-claro),
+		var(--paw-verde-oscuro)
+	);
 	color: black;
 }
 
+.paw-development .paw-diseno {
+	background-image: radial-gradient(
+		var(--paw-verde-medio-claro),
+		var(--paw-verde-medio-oscuro)
+	);
+	width: 7rem;
+}
+.paw-development .paw-coding {
+	background-image: radial-gradient(
+		var(--paw-verde-medio-oscuro),
+		var(--paw-verde-oscuro)
+	);
+	color: white;
+	min-width: 7rem;
+	max-width: 20rem;
+}
+
 .paw-development .paw-coding .paw-maquetado {
-	background-color: var(--paw-verde-claro);
+	background-image: linear-gradient(
+		90deg,
+		var(--paw-verde-claro),
+		var(--paw-verde-medio-oscuro)
+	);
+	color: black;
+	width: 7rem;
 }
 
 .paw-development .paw-coding .paw-programacion {
-	background-color: var(--paw-amarillo);
+	background-image: linear-gradient(
+		90deg,
+		var(--paw-verde-oscuro),
+		var(--paw-amarillo)
+	);
+	color: black;
+	width: 7rem;
 }
