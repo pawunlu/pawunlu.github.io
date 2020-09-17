@@ -344,6 +344,22 @@
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 }
 
+.reveal .hljs-ln-numbers {
+	padding: 0 0.5rem;
+	border-right: rgba(30, 30, 30, 1) 0.05rem solid;
+}
+
+.reveal .hljs-ln-code {
+	padding: 0 0.5rem;
+}
+
+.highlight-line {
+	font-weight: bold;
+	background-color: rgba(50, 50, 50, 0.8);
+	border: rgba(80, 80, 80, 1) solid;
+	border-width: 0 0.05rem;
+}
+
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
