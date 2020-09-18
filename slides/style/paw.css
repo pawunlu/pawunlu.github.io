@@ -180,23 +180,28 @@ header.paw-encabezado {
 	font-size: 1.5rem;
 }
 
+.reveal .paw-presentacion .paw-tituloContenido h2 {
+	color: var(--paw-verde-medio-oscuro);
+	font-size: 1.2rem;
+}
+
 /******************
  Diapositivas
 ********************/
 
 .reveal .paw-indice {
 	margin: 0.5rem 0 0 0;
-	width: 50vw;
+	width: 55vw;
 	font-size: 1rem;
 }
 
 .reveal footer {
 	text-align: right;
-	margin: 1.5rem 5rem 0 5rem;
+	margin: 1.3rem 5rem 0 5rem;
 }
 
 .reveal li {
-	line-height: 2.5;
+	line-height: 2.2;
 	padding: 0 0.5rem;
 }
 

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PAW - Maquetado Web - Proyectos Web</title>
+
+		<link rel="stylesheet" href="../../reveal/reset.css" />
+		<link rel="stylesheet" href="../../reveal/reveal.css" />
+		<link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
+		<link rel="stylesheet" href="../../style/paw.css" id="theme" />
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link
+			rel="stylesheet"
+			href="../../reveal/plugin/highlight/monokai.css"
+			id="highlight-theme"
+		/>
+
+		<link rel="stylesheet" href="../style/maquetado.css" id="slideStyle" />
+	</head>
+	<body>
+		<header class="paw-encabezado">
+			<img src="../../images/logoPAW.svg" alt="" />
+			<h2 class="paw-asignatura">PAW</h2>
+			<h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+		</header>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Presentación -->
+				<section class="paw-presentacion">
+					<div class="paw-logo">
+						<img src="../../images/logoPAW.svg" alt="" />
+					</div>
+					<div class="paw-asignatura">
+						<h1>PAW</h1>
+					</div>
+					<div class="paw-comision">
+						<h2>Lic. en Sistemas de Información</h2>
+					</div>
+					<div class="paw-autor">
+						<p class="paw-speaker">Speaker:</p>
+						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
+						<address>
+							<a href="mailto:pcchale@gmail.com">pcchale@gmail.com</a>
+						</address>
+					</div>
+					<div class="paw-tituloContenido">
+						<h1>
+							Introducción <br />
+							al maquetado
+						</h1>
+						<h2>Estándares Web</h2>
+					</div>
+				</section>
+				<!-- Indice -->
+				<section id="indice">
+					<h2 style="margin-bottom: 0; margin-top: 1rem">Índice:</h2>
+					<ol class="paw-indice">
+						<li>Proyectos Web</li>
+						<li>Estructura de la información</li>
+						<li>Wireframes</li>
+						<li><strong>Estándares Web</strong></li>
+						<li>Lenguajes de Marcado</li>
+						<li>El estandar HTML</li>
+					</ol>
+				</section>
+				<section>
+					<h2>Tim Berners-Lee</h2>
+					<h3>1989</h3>
+					<p>CERN -> Nace el concepto de "Internet": HTTP + HTML</p>
+				</section>
+				<section>
+					<p>
+						los usuarios acceden a nuestro contenido <br />
+						desde una infinidad de dispositivos y softwares
+					</p>
+				</section>
+				<section id="w3c">
+					<h2>World Wide Web Consorsium</h2>
+					<h3>Objetivos</h3>
+					<p class="fragment">
+						La Web sea accesible a nivel Universal,<br />sin importar la
+						discapacidad, el lenguaje o la cultura
+					</p>
+					<footer>
+						<a href="http://www.w3.org/">http://www.w3.org/</a>
+					</footer>
+				</section>
+				<section>
+					<h2>World Wide Web Consorsium</h2>
+
+					<h3>Que hace?</h3>
+					<strong class="fragment">Recomendaciones</strong>
+					<p class="fragment">
+						Documento que especifica el papel <br />
+						que desempeña una tecnologia, las reglas de sintaxis, etc.
+					</p>
+					<footer>
+						<a href="http://www.w3.org/">http://www.w3.org/</a>
+					</footer>
+				</section>
+				<section>
+					<h3>https://www.w3.org/</h3>
+					<iframe
+						src="https://www.w3.org"
+						frameborder="0"
+						height="700"
+						width="1300"
+					></iframe>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../reveal/reveal.js"></script>
+		<script src="../../reveal/plugin/zoom/zoom.js"></script>
+		<script src="../../reveal/plugin/notes/notes.js"></script>
+		<script src="../../reveal/plugin/search/search.js"></script>
+		<script src="../../reveal/plugin/markdown/markdown.js"></script>
+		<script src="../../reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				width: 1920,
+				height: 1080,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [
+					RevealZoom,
+					RevealNotes,
+					RevealSearch,
+					RevealMarkdown,
+					RevealHighlight,
+				],
+			});
+
+			Reveal.on("slidechanged", (event) => {
+				document.querySelector(".paw-comision").innerHTML = [
+					document.querySelector(".paw-presentacion .paw-tituloContenido h1")
+						.textContent,
+					" | ",
+					document.querySelector(".paw-presentacion .paw-tituloContenido h2")
+						.textContent,
+				].join(" ");
+			});
+		</script>
+	</body>
+</html>

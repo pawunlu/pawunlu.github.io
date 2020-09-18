@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PAW - Maquetado Web - Proyectos Web</title>
+
+		<link rel="stylesheet" href="../../reveal/reset.css" />
+		<link rel="stylesheet" href="../../reveal/reveal.css" />
+		<link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
+		<link rel="stylesheet" href="../../style/paw.css" id="theme" />
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link
+			rel="stylesheet"
+			href="../../reveal/plugin/highlight/monokai.css"
+			id="highlight-theme"
+		/>
+
+		<link rel="stylesheet" href="../style/maquetado.css" id="slideStyle" />
+	</head>
+	<body>
+		<header class="paw-encabezado">
+			<img src="../../images/logoPAW.svg" alt="" />
+			<h2 class="paw-asignatura">PAW</h2>
+			<h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+		</header>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Presentación -->
+				<section class="paw-presentacion">
+					<div class="paw-logo">
+						<img src="../../images/logoPAW.svg" alt="" />
+					</div>
+					<div class="paw-asignatura">
+						<h1>PAW</h1>
+					</div>
+					<div class="paw-comision">
+						<h2>Lic. en Sistemas de Información</h2>
+					</div>
+					<div class="paw-autor">
+						<p class="paw-speaker">Speaker:</p>
+						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
+						<address>
+							<a href="mailto:pcchale@gmail.com">pcchale@gmail.com</a>
+						</address>
+					</div>
+					<div class="paw-tituloContenido">
+						<h1>
+							Introducción <br />
+							al maquetado
+						</h1>
+						<h2>Estandar HTML</h2>
+					</div>
+				</section>
+				<!-- Indice -->
+				<section id="indice">
+					<h2 style="margin-bottom: 0; margin-top: 1rem">Índice:</h2>
+					<ol class="paw-indice">
+						<li>Proyectos Web</li>
+						<li>Estructura de la información</li>
+						<li>Wireframes</li>
+						<li>Estandares Web</li>
+						<li>Lenguajes de Marcado</li>
+						<li><strong>El estandar HTML</strong></li>
+					</ol>
+				</section>
+				<section id="WhatWG">
+					<h2>Web Hypertext Application <br />Technology Working Group</h2>
+					<p class="fragment">
+						<strong>Promover la evolución del HTML</strong>
+					</p>
+					<p class="fragment">
+						Una respuesta al funcionamiento del W3C <br />
+						Al lento progreso en los estándares Web, <br />
+						especialmente HTML
+					</p>
+					<footer>
+						<p><a href="http://www.whatwg.org/">http://www.whatwg.org/</a></p>
+					</footer>
+				</section>
+				<section>
+					<h2>WHATWG</h2>
+					<h3>Living Standard development model</h3>
+					<p class="fragment">
+						Mantiene y desarrolla el estandar HTML <br />
+						y APIs para las aplicaciones web
+					</p>
+				</section>
+				<section>
+					<h3>https://whatwg.org/</h3>
+					<iframe
+						src="https://whatwg.org/"
+						frameborder="0"
+						height="700"
+						width="1300"
+					></iframe>
+				</section>
+				<section id="colaboracion">
+					<h2>W3C and WHATWG</h2>
+					<p style="text-align: right">
+						<time datetime="2019-05-28">28 de Mayo de 2019</time>
+					</p>
+					<h3>Acuerdo de colaboración</h3>
+
+					<p class="fragment">Desarrollar una versión de HMTL unificada</p>
+					<footer>
+						<p>
+							<a href="https://www.w3.org/2019/04/WHATWG-W3C-MOU.html">
+								https://www.w3.org/2019/04/WHATWG-W3C-MOU.html
+							</a>
+						</p>
+					</footer>
+				</section>
+				<section>
+					<p>
+						Los borradores de revisiones <br />de la WHATWG son consideradas
+						como<br />
+						<strong>Recomendaciones Candidatas de la W3C</strong>
+					</p>
+				</section>
+				<section>
+					<h2>HTML</h2>
+					<p>
+						HTML fue diseñado como un lenguaje <br />
+						para describir semánticamente documentos
+					</p>
+				</section>
+				<section>
+					<h2>HTML 5</h2>
+					<p>
+						Lenguaje de marcado a nivel semántico <br />
+						y las APIs de script a nivel semántico<br />
+						para la creación de paginas accesibles
+					</p>
+				</section>
+				<section>
+					<h2>HTML 5</h2>
+					<p>
+						No provee mecanismos para personalizar la presentación<br />
+						en función de los medios en los que se publiquen
+					</p>
+				</section>
+				<section>
+					<svg
+						id="abstractimg"
+						height="700"
+						role="img"
+						viewBox="0 0 398 362"
+						aria-label="It consists of everything else, above such core technologies as HTTP, TLS, DOM, Unicode, Web IDL, MIME, URL, XML, JavaScript, and Encoding; below higher-level technologies like CSS, SVG, MathML, and Service Workers; and to the side of technologies like IndexedDB, Fetch, CSP, AV1, Opus, and PNG."
+					>
+						<g class="fragment" data-fragment-index="3">
+							<rect
+								fill="#fbc808"
+								width="398"
+								height="80"
+								stroke="black"
+								stroke-width="2px"
+							></rect>
+							<text
+								fill="black"
+								style="word-spacing: 12px; font-size: 18px; text-anchor: middle"
+								x="199"
+								y="45"
+							>
+								CSS SVG MathML Service Workers
+							</text>
+						</g>
+						<g class="fragment" data-fragment-index="2">
+							<rect
+								fill="#65af26"
+								width="67"
+								y="85"
+								height="177"
+								stroke="black"
+								stroke-width="2px"
+							></rect>
+							<text
+								fill="black"
+								transform="translate(25 240) rotate(-90)"
+								font-size="20px"
+							>
+								IDB Fetch CSP
+							</text>
+							<text
+								fill="black"
+								transform="translate(50 240) rotate(-90)"
+								font-size="20px"
+							>
+								AV1 Opus PNG
+							</text>
+						</g>
+						<rect
+							fill="#1d6625"
+							width="327"
+							y="85"
+							x="71"
+							height="177"
+							stroke="black"
+							stroke-width="2px"
+						></rect>
+						<image
+							xlink:href="../images/Especificacion.jpg"
+							width="326"
+							x="72"
+							y="85"
+							height="177"
+						></image>
+						<text fill="white" class="right" x="130" y="250" font-size="25px">
+							THIS SPECIFICATION
+						</text>
+						<g class="fragment" data-fragment-index="1">
+							<rect
+								fill="#1d6625"
+								width="398"
+								y="267"
+								height="92"
+								stroke="black"
+								stroke-width="2px"
+							></rect>
+							<text
+								fill="white"
+								style="word-spacing: 12px; font-size: 18px; text-anchor: middle"
+								x="199"
+								y="300"
+							>
+								HTTP TLS DOM Unicode Web IDL
+							</text>
+							<text
+								fill="white"
+								style="word-spacing: 12px; font-size: 18px; text-anchor: middle"
+								x="199"
+								y="330"
+							>
+								MIME URL XML JavaScript Encoding
+							</text>
+						</g>
+					</svg>
+				</section>
+				<section>
+					<p>Los documentos HTML consisten en</p>
+					<h4>
+						un <strong>árbol</strong><br />
+						de <em>elementos</em> y <em>texto</em>
+					</h4>
+				</section>
+				<section>
+					<h2>Elementos</h2>
+					<p>
+						La gran mayoría pueden contener<br />
+						<em>elementos</em> y <em>texto</em><br />
+						<strong>UN SUB-ÁRBOL</strong>
+					</p>
+				</section>
+				<section>
+					<h2>The Document Object Model (DOM)</h2>
+					<p>una representación, un modelo, del documento y su contenido</p>
+				</section>
+				<section>
+					<h2>DOM</h2>
+					<p>
+						una API que permite crear y construir documentos, navegar su
+						estructura y modificarla creando, modificando y / o eliminando
+						elementos y contenido
+					</p>
+				</section>
+				<section>
+					<h2>Navegadores y Motores de Renderizado</h2>
+				</section>
+				<section>
+					<h2 style="margin-bottom: 2rem">html5test.com/</h2>
+					<iframe
+						src="https://html5test.com/"
+						frameborder="0"
+						width="1000"
+						height="450"
+						style="transform: scale(1.5)"
+					></iframe>
+				</section>
+				<section>
+					<h2 style="margin-bottom: 2rem">gs.statcounter.com</h2>
+					<iframe
+						src="https://gs.statcounter.com/browser-version-market-share#monthly-202006-202008"
+						frameborder="0"
+						width="1000"
+						height="450"
+						style="transform: scale(1.5)"
+					></iframe>
+				</section>
+				<section>
+					<h2 style="margin-bottom: 2rem">
+						gs.statcounter.com/platform-market-share/
+					</h2>
+					<iframe
+						src="https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet"
+						frameborder="0"
+						width="1000"
+						height="450"
+						style="transform: scale(1.5)"
+					></iframe>
+				</section>
+				<section>
+					<h2 style="margin-bottom: 2rem">gs.statcounter.com</h2>
+					<iframe
+						src="https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet/argentina"
+						frameborder="0"
+						width="1000"
+						height="450"
+						style="transform: scale(1.5)"
+					></iframe>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../reveal/reveal.js"></script>
+		<script src="../../reveal/plugin/zoom/zoom.js"></script>
+		<script src="../../reveal/plugin/notes/notes.js"></script>
+		<script src="../../reveal/plugin/search/search.js"></script>
+		<script src="../../reveal/plugin/markdown/markdown.js"></script>
+		<script src="../../reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				width: 1920,
+				height: 1080,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [
+					RevealZoom,
+					RevealNotes,
+					RevealSearch,
+					RevealMarkdown,
+					RevealHighlight,
+				],
+			});
+
+			Reveal.on("slidechanged", (event) => {
+				document.querySelector(".paw-comision").innerHTML = [
+					document.querySelector(".paw-presentacion .paw-tituloContenido h1")
+						.textContent,
+					" | ",
+					document.querySelector(".paw-presentacion .paw-tituloContenido h2")
+						.textContent,
+				].join(" ");
+			});
+		</script>
+	</body>
+</html>
