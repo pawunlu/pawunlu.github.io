@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PAW | Maquetado Web - Lenguajes de Marcado</title>
+
+		<link rel="stylesheet" href="../../reveal/reset.css" />
+		<link rel="stylesheet" href="../../reveal/reveal.css" />
+		<link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
+		<link rel="stylesheet" href="../../style/paw.css" id="theme" />
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link
+			rel="stylesheet"
+			href="../../reveal/plugin/highlight/monokai.css"
+			id="highlight-theme"
+		/>
+
+		<link rel="stylesheet" href="../style/maquetado.css" id="slideStyle" />
+	</head>
+	<body>
+		<header class="paw-encabezado">
+			<img src="../../images/logoPAW.svg" alt="" />
+			<h2 class="paw-asignatura">PAW</h2>
+			<h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+		</header>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Presentación -->
+				<section class="paw-presentacion">
+					<div class="paw-logo">
+						<img src="../../images/logoPAW.svg" alt="" />
+					</div>
+					<div class="paw-asignatura">
+						<h1>PAW</h1>
+					</div>
+					<div class="paw-comision">
+						<h2>Lic. en Sistemas de Información</h2>
+					</div>
+					<div class="paw-autor">
+						<p class="paw-speaker">Speaker:</p>
+						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
+						<address>
+							<a href="mailto:pcchale@gmail.com">pcchale@gmail.com</a>
+						</address>
+					</div>
+					<div class="paw-tituloContenido">
+						<h1>
+							Introducción <br />
+							al maquetado
+						</h1>
+						<h2>Lenguajes de Marcado</h2>
+					</div>
+				</section>
+				<!-- Indice -->
+				<section id="indice">
+					<h2 style="margin-bottom: 0; margin-top: 1rem">Índice:</h2>
+					<ol class="paw-indice">
+						<li>Proyectos Web</li>
+						<li>Estructura de la información</li>
+						<li>Wireframes</li>
+						<li>Estandares Web</li>
+						<li><strong>Lenguajes de Marcado</strong></li>
+						<li>El estandar HTML</li>
+					</ol>
+				</section>
+				<section id="sgml">
+					<h2>Standard Generalized Markup Language (SGML)</h2>
+					<p class="fragment">
+						1986 -> International Standards Organization (ISO-8879)
+					</p>
+				</section>
+				<section>
+					<h3>Define la <strong>gramática</strong> de un lenguaje</h3>
+					<p class="fragment">Declarativo</p>
+					<p class="fragment">Riguroso</p>
+				</section>
+				<section id="sgml">
+					<h2>SGML</h2>
+					<h3>NO es un lenguaje de marcas en si mismo</h3>
+					<h4 class="fragment">Meta-lenguaje</h4>
+					<p class="fragment">
+						Para crear lenguajes de marcado para<br />
+						el intercambio y conservación de documentos.
+					</p>
+				</section>
+				<section id="sgml2">
+					<h2>Un documento SGML</h2>
+					<ul>
+						<li class="fragment">la Declaración SGML</li>
+						<li class="fragment">
+							el Prólogo DOCTYPE -> Definición de tipo de documento (DTD)
+						</li>
+						<li class="fragment">
+							la instancia, que contiene un elemento superior y su contenido.
+						</li>
+					</ul>
+				</section>
+				<section id="sgml3">
+					<h2>SGML</h2>
+					<h3>Multiples aplicaciones</h3>
+					<p class="fragment">Simples -> MediaWiki</p>
+					<p class="fragment">Entre corchetes -> RTF</p>
+					<p class="fragment">Etiquetas coincidentes -> HTML</p>
+				</section>
+				<section>
+					<h2 style="margin-bottom: 3rem">Ejemplo: MediaWiki</h2>
+					<iframe
+						src="https://www.mediawiki.org/wiki/Help:Formatting"
+						frameborder="0"
+						width="900"
+						height="350"
+						style="transform: scale(1.5)"
+					></iframe>
+				</section>
+				<section>
+					<h2>Ejemplo: RTF</h2>
+					<pre><code data-line-numbers="1|2-4|3">{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang10 Ejemplo de \i RTF\i0  para \b PAW\b0\par
+}
+						</code></pre>
+				</section>
+				<section id="xml">
+					<h2>eXtensible Markup Language (XML)</h2>
+					<p class="fragment">Una simplificacion derivada del SGML</p>
+				</section>
+				<section>
+					<p>
+						Lenguaje de meta-marcado <br />
+						que provee mecanismos para definir <br />
+						lenguajes de marcado especializados
+					</p>
+					<footer>[Sebesta]</footer>
+				</section>
+				<section>
+					<h2>Ejemplo: XML</h2>
+					<pre
+						style="height: 700px; width: 83%; margin-left: 6rem"
+					><code data-line-numbers="1|2|3,21|4,11"><?xml version="1.0"?>
+&lt;!DOCTYPE Catalog SYSTEM "books.dtd"&gt;
+<Catalog>
+<Book id="bk101">
+  <Author>Garghentini, Davide</Author>
+  <Title>XML Developer's Guide</Title>
+  <Genre>Computer</Genre>
+  <Price>44.95</Price>
+  <PublishDate>2000-10-01</PublishDate>
+  <Description>An in-depth look at creating applications with XML.</Description>
+</Book>
+<Book id="bk102">
+  <Author>Garcia, Debra</Author>
+  <Title>Midnight Rain</Title>
+  <Genre>Fantasy</Genre>
+  <Price>5.95</Price>
+  <PublishDate>2000-12-16</PublishDate>
+  <Description>A former architect battles corporate zombies,
+  an evil sorceress, and her own childhood to become queen of the world.</Description>
+</Book>
+</Catalog></code></pre>
+				</section>
+				<section>
+					<h2>Aplicaciones XML</h2>
+					<p class="fragment">Scalable Vector Graphics (SVG)</p>
+					<p class="fragment">Mathematics Markup Language (MathML)</p>
+					<p class="fragment">Chemical Markup Language (CML)</p>
+					<p class="fragment">Hipertext Markup Language (HTML)</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../reveal/reveal.js"></script>
+		<script src="../../reveal/plugin/zoom/zoom.js"></script>
+		<script src="../../reveal/plugin/notes/notes.js"></script>
+		<script src="../../reveal/plugin/search/search.js"></script>
+		<script src="../../reveal/plugin/markdown/markdown.js"></script>
+		<script src="../../reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				width: 1920,
+				height: 1080,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [
+					RevealZoom,
+					RevealNotes,
+					RevealSearch,
+					RevealMarkdown,
+					RevealHighlight,
+				],
+			});
+
+			Reveal.on("slidechanged", (event) => {
+				document.querySelector(".paw-comision").innerHTML = [
+					document.querySelector(".paw-presentacion .paw-tituloContenido h1")
+						.textContent,
+					" | ",
+					document.querySelector(".paw-presentacion .paw-tituloContenido h2")
+						.textContent,
+				].join(" ");
+			});
+		</script>
+	</body>
+</html>

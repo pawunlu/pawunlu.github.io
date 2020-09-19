@@ -1,0 +1,214 @@
+/*********************
+Encabezado Diapositivas
+***********************/
+header.paw-encabezado {
+	height: 4rem;
+	width: 100vw;
+	overflow: hidden;
+	position: absolute !important;
+}
+
+.paw-encabezado img {
+	float: left;
+	height: 2.5rem;
+	padding: 0.5rem;
+	animation: paw-animacion-logo infinite 20s;
+}
+
+@keyframes paw-animacion-logo {
+	0% {
+		transform: rotate3d(0, 0, 0, 0);
+	}
+	50% {
+		transform: rotate3d(0, 0, 0, 0);
+	}
+	62.5% {
+		transform: rotate3d(0, 1, 0.1, 20deg);
+	}
+	75% {
+		transform: rotate3d(0);
+	}
+	87.5% {
+		transform: rotate3d(0, 1, 0.1, -20deg);
+	}
+	100% {
+		transform: rotate3d(0);
+	}
+}
+
+.paw-encabezado .paw-asignatura {
+	border-bottom: var(--paw-rojo) solid 0.15rem;
+	font-size: 1.25rem;
+	padding-top: 0.2em;
+	font-family: var(--heading-font);
+	letter-spacing: 0.4rem;
+	color: #fff;
+	font-weight: 900;
+}
+
+.paw-encabezado .paw-comision {
+	font-size: 0.7rem;
+	color: var(--paw-amarillo);
+	padding-top: 0.2rem;
+	padding-right: 0.5rem;
+	font-family: var(--main-font);
+	letter-spacing: 0.1rem;
+	font-size: 0.4rem;
+	text-transform: none;
+}
+
+/**********************
+         Caratula
+**********************/
+
+.reveal .slides .paw-presentacion {
+	width: 120%;
+	height: 112%;
+	/*Acomodo el margin top: 2% por un borde que queda y 8rem por el tamaño del header de las otras diapositivas*/
+	margin-left: -10%;
+	margin-top: -4.5%;
+	background: linear-gradient(
+		var(--paw-verde-oscuro) 0%,
+		var(--paw-verde-oscuro) 24.75%,
+		var(--paw-verde-medio-oscuro) 24.75%,
+		var(--paw-verde-medio-oscuro) 49.5%,
+		var(--paw-rojo) 49.5%,
+		var(--paw-rojo) 50.5%,
+		var(--paw-verde-medio-claro) 50.5%,
+		var(--paw-verde-medio-claro) 75.75%,
+		var(--paw-verde-claro) 75.75%,
+		var(--paw-verde-claro) 100%
+	);
+	display: grid !important;
+	grid-template-rows: 35% 15% 15% 35%;
+	grid-template-columns: 25% 1.5fr 3fr 25%;
+}
+
+.reveal .paw-presentacion .paw-logo {
+	grid-row: 2/4;
+	grid-column: 2;
+	align-self: center;
+	text-align: right;
+	margin-right: 0.75rem;
+}
+
+.reveal .paw-presentacion .paw-logo img {
+	height: 30vh;
+	width: auto;
+	z-index: 100;
+}
+
+.reveal .paw-presentacion .paw-asignatura h1 {
+	font-size: 2.25rem;
+	text-align: left;
+	line-height: 1;
+	font-family: var(--heading-font);
+	font-weight: 900;
+	letter-spacing: 0.4rem;
+	margin: 0;
+	margin-bottom: 0.15rem;
+}
+.reveal .paw-presentacion .paw-asignatura {
+	z-index: 10;
+	position: relative;
+	border: none;
+	grid-row: 2;
+	grid-column: 3;
+	align-self: flex-end;
+	text-align: left;
+}
+
+.reveal .paw-presentacion .paw-comision {
+	grid-row: 3;
+	grid-column: 3;
+	text-align: left;
+	align-self: start;
+}
+
+.reveal .paw-presentacion .paw-comision h2 {
+	color: white;
+	text-align: left;
+	font-family: var(--main-font);
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	text-indent: 0;
+	padding: 0.5rem 0;
+	font-size: 0.6rem;
+	margin: 0;
+	text-transform: none;
+}
+.reveal .paw-presentacion .paw-autor {
+	grid-row: 1;
+	grid-column: 1/4;
+	text-align: right;
+	align-self: center;
+	margin: 1rem -1.5rem;
+}
+
+.reveal .paw-presentacion .paw-speaker {
+	font-size: 0.35rem;
+	margin: 0;
+	padding: 0;
+	text-decoration: underline;
+}
+
+.reveal .paw-presentacion .paw-docente {
+	font-weight: bold;
+	font-size: 0.6rem;
+	line-height: 1;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+.reveal .paw-presentacion address {
+	margin-right: 1.5rem;
+	margin: 0;
+	line-height: 1;
+	font-size: 0.45rem;
+}
+
+.reveal .paw-presentacion .paw-tituloContenido {
+	grid-row: 4;
+	grid-column: 1/5;
+	color: var(--paw-verde-oscuro);
+	margin-top: 1rem;
+}
+
+.reveal .paw-presentacion .paw-tituloContenido h1 {
+	color: var(--paw-verde-oscuro);
+	font-size: 1.5rem;
+}
+
+.reveal .paw-presentacion .paw-tituloContenido h2 {
+	color: var(--paw-verde-medio-oscuro);
+	font-size: 1.2rem;
+}
+
+/******************
+ Diapositivas
+********************/
+
+.reveal .paw-indice {
+	margin: 0.5rem 0 0 0;
+	width: 55vw;
+	font-size: 1rem;
+}
+
+.reveal footer {
+	text-align: right;
+	margin: 1.3rem 5rem 0 5rem;
+}
+
+.reveal li {
+	line-height: 2.2;
+	padding: 0 0.5rem;
+}
+
+/***********************
+ Estilos especificos
+************************/
+
+.paw-semi-out {
+	opacity: 0.5;
+}

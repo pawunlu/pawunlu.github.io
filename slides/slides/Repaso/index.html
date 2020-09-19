@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Repaso de contenidos previos</title>
+	<link rel="stylesheet" href="../reveal/reset.css" />
+	<link rel="stylesheet" href="../reveal/reveal.css" />
+	<link rel="stylesheet" href="../reveal/theme/pawTheme.css" id="theme" />
+	<link rel="stylesheet" href="../style/paw.css" id="theme" />
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="../reveal/plugin/highlight/monokai.css" id="highlight-theme" />
+</head>
+
+<body>
+	<!-- Encabezado de diaspos NO TOCAR -->
+	<header class="paw-encabezado">
+		<img src="../images/logoPAW.svg" alt="" />
+		<h2 class="paw-asignatura">PAW</h2>
+		<h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+	</header>
+	<div class="reveal">
+		<div class="slides">
+			<!-- Diapositiva PRESENTACION NO TOCAR -->
+			<section class="paw-presentacion">
+				<div class="paw-logo">
+					<img src="../images/logoPAW.svg" alt="" />
+				</div>
+				<div class="paw-asignatura">
+					<h1>PAW</h1>
+				</div>
+				<div class="paw-comision">
+					<h2>Lic. en Sistemas de Información</h2>
+				</div>
+				<div class="paw-autor">
+					<p class="paw-speaker">Speaker:</p>
+					<p class="paw-docente">Tomás DELVECHIO</p>
+					<address>
+						<a href="mailto:tdelvechio@unlu.edu.ar">tdelvechio@unlu.edu.ar</a>
+					</address>
+				</div>
+				<div class="paw-tituloContenido">
+					<!-- TITULO de las SLIDES -->
+					<h1>Repaso de Contenidos Previos</h1>
+				</div>
+			</section>
+
+			<section id="indice">
+				<h1>Índice</h1>
+				<ul>
+					<li>Introducción</li>
+					<li>Redes</li>
+					<li>Programación</li>
+					<li>Herramientas</li>
+				</ul>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Índice</h1>
+				<ul>
+					<li><strong>Introducción</strong></li>
+					<li>Redes</li>
+					<li>Programación</li>
+					<li>Herramientas</li>
+				</ul>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Introducción</h1>
+				<p>PAW Integra diversas lineas</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Introducción</h1>
+				<p>No existe un único enfoque posible</p>
+				<footer>
+					<a href="https://roadmap.sh/">Developer Roadmaps</a><br />
+					<a href="https://infinite.education/">Infinite Education</a>
+				</footer>
+			</section>
+
+			<section>
+				<h1>Índice</h1>
+				<ul>
+					<li>Introducción</li>
+					<li>
+						<strong>Redes</strong>
+						<ul>
+							<li>DNS</li>
+							<li>HTTP</li>
+						</ul>
+					</li>
+					<li>Programación</li>
+					<li>Herramientas</li>
+				</ul>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Índice</h1>
+				<ul>
+					<li>Introducción</li>
+					<li>
+						Redes
+						<ul>
+							<li><strong>DNS</strong></li>
+							<li>HTTP</li>
+						</ul>
+					</li>
+					<li>Programación</li>
+					<li>Herramientas</li>
+				</ul>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Redes - DNS</h1>
+				<p>Sistema de Nombres de Dominio</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Redes - DNS</h1>
+				<p>Nombres de Dominio deben ser resueltos por un servicio DNS</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Redes - DNS</h1>
+				<p>Fase de Desarrollo: Resolución local</p>
+				<p>Ejemplo: www.example.com -> local.www.example.com</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Redes - DNS</h1>
+				<p>Fase de Desarrollo: Resolución local</p>
+				<p>¿Donde?</p>
+				<h3>Linux</h3>
+				<pre><code class="bash" data-trim data-noescape>
+					/etc/hosts
+				</code></pre>
+				<h3>Windows</h3>
+				<pre><code class="bash" data-trim data-noescape>
+					c:\windows\system32\drivers\etc\hosts
+				</code></pre>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Redes - DNS</h1>
+				<p>Fase de Desarrollo: Resolución local</p>
+				<p>Como?</p>
+				<pre><code class="txt" data-trim data-noescape>
+					127.0.0.1			localhost local.www.example.com
+				</code></pre>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Índice</h1>
+				<ul>
+					<li>Introducción</li>
+					<li>
+						Redes
+						<ul>
+							<li>DNS</strong></li>
+							<li><strong>HTTP</strong></li>
+						</ul>
+					</li>
+					<li>Programación</li>
+					<li>Herramientas</li>
+				</ul>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Redes - HTTP</h1>
+				<p>Protocolo fundamental</p>
+				<p>Utiliza servicios de TCP</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Redes - HTTP</h1>
+				<p>Cliente / Servidor</p>
+				<p>PDU: Mensajes en ASCII (versión 1.1)</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Redes - HTTP</h1>
+				<p>Sin Estado</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Redes - HTTP</h1>
+				<p>Requiere software diferenciado entre cliente y servidor</p>
+				<p>Al ser protocolo, existen infinidad de implementaciones</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Redes - HTTP</h1>
+				<p>Cliente: Browser o Navegador</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Redes - HTTP</h1>
+				<p>Servidor: Web Server</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Redes - HTTP</h1>
+				<p>Versiones de HTTP</p>
+				<p>HTTP 0.9</p>
+				<p>HTTP 1.0</p>
+				<p>HTTP 1.1</p>
+				<p>HTTP 2.0</p>
+				<p>Futuro? HTTP 3</p>
+				<footer>
+					<a href="https://developer.mozilla.org/es/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP">Evolución
+						de HTTP por MDN</a>
+				</footer>
+			</section>
+
+			<section>
+				<h1>Redes - HTTP</h1>
+				<p>Versiones de HTTP</p>
+				<p>¿Que impacto tiene sobre el desarrollo web?</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>HTTP - Caracteristicas</h1>
+				<p>Modelo Cliente Servidor</p>
+				<img src="Selection_001.png" alt="Cliente Servidor">
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>HTTP - Caracteristicas</h1>
+				<p>Modelo Cliente Servidor</p>
+				<img src="Selection_002.png" alt="Cliente Servidor">
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>HTTP - Caracteristicas</h1>
+				<p>Forma de Operación</p>
+				<img src="Selection_003.png" alt="Petición / Respuesta">
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>HTTP - Caracteristicas</h1>
+				<p>Forma de Operación - Varios recursos</p>
+				<img src="Selection_006.png" alt="Petición / Respuesta">
+				<footer>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview">MDN</a>
+				</footer>
+			</section>
+
+			<section>
+				<h1>Petición</h1>
+				<img src="http-req.png" alt="Petición / Respuesta">
+				<footer>
+					<a href="https://web.stanford.edu/class/cs142/lectures/HTTP.pdf">CS 142 - HTTP Lecture</a>
+				</footer>
+			</section>
+
+			<section>
+				<h1>Petición - Secciones</h1>
+				<h3>Request Line</h3>
+				<pre><code class="http" data-trim data-noescape>
+					GET /index.html HTTP/1.1
+				</code></pre>
+				<h3>Esquema general</h3>
+				<pre><code class="http" data-trim data-noescape>
+					METODO PATH HTTP_VERSION/r/n
+				</code></pre>
+			</section>
+
+			<section>
+				<h1>Petición - Request Line</h1>
+				<h3>Métodos</h3>
+				<p>GET</p>
+				<p>POST</p>
+				<p>PUT, DELETE, HEAD, otros</p>
+			</section>
+
+			<section>
+				<h1>Petición - Request Line</h1>
+				<h3>Path</h3>
+				<pre><code class="bash" data-trim data-noescape>
+					/index.html
+				</code></pre>
+				<h3>Versiones</h3>
+				<p>HTTP 1.0, 1.1</p>
+			</section>
+
+			<section>
+				<h1>Petición - Cabeceras</h1>
+				<img src="Selection_004.png" alt="Tipos de Headers">
+				<h3>Forma General</h3>
+				<pre><code class="http" data-trim data-noescape>
+					METODO PATH HTTP_VERSION/r/n
+					Name-Of-Header: value/r/n
+				</code></pre>
+				<footer>
+					<a href="https://developer.mozilla.org/es/docs/Web/HTTP/Messages#Cabeceras">MDN</a>
+				</footer>
+			</section>
+
+			<section>
+				<h1>Petición - Cuerpo</h1>
+				<h3>Linea en Blanco</h3>
+				<h3>Cuerpo</h3>
+				<p>Opciónal segun método</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Respuesta</h1>
+				<img src="http-res.png" alt="Petición / Respuesta">
+				<footer>
+					<a href="https://web.stanford.edu/class/cs142/lectures/HTTP.pdf">CS 142 - HTTP Lecture</a>
+				</footer>
+			</section>
+
+			<section>
+				<h1>Respuesta - Secciones</h1>
+				<h3>Status Line</h3>
+				<pre><code class="http" data-trim data-noescape>
+								HTTP/1.1 200 OK
+							</code></pre>
+				<h3>Esquema general</h3>
+				<pre><code class="http" data-trim data-noescape>
+								VERSION STATUS_CODE STATUS_MESSAGE/r/n
+							</code></pre>
+			</section>
+
+			<section>
+				<h1>Respuesta - Status Line</h1>
+				<h3>Versión</h3>
+				<h3>Códigos de Estado</h3>
+				<p>2XX: Petición procesada con exito</p>
+				<p>3XX: Avisos de Redirección</p>
+				<p>4XX: Existe un problema en la Petición</p>
+				<p>5XX: Sucedio un error en el procesamiento de la Petición</p>
+			</section>
+
+			<section>
+				<h1>Respuesta - Cabeceras</h1>
+				<img src="Selection_007.png" alt="Tipos de Headers">
+				<footer>
+					<a href="https://developer.mozilla.org/es/docs/Web/HTTP/Messages#Cabeceras_2">MDN</a>
+				</footer>
+			</section>
+
+			<section>
+				<h1>Respuesta - Cuerpo</h1>
+				<p>¿Tipo de Contenido del Cuerpo?</p>
+				<p>HTML, CSS, JS (Texto)</p>
+				<p>Multimedia (MIME)</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Índice</h1>
+				<ul>
+					<li>Introducción</li>
+					<li>Redes</li>
+					<li><strong>Programación</strong></li>
+					<li>Herramientas</li>
+				</ul>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Programación</h1>
+				<p>Algunos conceptos es necesario refrescarlos o manejarlos adecuadamente</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Programación</h1>
+				<p>OOP - Patrones</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Programación</h1>
+				<p>Estructuras de datos</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Programación</h1>
+				<p>Mapeo Objeto Relacional - ORM</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Programación</h1>
+				<p>Ingenieria de Software y SQL</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Índice</h1>
+				<ul>
+					<li>Introducción</li>
+					<li>Redes</li>
+					<li>Programación</li>
+					<li><strong>Herramientas</strong></li>
+				</ul>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Herramientas</h1>
+				<p>Consola o CLI</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Herramientas</h1>
+				<p>GIT</p>
+				<p>Obligatorio para entrega de TPs</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>Herramientas</h1>
+				<p>GIT</p>
+				<p>Algo de material introductorio</p>
+				<footer>
+					<a href="https://www.youtube.com/watch?v=okJf65oIxJ8">Intro a GIT en PyConAr</a><br>
+					<a href="https://youtu.be/Ur_GdrK7oSw">Intro a GIT - Parte 1</a><br>
+					<a href="https://youtu.be/KPejeOYzvT4">Intro a GIT - Parte 2</a><br>
+					<a href="https://youtu.be/6eYuzLQ_Dgw">Intro a GIT - Parte 3</a>
+				</footer>
+			</section>
+
+			<section>
+				<h1>Final del Repaso</h1>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="../reveal/reveal.js"></script>
+	<script src="../reveal/plugin/zoom/zoom.js"></script>
+	<script src="../reveal/plugin/notes/notes.js"></script>
+	<script src="../reveal/plugin/search/search.js"></script>
+	<script src="../reveal/plugin/markdown/markdown.js"></script>
+	<script src="../reveal/plugin/highlight/highlight.js"></script>
+	<script>
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+			width: 1920,
+			height: 1080,
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [
+				RevealZoom,
+				RevealNotes,
+				RevealSearch,
+				RevealMarkdown,
+				RevealHighlight,
+			],
+		});
+	</script>
+</body>
+
+</html>
