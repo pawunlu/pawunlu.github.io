@@ -1,88 +1,281 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Presentación de prueba</title>
-		<link rel="stylesheet" href="../reveal/reset.css" />
-		<link rel="stylesheet" href="../reveal/reveal.css" />
-		<link rel="stylesheet" href="../reveal/theme/pawTheme.css" id="theme" />
-		<link rel="stylesheet" href="../style/paw.css" id="theme" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link
-			rel="stylesheet"
-			href="../reveal/plugin/highlight/monokai.css"
-			id="highlight-theme"
-		/>
-	</head>
-	<body>
-		<!-- Encabezado de diaspos NO TOCAR -->
-		<header class="paw-encabezado">
-			<img src="../images/logoPAW.svg" alt="" />
-			<h2 class="paw-asignatura">PAW</h2>
-			<h3 class="paw-comision">Lic. en Sistemas de Información</h3>
-		</header>
-		<div class="reveal">
-			<div class="slides">
-				<!-- Diapositiva PRESENTACION NO TOCAR -->
-				<section class="paw-presentacion">
-					<div class="paw-logo">
-						<img src="../images/logoPAW.svg" alt="" />
-					</div>
-					<div class="paw-asignatura">
-						<h1>PAW</h1>
-					</div>
-					<div class="paw-comision">
-						<h2>Lic. en Sistemas de Información</h2>
-					</div>
-					<div class="paw-autor">
-						<p class="paw-speaker">Speaker:</p>
-						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
-						<address>
-							<a href="mailto:pcchale@gmail.com">pcchale@gmail.com</a>
-						</address>
-					</div>
-					<div class="paw-tituloContenido">
-						<!-- TITULO de las SLIDES -->
-						<h1>Introducción al maquetado</h1>
-					</div>
-				</section>
-				<section></section>
-			</div>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Servidores Web</title>
+	<link rel="stylesheet" href="../../reveal/reset.css" />
+	<link rel="stylesheet" href="../../reveal/reveal.css" />
+	<link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
+	<link rel="stylesheet" href="../../style/paw.css" id="theme" />
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="../../reveal/plugin/highlight/monokai.css" id="highlight-theme" />
+</head>
+
+<body>
+	<!-- Encabezado de diaspos NO TOCAR -->
+	<header class="paw-encabezado">
+		<img src="../../images/logoPAW.svg" alt="" />
+		<h2 class="paw-asignatura">PAW</h2>
+		<h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+	</header>
+	<div class="reveal">
+		<div class="slides">
+			<!-- Diapositiva PRESENTACION NO TOCAR -->
+			<section class="paw-presentacion">
+				<div class="paw-logo">
+					<img src="../../images/logoPAW.svg" alt="" />
+				</div>
+				<div class="paw-asignatura">
+					<h1>PAW</h1>
+				</div>
+				<div class="paw-comision">
+					<h2>Lic. en Sistemas de Información</h2>
+				</div>
+				<div class="paw-autor">
+					<p class="paw-speaker">Speaker:</p>
+					<p class="paw-docente">Tomás DELVECHIO</p>
+					<address>
+						<a href="mailto:tdelvechio@unlu.edu.ar">tdelvechio@unlu.edu.ar</a>
+					</address>
+				</div>
+				<div class="paw-tituloContenido">
+					<!-- TITULO de las SLIDES -->
+					<h1>Servidores Web</h1>
+				</div>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Servidores Web</h1>
+				<p>Elemento pasivo del modelo C/S</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Servidores Web</h1>
+				<p>Elemento pasivo del modelo C/S</p>
+				<p>Acceder a un arbol de documentos</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Servidores Web</h1>
+				<p>Acceder a un arbol de documentos</p>
+				<p>Acceder a recursos dinamicos</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Servidores Web</h1>
+				<p>Proceso que se ejecuta por tiempo indefinido</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Servidores Web</h1>
+				<p>Proceso que se ejecuta por tiempo indefinido</p>
+				<p>Puerto bien conocido: 80</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Servidores Web</h1>
+				<p>Proceso que se ejecuta por tiempo indefinido</p>
+				<p>Puerto bien conocido: 80</p>
+				<p>Tambien 443</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Servidores Web - Ejemplos</h1>
+				<ul>
+					<li class="fragment">Apache2</li>
+					<li class="fragment">Nginx</li>
+					<li class="fragment">Tomcat</li>
+					<li class="fragment">Standalone servers</li>
+				</ul>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Servidores Web</h1>
+				<p>Funcionamiento Interno</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<img style="float: left;" src="images/web-server-operation.png" alt="">
+				<ul>
+					<li class="fragment">Modulo de Red</li>
+					<li class="fragment">Resolución de direcciones</li>
+					<li class="fragment">Procesamiento de la petición</li>
+					<li class="fragment">Generación de la respuesta</li>
+				</ul>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<img style="float: left;" src="images/web-server-operation.png" alt="">
+				<ul>
+					<li>
+						<strong>Modulo de Red</strong>
+					</li>
+					<li>Resolución de direcciones</li>
+					<li>Procesamiento de la petición</li>
+					<li>Generación de la respuesta</li>
+				</ul>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<img style="float: left;" src="images/web-server-operation.png" alt="">
+				<ul>
+					<li>Modulo de Red</li>
+					<li>
+						<strong>Resolución de direcciones</strong>
+						<ul>
+							<li class="fragment">Virtual hosting</li>
+							<li class="fragment">Address Mapping</li>
+							<li class="fragment">Authentication</li>
+						</ul>
+					</li>
+					<li>Procesamiento de la petición</li>
+					<li>Generación de la respuesta</li>
+				</ul>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<img style="float: left;" src="images/web-server-operation.png" alt="">
+				<ul>
+					<li>Modulo de Red</li>
+					<li>Resolución de direcciones</li>
+					<li>
+						<strong>Procesamiento de la petición</strong>
+						<ul>
+							<li class="fragment">Contenido Estático</li>
+							<li class="fragment">Contenido Dinámico</li>
+						</ul>
+					</li>
+					<li>Generación de la respuesta</li>
+				</ul>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<img style="float: left;" src="images/web-server-operation.png" alt="">
+				<ul>
+					<li>Modulo de Red</li>
+					<li>Resolución de direcciones</li>
+					<li>Procesamiento de la petición</li>
+					<li>
+						<strong>Generación de la respuesta</strong>
+						<ul>
+							<li class="fragment">Cabeceras</li>
+							<li class="fragment">Cuerpo</li>
+						</ul>
+					</li>
+				</ul>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Contenido Estático</h1>
+				<p>Recurso previamente existente en el servidor</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Contenido Estático</h1>
+				<pre class="fragment"><code class="text" data-trim>
+					http://www.example.com/documentos/imagenes/foto1.jpg
+				</code></pre>
+				<p class="fragment">apunta en server a</p>
+				<pre class="fragment"><code class="path" data-trim>
+					/var/www/web-example/documentos/imagenes/foto1.jpg
+				</code></pre>
+				<p class="fragment">URL Path: <code>/documentos/imagenes/foto1.jpg</code></p>
+				<p class="fragment">Document Root: <code>/var/www/web-example</code></p>
+				<p class="fragment">Path al contenido = Document Root + URL Path</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Contenido Dinámico</h1>
+				<p class="fragment">Petición requiere de un script o programa para generar respuesta</p>
+				<h3 class="fragment">Respuesta</h3>
+				<p class="fragment">Headers del server</p>
+				<p class="fragment">+ Headers del script</p>
+				<p class="fragment">+ Cuerpo de la salida del Script</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Contenido Dinámico - CGI</h1>
+				<p class="fragment">Primer especificación de estandar</p>
+				<p class="fragment">1 proceso por petición</p>
+				<p class="fragment">Uso de variables de entorno para "alimentar" proceso</p>
+				<p class="fragment">FastCGI: Reutilizaba proceso</p>
+				<p class="fragment">Apache MPM: Módulos de MultiProcesamiento</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Códigos de estado</h1>
+				<p class="fragment">Si la petición se atiende exitosamente: 200</p>
+				<p class="fragment">Si el mapeo del recurso apunta a contenido inexistente: 404</p>
+				<p class="fragment">Si falla la autenticación: 401</p>
+				<p class="fragment">Si no se tienen permisos suficientes para el recurso: 403</p>
+				<p class="fragment">Si ocurre un error al ejecutar un script: 500</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Virtual hosting</h1>
+				<p class="fragment">Multiples sitios y servidores bajo una misma IP</p>
+				<p class="fragment">En HTTP 1.1 gracias al Header <code>Host</code></p>
+				<p class="fragment">Si 2 dominios resuelven (por DNS) a la misma IP y Puerto</p>
+				<p class="fragment">El header Host permite al web server resolver el recurso</p>
+				<footer></footer>
+			</section>
+
 		</div>
+	</div>
 
-		<script src="../reveal/reveal.js"></script>
-		<script src="../reveal/plugin/zoom/zoom.js"></script>
-		<script src="../reveal/plugin/notes/notes.js"></script>
-		<script src="../reveal/plugin/search/search.js"></script>
-		<script src="../reveal/plugin/markdown/markdown.js"></script>
-		<script src="../reveal/plugin/highlight/highlight.js"></script>
-		<script>
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				center: true,
-				hash: true,
-				width: 1920,
-				height: 1080,
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [
-					RevealZoom,
-					RevealNotes,
-					RevealSearch,
-					RevealMarkdown,
-					RevealHighlight,
-				],
-			});
+	<script src="../../reveal/reveal.js"></script>
+	<script src="../../reveal/plugin/zoom/zoom.js"></script>
+	<script src="../../reveal/plugin/notes/notes.js"></script>
+	<script src="../../reveal/plugin/search/search.js"></script>
+	<script src="../../reveal/plugin/markdown/markdown.js"></script>
+	<script src="../../reveal/plugin/highlight/highlight.js"></script>
+	<script>
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+			width: 1920,
+			height: 1080,
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [
+				RevealZoom,
+				RevealNotes,
+				RevealSearch,
+				RevealMarkdown,
+				RevealHighlight,
+			],
+		});
 
-			Reveal.on("slidechanged", (event) => {
-				document.querySelector(
-					".paw-comision"
-				).innerHTML = document.querySelector(
-					".paw-tituloContenido"
-				).textContent;
-			});
-		</script>
-	</body>
+		Reveal.on("slidechanged", (event) => {
+			document.querySelector(
+				".paw-comision"
+			).innerHTML = document.querySelector(
+				".paw-tituloContenido"
+			).textContent;
+		});
+	</script>
+</body>
+
 </html>
