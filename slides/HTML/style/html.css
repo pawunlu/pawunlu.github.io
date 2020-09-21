@@ -1,0 +1,21 @@
+.inline-block {
+	display: inline-block;
+}
+
+.current-fragment.highlight-current-green {
+	font-size: 1.4em !important;
+	color: var(--paw-amarillo) !important;
+	font-weight: bolder;
+	vertical-align: baseline;
+}
+
+.reveal pre {
+	width: 60%;
+	font-size: 0.7rem;
+}
+
+.reveal #indice img {
+	position: absolute;
+	right: 2rem;
+	height: 7rem;
+}

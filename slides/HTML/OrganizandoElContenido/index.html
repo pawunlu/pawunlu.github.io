@@ -3,32 +3,61 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Presentación de prueba</title>
-		<link rel="stylesheet" href="../reveal/reset.css" />
-		<link rel="stylesheet" href="../reveal/reveal.css" />
-		<link rel="stylesheet" href="../reveal/theme/pawTheme.css" id="theme" />
-		<link rel="stylesheet" href="../style/paw.css" id="theme" />
+		<title>PAW | HTML 5 - Estructura del documento</title>
+
+		<!-- Favicon-->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="../../images/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../../images/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="../../images/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="../../images/site.webmanifest" />
+		<link
+			rel="mask-icon"
+			href="../../images/safari-pinned-tab.svg"
+			color="#5bbad5"
+		/>
+		<meta name="msapplication-TileColor" content="#00a300" />
+		<meta name="theme-color" content="#ffffff" />
+
+		<link rel="stylesheet" href="../../reveal/reset.css" />
+		<link rel="stylesheet" href="../../reveal/reveal.css" />
+		<link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
+		<link rel="stylesheet" href="../../style/paw.css" id="theme" />
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link
 			rel="stylesheet"
-			href="../reveal/plugin/highlight/monokai.css"
+			href="../../reveal/plugin/highlight/monokai.css"
 			id="highlight-theme"
 		/>
+
+		<link rel="stylesheet" href="../style/html.css" id="slideStyle" />
 	</head>
 	<body>
-		<!-- Encabezado de diaspos NO TOCAR -->
 		<header class="paw-encabezado">
-			<img src="../images/logoPAW.svg" alt="" />
+			<img src="../../images/logoPAW.svg" alt="" />
 			<h2 class="paw-asignatura">PAW</h2>
 			<h3 class="paw-comision">Lic. en Sistemas de Información</h3>
 		</header>
 		<div class="reveal">
 			<div class="slides">
-				<!-- Diapositiva PRESENTACION NO TOCAR -->
+				<!-- Presentación -->
 				<section class="paw-presentacion">
 					<div class="paw-logo">
-						<img src="../images/logoPAW.svg" alt="" />
+						<img src="../../images/logoPAW.svg" alt="" />
 					</div>
 					<div class="paw-asignatura">
 						<h1>PAW</h1>
@@ -44,20 +73,34 @@
 						</address>
 					</div>
 					<div class="paw-tituloContenido">
-						<!-- TITULO de las SLIDES -->
-						<h1>Introducción al maquetado</h1>
+						<h1>HTML</h1>
+						<h2>Estructura del Documento</h2>
 					</div>
 				</section>
-				<section></section>
+				<!-- Indice -->
+				<section id="indice">
+					<img src="../images/HTML5.png" alt="" />
+					<h2 style="margin-bottom: 0; margin-top: 1rem">Índice:</h2>
+					<ol class="paw-indice">
+						<li>Estructura del documento</li>
+						<li><strong>Organizando el contenido</strong></li>
+						<li>Elementos de Redacción</li>
+						<li>Estructuras Especiales</li>
+						<li>Contenido Incrustado</li>
+					</ol>
+				</section>
+				<section>
+					section, article, main, aside, nav, header, footer, address div
+				</section>
 			</div>
 		</div>
 
-		<script src="../reveal/reveal.js"></script>
-		<script src="../reveal/plugin/zoom/zoom.js"></script>
-		<script src="../reveal/plugin/notes/notes.js"></script>
-		<script src="../reveal/plugin/search/search.js"></script>
-		<script src="../reveal/plugin/markdown/markdown.js"></script>
-		<script src="../reveal/plugin/highlight/highlight.js"></script>
+		<script src="../../reveal/reveal.js"></script>
+		<script src="../../reveal/plugin/zoom/zoom.js"></script>
+		<script src="../../reveal/plugin/notes/notes.js"></script>
+		<script src="../../reveal/plugin/search/search.js"></script>
+		<script src="../../reveal/plugin/markdown/markdown.js"></script>
+		<script src="../../reveal/plugin/highlight/highlight.js"></script>
 		<script>
 			Reveal.initialize({
 				controls: true,
@@ -75,7 +118,6 @@
 					RevealHighlight,
 				],
 			});
-
 			//Configuro el Plugin Highlight para que los tab se reemplacen por 2 espacios
 			Reveal.getPlugin("highlight").hljs.configure({
 				tabReplace: "  ",
@@ -86,7 +128,6 @@
 					// pregunto si la presentacion tiene subtitulo
 					document.querySelector(".paw-presentacion .paw-tituloContenido h2")
 						? //Si tiene lo incorporo a la cabecera de la slide
-						  // Titulo | Subtitulo
 						  [
 								document.querySelector(
 									".paw-presentacion .paw-tituloContenido h1"

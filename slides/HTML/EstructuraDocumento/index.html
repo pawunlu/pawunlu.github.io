@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PAW | HTML 5 - Estructura del documento</title>
+
+		<!-- Favicon-->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="../../images/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../../images/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="../../images/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="../../images/site.webmanifest" />
+		<link
+			rel="mask-icon"
+			href="../../images/safari-pinned-tab.svg"
+			color="#5bbad5"
+		/>
+		<meta name="msapplication-TileColor" content="#00a300" />
+		<meta name="theme-color" content="#ffffff" />
+
+		<link rel="stylesheet" href="../../reveal/reset.css" />
+		<link rel="stylesheet" href="../../reveal/reveal.css" />
+		<link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
+		<link rel="stylesheet" href="../../style/paw.css" id="theme" />
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link
+			rel="stylesheet"
+			href="../../reveal/plugin/highlight/monokai.css"
+			id="highlight-theme"
+		/>
+
+		<link rel="stylesheet" href="../style/html.css" id="slideStyle" />
+	</head>
+	<body>
+		<header class="paw-encabezado">
+			<img src="../../images/logoPAW.svg" alt="" />
+			<h2 class="paw-asignatura">PAW</h2>
+			<h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+		</header>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Presentación -->
+				<section class="paw-presentacion">
+					<div class="paw-logo">
+						<img src="../../images/logoPAW.svg" alt="" />
+					</div>
+					<div class="paw-asignatura">
+						<h1>PAW</h1>
+					</div>
+					<div class="paw-comision">
+						<h2>Lic. en Sistemas de Información</h2>
+					</div>
+					<div class="paw-autor">
+						<p class="paw-speaker">Speaker:</p>
+						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
+						<address>
+							<a href="mailto:pcchale@gmail.com">pcchale@gmail.com</a>
+						</address>
+					</div>
+					<div class="paw-tituloContenido">
+						<h1>HTML</h1>
+						<h2>Estructura del Documento</h2>
+					</div>
+				</section>
+				<!-- Indice -->
+				<section id="indice">
+					<img src="../images/HTML5.png" alt="" />
+					<h2 style="margin-bottom: 0; margin-top: 1rem">Índice:</h2>
+					<ol class="paw-indice">
+						<li><strong>Estructura del documento</strong></li>
+						<li>Organizando el contenido</li>
+						<li>Elementos de Redacción</li>
+						<li>Estructuras Especiales</li>
+						<li>Contenido Incrustado</li>
+					</ol>
+				</section>
+				<section>
+					<h2 style="text-transform: lowercase">index<strong>.html</strong></h2>
+					<img src="" alt="" />
+					<p>
+						archivo de texto que cumpla <br />
+						con la sintaxis definida en <br />
+						<strong>la especificación</strong>
+					</p>
+				</section>
+				<section>
+					<section id="doctype">
+						<h2>Doctype</h2>
+						<p class="fragment">&lt;!DOCTYPE html&gt;</p>
+					</section>
+				</section>
+				<section>
+					<p>
+						Todos los elementos definidos en la especificación<br />
+						están definidos en el <strong>HTML namespace</strong>
+					</p>
+					<footer>
+						<a href="http://www.w3.org/1999/xhtml">
+							http://www.w3.org/1999/xhtml
+						</a>
+					</footer>
+				</section>
+				<section>
+					<h2>html 5</h2>
+					<p>
+						Todos los <strong>elementos</strong>, <strong>atributos</strong> y
+						<br />
+						<strong>los valores de los attributos</strong> tienen un<br />
+						<em><strong>SIGNIFICADO asociado</strong></em>
+					</p>
+				</section>
+				<section id="estructuraTad1" data-auto-animate>
+					<h2>Elementos Contenedores</h2>
+					<div style="text-align: left; padding-left: 30%">
+						<p
+							class="inline-block fragment highlight-current-green"
+							data-fragment-index="1"
+							data-id="lt"
+						>
+							&lt;
+						</p>
+						<p
+							class="inline-block fragment highlight-current-green"
+							data-fragment-index="2"
+							data-id="t"
+						>
+							nombreTag
+						</p>
+						<p
+							class="inline-block fragment highlight-current-green"
+							data-fragment-index="1"
+							data-id="gt"
+						>
+							&gt;
+						</p>
+						<p
+							style="margin-left: 2rem"
+							class="fragment highlight-current-green"
+							data-fragment-index="5"
+							data-id="ct"
+						>
+							Contenido
+						</p>
+						<p
+							class="inline-block fragment highlight-current-green"
+							data-fragment-index="6"
+							data-id="lt2"
+						>
+							&lt;
+						</p>
+						<p
+							class="inline-block fragment highlight-current-green"
+							data-fragment-index="7"
+							data-id="ct"
+						>
+							/
+						</p>
+						<p
+							class="inline-block fragment highlight-current-green"
+							data-fragment-index="6"
+							data-id="nt2"
+						>
+							nombreTag&gt;
+						</p>
+						<p><br /></p>
+						<p>
+							<span data-id="et1">&lt;article</span
+							><span data-id="et2"
+								>> Lorem ipsum dolor sit amet &lt;/article&gt;</span
+							>
+						</p>
+					</div>
+				</section>
+				<section id="estructuraTad1Propiedades" data-auto-animate>
+					<h2>Elementos Contenedores</h2>
+					<div style="text-align: left; padding-left: 30%">
+						<p class="inline-block highlight-current-green" data-id="lt">
+							&lt;
+						</p>
+						<p class="inline-block highlight-current-green" data-id="nt">
+							nombreTag
+						</p>
+						<p
+							class="inline-block fragment highlight-current-green"
+							data-fragment-index="1"
+							data-id="np"
+						>
+							atributo
+						</p>
+						<p
+							class="inline-block fragment highlight-current-green"
+							data-fragment-index="2"
+							data-id="vp"
+						>
+							="Valor"
+						</p>
+						<p class="inline-block highlight-current-green" data-id="gt">
+							&gt;
+						</p>
+						<p
+							style="margin-left: 2rem"
+							class="highlight-current-green"
+							data-id="ct"
+						>
+							Contenido
+						</p>
+						<p class="inline-block highlight-current-green" data-id="lt2">
+							&lt;
+						</p>
+						<p class="inline-block highlight-current-green" data-id="ct">/</p>
+						<p class="inline-block highlight-current-green" data-id="nt2">
+							nombreTag&gt;
+						</p>
+						<p><br /></p>
+						<p>
+							<span data-id="et1">&lt;article</span>
+							<span>class="miClase"</span
+							><span data-id="et2"
+								>> <em>Lorem ipsum dolor </em> &lt;/article&gt;</span
+							>
+						</p>
+					</div>
+				</section>
+				<section id="estructuraTad1PropiedadesBooleanas" data-auto-animate>
+					<h2>Elementos Contenedores</h2>
+					<div style="text-align: left; padding-left: 30%">
+						<p class="inline-block highlight-current-green" data-id="lt">
+							&lt;
+						</p>
+						<p class="inline-block highlight-current-green" data-id="nt">
+							nombreTag
+						</p>
+						<p class="inline-block highlight-current-green" data-id="np">
+							atributo
+						</p>
+
+						<p class="inline-block highlight-current-green" data-id="gt">
+							&gt;
+						</p>
+						<p
+							style="margin-left: 2rem"
+							class="highlight-current-green"
+							data-id="ct"
+						>
+							Contenido
+						</p>
+						<p class="inline-block highlight-current-green" data-id="lt2">
+							&lt;
+						</p>
+						<p class="inline-block highlight-current-green" data-id="ct">/</p>
+						<p class="inline-block highlight-current-green" data-id="nt2">
+							nombreTag&gt;
+						</p>
+						<p><br /></p>
+						<p>&lt;form novalidate&gt; Contenido Formulario &lt;/form&gt;</p>
+					</div>
+				</section>
+				<section id="estructuraTad2">
+					<h2>Elementos Vacios</h2>
+					<p class="fragment">&lt;nombreTag nombrePropiedad="Valor"&gt;</p>
+					<p class="fragment">&lt;nombreTag nombrePropiedad="Valor" /&gt;</p>
+					<p><br /></p>
+					<p class="fragment">
+						&lt;img src="images/logo.png" alt="logo de la empresa" /&gt;
+					</p>
+				</section>
+				<section id="estructuraTad3">
+					<h2>Comentarios</h2>
+					<p>
+						<span
+							class="fragment grow highlight-current-green"
+							data-fragment-index="1"
+							>&lt;!--
+						</span>
+						<span class="fragment" data-fragment-index="2"
+							><em>Comentario</em>
+						</span>
+						<span
+							class="fragment grow highlight-current-green"
+							data-fragment-index="1"
+							>--&gt;</span
+						>
+					</p>
+				</section>
+				<section>
+					<pre><code class="language-html" data-line-numbers="1|2,9|3-5|6-8">&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+	&lt;head&gt;
+		&lt;!-- Contenido --&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;!-- Contenido --&gt;
+	&lt;/body&gt;
+&lt;/html&gt;	
+					</code></pre>
+				</section>
+				<section>
+					<h2 class="paw-code">lang=" "</h2>
+					<h3>Impresindible por:</h3>
+					<ul>
+						<li>los motores de busqueda</li>
+						<li>los correctores ortográficos y de gramática</li>
+						<li>los browsers para usar la "Fuente" correcta</li>
+						<li>los sintetizadores de voz a pronunciar correctamente</li>
+					</ul>
+				</section>
+				<section>
+					<h2>HEAD</h2>
+					<p class="fragment">
+						Contiene información sobre el documento destinada a <br />
+						navegadores, buscadores y otros softwares
+					</p>
+					<p><br /></p>
+					<p class="fragment">El elemento HEAD no permite atributos</p>
+				</section>
+				<section>
+					<h2>Metadata</h2>
+					<ul>
+						<li class="fragment">
+							contenido que establece la presentación <br />o el comportamiento
+							del resto del contenido
+						</li>
+						<li class="fragment">
+							que establece la relación del documento<br />con otros documentos
+						</li>
+					</ul>
+				</section>
+				<section>
+					base, link, meta, title, <br />
+					style, noscript, script, template
+				</section>
+				<section id="tagTitle">
+					<h2>title</h2>
+					<p>&lt;title&gt;<em>Nombre del documento</em>&lt;/title&gt;</p>
+				</section>
+				<section id="tagBase">
+					<h2>Base</h2>
+					<p>&lt;base href="url"&gt;</p>
+					<p>&lt;base target="_blank"&gt;</p>
+				</section>
+				<section id="tagMeta1">
+					<h2>Meta</h2>
+					<p>&lt;meta charset="utf-8"&gt;</p>
+				</section>
+				<section id="tagMeta2">
+					<h2>Meta name=" "</h2>
+					<p>&lt;meta name="propiedad" content="valor-propiedad"&gt;</p>
+					<h4>Propiedades Importantes:</h4>
+					<p>description, keywords, author, copyright, ...</p>
+				</section>
+				<section id="tagMeta3">
+					<h2>Meta Viewport</h2>
+					<p>
+						&lt;meta name="viewport" content="width=device-width,
+						initial-scale=1.0"&gt;
+					</p>
+					<footer>
+						<a
+							href="https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag"
+							>MDN Viewport</a
+						>
+					</footer>
+				</section>
+				<section id="tagMeta4">
+					<h2>meta http-equiv=" "</h2>
+					<p>Indicaciones equivalentes a las del encabezado HTTP</p>
+					<p><br /></p>
+					<p class="fragment fade-in-then-semi-out">
+						&lt;meta http-equiv="expires" content="0"/&gt;
+					</p>
+					<p class="fragment fade-in-then-semi-out">
+						&lt;meta http-equiv="expires" content="300000"/&gt;
+					</p>
+					<p class="fragment fade-in-then-semi-out">
+						&lt;meta http-equiv="refresh" content="10;
+						url=http://sitioDestino/"/&gt;
+					</p>
+				</section>
+				<section id="tagLink">
+					<h2>Link</h2>
+					<p>Relaciona el documento con un recurso externo</p>
+					<p>&lt;link href="URL" rel="ROL"&gt;</p>
+					<p><br /></p>
+					<p class="fragment fade-in-then-semi-out">
+						&lt;link rel="stylesheet" href="style/home.css"&gt;
+					</p>
+					<p class="fragment fade-in-then-semi-out">
+						&lt;link rel="icon" href="images/fav.ico"&gt;
+					</p>
+					<p class="fragment fade-in-then-semi-out">
+						alternate, author, help, license,<br />
+						next, preload, prev, search
+					</p>
+				</section>
+				<section>
+					<h2>Script</h2>
+					<p class="fragment fade-in-then-semi-out">
+						&lt;script src="URL" type="formatoMIME"&gt;&lt;/script&gt;
+					</p>
+					<p class="fragment fade-in-then-semi-out">
+						&lt;script src="URL"&gt;&lt;/script&gt;
+					</p>
+					<div
+						class="fragment fade-in-then-semi-out"
+						style="text-align: left; margin-left: 40%"
+					>
+						<p>&lt;script&gt;</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;<em>Código</em></p>
+						<p>&lt;/script&gt;</p>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../reveal/reveal.js"></script>
+		<script src="../../reveal/plugin/zoom/zoom.js"></script>
+		<script src="../../reveal/plugin/notes/notes.js"></script>
+		<script src="../../reveal/plugin/search/search.js"></script>
+		<script src="../../reveal/plugin/markdown/markdown.js"></script>
+		<script src="../../reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				width: 1920,
+				height: 1080,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [
+					RevealZoom,
+					RevealNotes,
+					RevealSearch,
+					RevealMarkdown,
+					RevealHighlight,
+				],
+			});
+			//Configuro el Plugin Highlight para que los tab se reemplacen por 2 espacios
+			Reveal.getPlugin("highlight").hljs.configure({
+				tabReplace: "  ",
+			});
+
+			Reveal.on("slidechanged", (event) => {
+				document.querySelector(".paw-comision").innerHTML =
+					// pregunto si la presentacion tiene subtitulo
+					document.querySelector(".paw-presentacion .paw-tituloContenido h2")
+						? //Si tiene lo incorporo a la cabecera de la slide
+						  [
+								document.querySelector(
+									".paw-presentacion .paw-tituloContenido h1"
+								).textContent,
+								" | ",
+								document.querySelector(
+									".paw-presentacion .paw-tituloContenido h2"
+								).textContent,
+						  ].join(" ")
+						: //Sino solo uso el titulo
+						  document.querySelector(
+								".paw-presentacion .paw-tituloContenido h1"
+						  ).textContent;
+			});
+		</script>
+	</body>
+</html>

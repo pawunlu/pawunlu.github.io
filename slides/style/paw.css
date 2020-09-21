@@ -212,3 +212,7 @@ header.paw-encabezado {
 .paw-semi-out {
 	opacity: 0.5;
 }
+
+.reveal .paw-code {
+	text-transform: none;
+}
