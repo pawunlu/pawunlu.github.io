@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Direccionamiento</title>
+	<link rel="stylesheet" href="../../reveal/reset.css" />
+	<link rel="stylesheet" href="../../reveal/reveal.css" />
+	<link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
+	<link rel="stylesheet" href="../../style/paw.css" id="theme" />
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="../../reveal/plugin/highlight/monokai.css" id="highlight-theme" />
+</head>
+
+<body>
+	<!-- Encabezado de diaspos NO TOCAR -->
+	<header class="paw-encabezado">
+		<img src="../../images/logoPAW.svg" alt="" />
+		<h2 class="paw-asignatura">PAW</h2>
+		<h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+	</header>
+	<div class="reveal">
+		<div class="slides">
+			<!-- Diapositiva PRESENTACION NO TOCAR -->
+			<section class="paw-presentacion">
+				<div class="paw-logo">
+					<img src="../../images/logoPAW.svg" alt="" />
+				</div>
+				<div class="paw-asignatura">
+					<h1>PAW</h1>
+				</div>
+				<div class="paw-comision">
+					<h2>Lic. en Sistemas de Información</h2>
+				</div>
+				<div class="paw-autor">
+					<p class="paw-speaker">Speaker:</p>
+					<p class="paw-docente">Tomás DELVECHIO</p>
+					<address>
+						<a href="mailto:tdelvechio@unlu.edu.ar">tdelvechio@unlu.edu.ar</a>
+					</address>
+				</div>
+				<div class="paw-tituloContenido">
+					<!-- TITULO de las SLIDES -->
+					<h1>Direccionamiento</h1>
+				</div>
+			</section>
+
+			<section data-auto-animate>
+				<h1>URL</h1>
+				<p>Uniform Resource Locator</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>URL</h1>
+				<p>Uniform Resource Locator</p>
+				<p>Enlace o Link</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>URL</h1>
+				<p>Es la implementación en HTTP del concepto de Hipertexto</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>URL - Objetivo</h1>
+				<p>Si el recurso o documento tiene una URL, puede ser enlazado</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>URL - Ejemplo - Navegador</h1>
+				<img src="images/url-example.png" alt="" class="fragment">
+				<p class="fragment">En la barra de direcciones</p>
+				<p class="fragment">Tambien como enlace en la página "dibujada"</p>
+				<pre class="fragment"><code class="html" data-trim>
+					<a href="http://www.unlu.edu.ar/oferta.html">Oferta Educativa</a>
+				</code></pre>
+				<p class="fragment">Que se ve así: <a href="http://www.unlu.edu.ar/oferta.html">Oferta Educativa</a></p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>URL - Ejemplo - Web Server</h1>
+				<p class="fragment">En la configuración de Web Server</p>
+				<p class="fragment">En los recursos del sitio alojados</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>URL - Ejemplo - HTTP</h1>
+				<img style="height: 300px;" src="images/request-get-example.png" alt="">
+				<p>En la petición: Path en linea de estado + Cabecera Host</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>URL - Estructura</h1>
+				<pre><code class="text" data-trim>
+					scheme://host[:port]/path/.../[;url-params][?query-string][#fragment]
+				</code></pre>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>URL - Estructura</h1>
+				<pre><code class="text" data-trim>
+					scheme://host[:port]/path/.../[;url-params][?query-string][#fragment]
+				</code></pre>
+				<p>Schemes: http, https, mailto</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>URL - Estructura</h1>
+				<pre><code class="text" data-trim>
+					scheme://host[:port]/path/.../[;url-params][?query-string][#fragment]
+				</code></pre>
+				<p>Corchetes marcan presencia opcional</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>URL - Estructura</h1>
+				<pre><code class="text" data-trim>
+					scheme://host[:port]/path/.../[;url-params][?query-string][#fragment]
+				</code></pre>
+				<p>url-params no se usa en web</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>URL - Estructura</h1>
+				<pre><code class="text" data-trim>
+					scheme://host[:port]/path/.../[;url-params][?query-string][#fragment]
+				</code></pre>
+				<p>Formato de query-string:</p>
+				<pre><code class="text" data-trim>
+					[?query-string] ::= [?key1=value[&key2=value2[&...]]]</code></pre>
+				<p class="fragment" data-fragment-index="1">Ejemplo</p>
+				<img class="fragment" data-fragment-index="1" style="height: 100px;" src="images/url-example-2.png"
+					alt="">
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>URL - Estructura</h1>
+				<pre><code class="text" data-trim>
+					scheme://host[:port]/path/.../[;url-params][?query-string][#fragment]
+				</code></pre>
+				<p>#fragment no se envia en la petición</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>URL - Path</h1>
+				<p>Dominio+Path definen el recurso</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>URL - Path</h1>
+				<p>Dominio+Path definen el recurso en el servidor</p>
+				<p>Para el cliente es "caja negra" como el Server procesa el path</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>URL - Path</h1>
+				<p>Posibilidad 1: Enlace a recurso explícito</p>
+				<pre><code class="url" data-trim>
+					http://www.example.com/documentos/imagenes/foto1.jpg
+				</code></pre>
+				<p>apunta en server a</p>
+				<pre><code class="path" data-trim>
+					/var/www/web-example/documentos/imagenes/foto1.jpg
+				</code></pre>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>URL - Path</h1>
+				<p>Posibilidad 2: Enlace a recurso no explícito o mapeo</p>
+				<pre><code class="url" data-trim>
+					http://www.example.com/usuarios/signup
+				</code></pre>
+				<p>apunta en server a</p>
+				<pre><code class="path" data-trim>
+					/var/www/web-example/php/usuarios/crear_usuario.php
+				</code></pre>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>URL - Path</h1>
+				<p>¿Porque generar estos mapeos?</p>
+				<p class="fragment">3 motivos:</p>
+				<p class="fragment">1 - Flexibilidad</p>
+				<p class="fragment">2 - Legibilidad</p>
+				<p class="fragment">3 - Seguridad</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>URL - Path</h1>
+				<p>¿Que implicancia tiene este mapeo?</p>
+				<p class="fragment">Software en server dedicado a resolver estas traducciones de rutas</p>
+				<p class="fragment">Se puede hacer en la configuración del Web Server</p>
+				<p class="fragment">Tambien se puede hacer en la app</p>
+				<p class="fragment">En este ultimo caso, al script o clase que hace esto se le llama Ruteador</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Tipos de URL</h1>
+				<p class="fragment">Forma de un tag de enlace</p>
+				<pre class="fragment"><code class="path" data-trim>
+					<a href="http://www.example.com/login">Ingresar</a>
+				</code></pre>
+				<p class="fragment">Al cargar página: Ubicación Actual</p>
+				<p class="fragment">¿Valores posible del atributo href?</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Tipos de URL</h1>
+				<p>¿Valores posible del atributo href?</p>
+				<p class="fragment">3 posibles valores</p>
+				<p class="fragment">URL Completa</p>
+				<pre class="fragment"><code class="path" data-trim>
+					<a href="http://www.example.com/login">Ingresar</a>
+				</code></pre>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Tipos de URL</h1>
+				<p>¿Valores posible del atributo href?</p>
+				<p>3 posibles valores</p>
+				<p class="fragment">URL absoluta</p>
+				<pre class="fragment"><code class="path" data-trim>
+					<a href="/login">Ingresar</a>
+				</code></pre>
+				<p class="fragment">URL Completa = scheme + host + valor de href</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Tipos de URL</h1>
+				<p>¿Valores posible del atributo href?</p>
+				<p>3 posibles valores</p>
+				<p class="fragment">URL relativa</p>
+				<pre class="fragment"><code class="path" data-trim>
+					<a href="login">Ingresar</a>
+				</code></pre>
+				<p class="fragment">URL Completa = scheme + host + path + valor de href</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Tipos de URL</h1>
+				<p>URL relativa - Ejemplo</p>
+				<pre class="fragment"><code class="path" data-trim>
+					<a href="login">Ingresar</a>
+				</code></pre>
+				<p class="fragment">Ubicación Actual: </p>
+				<pre class="fragment"><code class="path" data-trim>
+					http://www.example.com/
+				</code></pre>
+				<p class="fragment">Entonces URL Completa del link será</p>
+				<pre class="fragment"><code class="text" data-trim>
+					http://www.example.com/login
+				</code></pre>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Tipos de URL</h1>
+				<p>URL relativa - Ejemplo</p>
+				<pre><code class="path" data-trim>
+					<a href="login">Ingresar</a>
+				</code></pre>
+				<p>Ubicación Actual: </p>
+				<pre class="fragment"><code class="path" data-trim>
+					http://www.example.com/personas/
+				</code></pre>
+				<p class="fragment">Entonces URL Completa del link será</p>
+				<pre class="fragment"><code class="text" data-trim>
+					http://www.example.com/personas/login
+				</code></pre>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Tipos de URL</h1>
+				<p>Entonces ¿Cuando usar cada tipo de url?</p>
+				<p class="fragment">Completas</p>
+				<p class="fragment">Absolutas</p>
+				<p class="fragment">Relativas</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>URL - Ejemplos finales</h1>
+				<img style="height: 400px;" src="images/url-example-3.png" alt="">
+				<footer></footer>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="../../reveal/reveal.js"></script>
+	<script src="../../reveal/plugin/zoom/zoom.js"></script>
+	<script src="../../reveal/plugin/notes/notes.js"></script>
+	<script src="../../reveal/plugin/search/search.js"></script>
+	<script src="../../reveal/plugin/markdown/markdown.js"></script>
+	<script src="../../reveal/plugin/highlight/highlight.js"></script>
+	<script>
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+			width: 1920,
+			height: 1080,
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [
+				RevealZoom,
+				RevealNotes,
+				RevealSearch,
+				RevealMarkdown,
+				RevealHighlight,
+			],
+		});
+
+		Reveal.on("slidechanged", (event) => {
+			document.querySelector(
+				".paw-comision"
+			).innerHTML = document.querySelector(
+				".paw-tituloContenido"
+			).textContent;
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Arquitectura de las Aplicaciones</title>
+	<link rel="stylesheet" href="../../reveal/reset.css" />
+	<link rel="stylesheet" href="../../reveal/reveal.css" />
+	<link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
+	<link rel="stylesheet" href="../../style/paw.css" id="theme" />
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="../../reveal/plugin/highlight/monokai.css" id="highlight-theme" />
+</head>
+
+<body>
+	<!-- Encabezado de diaspos NO TOCAR -->
+	<header class="paw-encabezado">
+		<img src="../../images/logoPAW.svg" alt="" />
+		<h2 class="paw-asignatura">PAW</h2>
+		<h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+	</header>
+	<div class="reveal">
+		<div class="slides">
+			<!-- Diapositiva PRESENTACION NO TOCAR -->
+			<section class="paw-presentacion">
+				<div class="paw-logo">
+					<img src="../../images/logoPAW.svg" alt="" />
+				</div>
+				<div class="paw-asignatura">
+					<h1>PAW</h1>
+				</div>
+				<div class="paw-comision">
+					<h2>Lic. en Sistemas de Información</h2>
+				</div>
+				<div class="paw-autor">
+					<p class="paw-speaker">Speaker:</p>
+					<p class="paw-docente">Tomás DELVECHIO</p>
+					<address>
+						<a href="mailto:tdelvechio@unlu.edu.ar">tdelvechio@unlu.edu.ar</a>
+					</address>
+				</div>
+				<div class="paw-tituloContenido">
+					<!-- TITULO de las SLIDES -->
+					<h1>Arquitectura de <br> las Aplicaciones</h1>
+				</div>
+			</section>
+
+			<section data-auto-animate>
+				<h2>Índice</h2>
+				<ul>
+					<li>Desarrollo Monolítico</li>
+					<li>Arquitectura de 2 niveles</li>
+					<li>Layer vs Tier</li>
+					<li>Arquitectura de 3 niveles</li>
+					<li>Referencias</li>
+				</ul>
+			</section>
+
+			<section data-auto-animate>
+				<h2>Índice</h2>
+				<ul>
+					<li><strong>Desarrollo Monolítico</strong></li>
+					<li>Arquitectura de 2 niveles</li>
+					<li>Layer vs Tier</li>
+					<li>Arquitectura de 3 niveles</li>
+					<li>Referencias</li>
+				</ul>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Aplicaciones Monolíticas</h1>
+				<p>Software donde todos los niveles estan
+					acoplados y se instalan y ejecutan en
+					la misma plataforma</p>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Aplicaciones Monolíticas</h1>
+				<p>Acoplamiento ~ Falta de modularidad</p>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Aplicaciones Monolíticas</h1>
+				<p>Acoplamiento ~ Falta de modularidad</p>
+				<p>No se puede ejecutar porciones de la app en diferentes dispositivos</p>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Aplicaciones Monolíticas</h1>
+				<p>Ejemplos: App Desktop clásica</p>
+			</section>
+
+			<section>
+				<h2>Índice</h2>
+				<ul>
+					<li>Desarrollo Monolítico</li>
+					<li><strong>Arquitectura de 2 niveles</strong></li>
+					<li>Layer vs Tier</li>
+					<li>Arquitectura de 3 niveles</li>
+					<li>Referencias</li>
+				</ul>
+			</section>
+
+			<section data-auto-animate>
+				<h1>2 niveles - 2-tier</h1>
+				<p>Expansión de la web</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>2 niveles - 2-tier</h1>
+				<p>Expansión de la web</p>
+				<p>Aplicaciones transaccionales</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>2 niveles - 2-tier</h1>
+				<p>Expansión de la web</p>
+				<p>Aplicaciones transaccionales</p>
+				<p>Modelo Cliente / Servidor: Restricciones</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>2 niveles - 2-tier</h1>
+				<p>Aplicaciones transaccionales</p>
+				<p>Modelo Cliente / Servidor: Restricciones</p>
+				<p>No es posible apps monolíticas</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>2 niveles - 2-tier</h1>
+				<p>Modelo Cliente / Servidor: Restricciones</p>
+				<p>No es posible apps monolíticas</p>
+				<p>Separación de responsabilidades</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>2 niveles - 2-tier</h1>
+				<p>No es posible apps monolíticas</p>
+				<p>Separación de responsabilidades</p>
+				<p>Desacople de módulos</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>2 niveles - 2-tier</h1>
+				<p>Separación de responsabilidades</p>
+				<p>Desacople de módulos</p>
+				<p>Presentación o Render</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>2 niveles - 2-tier</h1>
+				<p>Desacople de módulos</p>
+				<p>Presentación o Render</p>
+				<p>Lógica de negocio</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>2 niveles - 2-tier</h1>
+				<p>Presentación o Render</p>
+				<p>Lógica de negocio</p>
+				<p>Acceso a capa de persistencia</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>2 niveles - 2-tier</h1>
+				<p>¿Comunicación entre ambos procesos?</p>
+				<footer></footer>
+			</section>
+
+			<section>
+				<h1>2 niveles - 2-tier</h1>
+				<p>¿Comunicación entre ambos procesos?</p>
+				<p>HTTP!!!</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>2 niveles - 2-tier</h1>
+				<p>Autores plantean un nivel cuando...</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>2 niveles - 2-tier</h1>
+				<p>Autores plantean un nivel cuando...</p>
+				<p>Se puede dibujar una linea conceptual que separe responsabilidades</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>2 niveles - 2-tier</h1>
+				<img src="images/2-tier-client-server.png" alt="">
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>2 niveles - 2-tier</h1>
+				<img src="images/2-tier-client-server.png" alt="">
+				<p>Ejemplos</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>2 niveles - 2-tier</h1>
+				<p>1 app C/S (2-tier) puede ejecutarse en un único dispositivo</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>2 niveles - 2-tier</h1>
+				<p>1 app C/S (2-tier) puede ejecutarse en un único dispositivo</p>
+				<p>1 app monolítica no puede ejecutarse en 2 o mas dispositivos</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h2>Índice</h2>
+				<ul>
+					<li>Desarrollo Monolítico</li>
+					<li>Arquitectura de 2 niveles</li>
+					<li><strong>Layer vs Tier</strong></li>
+					<li>Arquitectura de 3 niveles</li>
+					<li>Referencias</li>
+				</ul>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Layer vs Tier</h1>
+				<p>Tier = Nivel</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Layer vs Tier</h1>
+				<p>Tier = Nivel</p>
+				<p>Layer = Capa</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Layer vs Tier</h1>
+				<p>Tier = Nivel</p>
+				<p>Layer = Capa</p>
+				<p>¿Son lo mismo?</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Layer vs Tier</h1>
+				<p>Literatura los usa de forma intercambiable...</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Layer vs Tier</h1>
+				<p>Literatura los usa de forma intercambiable...</p>
+				<p>...a veces.</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Layer vs Tier</h1>
+				<p>¿Podemos dibujar la linea de división de dispositivo?</p>
+				<footer>[Fowler,2002]</footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Layer vs Tier</h1>
+				<p>Layer: Desacople en librerias internas (p.e. MVC)</p>
+				<p>Tier: Desacople en servicios diferentes (p.e. C/S)</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Layer vs Tier</h1>
+				<p>Se pueden usar como sinonimo</p>
+				<p>Si no hay posibilidad de ambigüedad</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h2>Índice</h2>
+				<ul>
+					<li>Desarrollo Monolítico</li>
+					<li>Arquitectura de 2 niveles</li>
+					<li>Layer vs Tier</li>
+					<li><strong>Arquitectura de 3 niveles</strong></li>
+					<li>Referencias</li>
+				</ul>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Arquitectura de 3 niveles</h1>
+				<p>3 componentes con capacidad de ejecutarse en diferentes dispositivos</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Arquitectura de 3 niveles</h1>
+				<img src="images/3-tier-example.png" alt="">
+				<footer><a
+						href="https://www.ibm.com/cloud/blog/four-architecture-choices-for-application-development">Four
+						Architecture Choices...</a> - IBM</footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Arquitectura de 3 niveles</h1>
+				<p>Tier 2 puede ser MVC por ejemplo</p>
+				<footer></footer>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Arquitectura de 3 niveles</h1>
+				<img src="images/tier-vs-layer.png" alt="">
+				<footer>[Erl,2013]</footer>
+			</section>
+
+			<section data-auto-animate>
+				<h2>Índice</h2>
+				<ul>
+					<li>Desarrollo Monolítico</li>
+					<li>Arquitectura de 2 niveles</li>
+					<li>Layer vs Tier</li>
+					<li>Arquitectura de 3 niveles</li>
+					<li><strong>Referencias</strong></li>
+				</ul>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Referencias</h1>
+				<ul>
+					<li>R. C. Martin, Clean architecture: a craftsman’s guide to software structure and design.
+						Prentice Hall, 2018.</li>
+					<li>T. Erl, R. Cope, and A. Naserpour, Cloud computing design patterns. Prentice Hall Press,
+						2015.</li>
+					<li>M. Fowler, Patterns of enterprise application architecture. Addison-Wesley Longman Publishing
+						Co., Inc., 2002.</li>
+				</ul>
+				<footer></footer>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="../../reveal/reveal.js"></script>
+	<script src="../../reveal/plugin/zoom/zoom.js"></script>
+	<script src="../../reveal/plugin/notes/notes.js"></script>
+	<script src="../../reveal/plugin/search/search.js"></script>
+	<script src="../../reveal/plugin/markdown/markdown.js"></script>
+	<script src="../../reveal/plugin/highlight/highlight.js"></script>
+	<script>
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+			width: 1920,
+			height: 1080,
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [
+				RevealZoom,
+				RevealNotes,
+				RevealSearch,
+				RevealMarkdown,
+				RevealHighlight,
+			],
+		});
+
+		Reveal.on("slidechanged", (event) => {
+			document.querySelector(
+				".paw-comision"
+			).innerHTML = document.querySelector(
+				".paw-tituloContenido"
+			).textContent;
+		});
+	</script>
+</body>
+
+</html>
