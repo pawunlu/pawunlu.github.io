@@ -19,3 +19,57 @@
 	right: 2rem;
 	height: 7rem;
 }
+
+.reveal #elementosHTML svg {
+	font: bold 18px sans-serif;
+	text-anchor: middle;
+	margin-left: 7rem;
+}
+.reveal #elementosHTML ellipse {
+	fill: var(--paw-verde-oscuro);
+	stroke: #000000;
+	stroke-width: 2px;
+	opacity: 0.67;
+}
+.reveal #elementosHTML text {
+	fill: #ffffff;
+	pointer-events: none;
+}
+.reveal #elementosHTML ellipse:hover {
+	stroke-width: 5px;
+}
+.reveal #elementosHTML ellipse:not(:hover) + foreignObject {
+	display: none;
+}
+.reveal #elementosHTML div {
+	font: 18px sans-serif;
+	width: 100%;
+}
+.reveal #elementosHTML h1 {
+	margin: 0 0 0.25em 0;
+	padding: 0;
+	font: 900 27px sans-serif;
+}
+.reveal #elementosHTML ul {
+	margin: 0;
+	padding: 0 0 0 1em;
+}
+.reveal #elementosHTML li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+}
+.reveal #elementosHTML li:not(:last-child):after {
+	content: ", ";
+}
+
+.reveal #elementosHTML code {
+	font: 1em monospace;
+	color: var(--paw-amarillo);
+}
+.reveal #elementosHTML p {
+	margin: 0.75em 0 0 0;
+	padding: 0 0 0 1em;
+	font: italic 18px sans-serif;
+}

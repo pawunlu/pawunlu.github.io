@@ -89,9 +89,8 @@
 						<li>Contenido Incrustado</li>
 					</ol>
 				</section>
-				<section>
+				<section id="indexHTML">
 					<h2 style="text-transform: lowercase">index<strong>.html</strong></h2>
-					<img src="" alt="" />
 					<p>
 						archivo de texto que cumpla <br />
 						con la sintaxis definida en <br />
@@ -102,7 +101,7 @@
 					<h2>Doctype</h2>
 					<p class="fragment">&lt;!DOCTYPE html&gt;</p>
 				</section>
-				<section>
+				<section id="namespace">
 					<p>
 						Todos los elementos definidos en la especificación<br />
 						están definidos en el <strong>HTML namespace</strong>
@@ -113,7 +112,7 @@
 						</a>
 					</footer>
 				</section>
-				<section>
+				<section id="significado">
 					<h2>html 5</h2>
 					<p>
 						Todos los <strong>elementos</strong>, <strong>atributos</strong> y
@@ -176,7 +175,7 @@
 							nombreTag&gt;
 						</p>
 						<p><br /></p>
-						<p>
+						<p class="fragment">
 							<span data-id="et1">&lt;article</span
 							><span data-id="et2"
 								>> Lorem ipsum dolor sit amet &lt;/article&gt;</span
@@ -246,7 +245,6 @@
 						<p class="inline-block highlight-current-green" data-id="np">
 							atributo
 						</p>
-
 						<p class="inline-block highlight-current-green" data-id="gt">
 							&gt;
 						</p>
@@ -295,7 +293,7 @@
 						>
 					</p>
 				</section>
-				<section>
+				<section id="estructuraBasica">
 					<pre><code class="language-html" data-line-numbers="1|2,9|3-5|6-8">&lt;!DOCTYPE html&gt;
 &lt;html lang="es"&gt;
 	&lt;head&gt;
@@ -307,7 +305,7 @@
 &lt;/html&gt;	
 					</code></pre>
 				</section>
-				<section>
+				<section id="lang">
 					<h2 class="paw-code">lang=" "</h2>
 					<h3>Impresindible por:</h3>
 					<ul>
@@ -317,7 +315,7 @@
 						<li>los sintetizadores de voz a pronunciar correctamente</li>
 					</ul>
 				</section>
-				<section>
+				<section id="tagHead">
 					<h2>HEAD</h2>
 					<p class="fragment">
 						Contiene información sobre el documento destinada a <br />
@@ -326,7 +324,7 @@
 					<p><br /></p>
 					<p class="fragment">El elemento HEAD no permite atributos</p>
 				</section>
-				<section>
+				<section id="metadata">
 					<h2>Metadata</h2>
 					<ul>
 						<li class="fragment">
@@ -338,10 +336,6 @@
 						</li>
 					</ul>
 				</section>
-				<section>
-					base, link, meta, title, <br />
-					style, noscript, script, template
-				</section>
 				<section id="tagTitle">
 					<h2>title</h2>
 					<p>&lt;title&gt;<em>Nombre del documento</em>&lt;/title&gt;</p>
@@ -352,7 +346,7 @@
 					<p>&lt;base target="_blank"&gt;</p>
 				</section>
 				<section id="tagMeta1">
-					<h2>Meta</h2>
+					<h2>Meta charset</h2>
 					<p>&lt;meta charset="utf-8"&gt;</p>
 				</section>
 				<section id="tagMeta2">
@@ -379,14 +373,14 @@
 					<p>Indicaciones equivalentes a las del encabezado HTTP</p>
 					<p><br /></p>
 					<p class="fragment fade-in-then-semi-out">
-						&lt;meta http-equiv="expires" content="0"/&gt;
+						&lt;meta http-equiv="expires" content="0"&gt;
 					</p>
 					<p class="fragment fade-in-then-semi-out">
-						&lt;meta http-equiv="expires" content="300000"/&gt;
+						&lt;meta http-equiv="expires" content="300000"&gt;
 					</p>
 					<p class="fragment fade-in-then-semi-out">
 						&lt;meta http-equiv="refresh" content="10;
-						url=http://sitioDestino/"/&gt;
+						url=http://sitioDestino/"&gt;
 					</p>
 				</section>
 				<section id="tagLink">
@@ -405,7 +399,7 @@
 						next, preload, prev, search
 					</p>
 				</section>
-				<section>
+				<section id="tagScript">
 					<h2>Script</h2>
 					<p class="fragment fade-in-then-semi-out">
 						&lt;script src="URL" type="formatoMIME"&gt;&lt;/script&gt;
