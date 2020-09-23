@@ -12,6 +12,10 @@
 .reveal pre {
 	width: 60%;
 	font-size: 0.7rem;
+	max-height: 15rem;
+}
+.reveal pre code {
+	max-height: 15rem;
 }
 
 .reveal #indice img {

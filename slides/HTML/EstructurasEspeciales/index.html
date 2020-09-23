@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>PAW | HTML 5 - Estructura del documento</title>
+		<title>PAW | HTML 5 - Estructuras Especiales</title>
 
 		<!-- Favicon-->
 		<link
@@ -74,7 +74,7 @@
 					</div>
 					<div class="paw-tituloContenido">
 						<h1>HTML</h1>
-						<h2>Estructura del Documento</h2>
+						<h2>Estructura Especiales</h2>
 					</div>
 				</section>
 				<!-- Indice -->
@@ -89,10 +89,157 @@
 						<li>Contenido Incrustado</li>
 					</ol>
 				</section>
-				<section>Listas: UL,OL, DL <br />Tablas</section>
+				<section id="listas">
+					<h2>Listas</h2>
+					<p>Ordenadas &rarr; ol</p>
+					<p>Sin ordenar &rarr; ul</p>
+					<p><br /></p>
+					<p>Items &rarr; li</p>
+				</section>
+				<section id="ejemploOrdenadas">
+					<h2>Enumeraciones</h2>
+					<pre style="display: inline-block; width: 50%; margin-left: 5rem">
+						<code data-line-numbers="1,12|5,9|"><ol type="1">
+	<li>item1</li>
+	<li>item2</li>
+	<li>item3
+		<ol type="a">
+			<li>subitem1</li>
+			<li>subitem2</li>
+			<li>subitem3</li>
+		</ol>
+	</li>
+	<li>item4</li>
+</ol></code></pre>
+					<div class="fragment inline-block" style="margin-left: 2rem">
+						<ol type="1">
+							<li>item1</li>
+							<li>item2</li>
+							<li>
+								item3
+								<ol type="a" style="list-style: lower-alpha">
+									<li>subitem1</li>
+									<li>subitem2</li>
+									<li>subitem3</li>
+								</ol>
+							</li>
+							<li>item4</li>
+						</ol>
+					</div>
+				</section>
+				<section id="ejemploSinOrdenar">
+					<h2>Viñetas</h2>
+					<pre style="display: inline-block; width: 50%; margin-left: 5rem">
+						<code data-line-numbers="1,12|5,9|"><ul type="disc">
+	<li>item1</li>
+	<li>item2</li>
+	<li>item3
+		<ul type="square">
+			<li>subitem1</li>
+			<li>subitem2</li>
+			<li>subitem3</li>
+		</ul>
+	</li>
+	<li>item4</li>
+</ul></code></pre>
+					<div class="fragment inline-block" style="margin-left: 2rem">
+						<ul type="circ">
+							<li>item1</li>
+							<li>item2</li>
+							<li>
+								item3
+								<ul type="square" style="list-style: square">
+									<li>subitem1</li>
+									<li>subitem2</li>
+									<li>subitem3</li>
+								</ul>
+							</li>
+							<li>item4</li>
+						</ul>
+					</div>
+				</section>
+				<section id="diccionario">
+					<h2>Listas</h2>
+					<p>Diccionarios &rarr; dl</p>
+					<p><br /></p>
+					<p>Términos &rarr; dt</p>
+					<p>Definición &rarr; dd</p>
+				</section>
+				<section id="ejemploDiccionario">
+					<h2>Diccionarios</h2>
+					<pre style="display: inline-block; width: 50%; margin-left: 5rem">
+						<code class="language-html" data-line-numbers="1,8|2-3|"><dl>
+	<dt>término1</dt>
+	<dd>definición1</dd>
+	<dt>término2</dt>
+	<dd>definición2</dd>
+	<dt>término3</dt>
+	<dd>definición3</dd>
+</dl>
+					</code></pre>
+					<div class="fragment inline-block" style="margin-left: 2rem">
+						<dl>
+							<dt>término1</dt>
+							<dd>definición1</dd>
+							<dt>término2</dt>
+							<dd>definición2</dd>
+							<dt>término3</dt>
+							<dd>definición3</dd>
+						</dl>
+					</div>
+				</section>
+				<section>
+					<h2>Tablas</h2>
+					<h4>table</h4>
+					<div class="fragment">
+						<p>caption</p>
+						<p>colgroup</p>
+						<p>thead</p>
+						<p>tfoot</p>
+						<p>tbody</p>
+					</div>
+				</section>
+				<section>
+					<pre>
+						<code data-line-numbers="1,13|5-9|10-12"><table>
+	<caption>
+		Fuente: Lorem ipsum dolor sit.
+	</caption>
+	<colgroup>
+		<col span="2" />
+		<col />
+		<col span="3" />
+	</colgroup>
+	<thead></thead>
+	<tfoot></tfoot>
+	<tbody></tbody>
+</table>
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h2>Celdas</h2>
+					<p>Filas &rarr; tr</p>
+					<p>Celdas &rarr; td</p>
+				</section>
+				<section>
+					<h2>Encabezados</h2>
+					<p>Celdas &rarr; th</p>
+					<p><br /></p>
+					<p class="fragment">&lt;th scope=" ">Contenido&lt;/th></p>
+					<p class="fragment">col | colgroup | row | rowgroup</p>
+				</section>
+				<section>
+					<h2>Combinacion de celdas</h2>
+					<p>rowspan="cantidadFilas"</p>
+					<p>colspan="cantidadColumnas"</p>
+					<p><br /></p>
+					<p class="fragment">
+						&lt;td colspan="2" rowspan="3">contenido&lt;/td>
+					</p>
+				</section>
 			</div>
 		</div>
-
 		<script src="../../reveal/reveal.js"></script>
 		<script src="../../reveal/plugin/zoom/zoom.js"></script>
 		<script src="../../reveal/plugin/notes/notes.js"></script>
