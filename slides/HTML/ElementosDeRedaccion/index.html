@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>PAW | HTML 5 - Estructura del documento</title>
+		<title>PAW | HTML 5 - Elementos de redacción</title>
 
 		<!-- Favicon-->
 		<link
@@ -74,7 +74,7 @@
 					</div>
 					<div class="paw-tituloContenido">
 						<h1>HTML</h1>
-						<h2>Estructura del Documento</h2>
+						<h2>Elementos de Redacción</h2>
 					</div>
 				</section>
 				<!-- Indice -->
@@ -89,13 +89,144 @@
 						<li>Contenido Incrustado</li>
 					</ol>
 				</section>
-				<section>
-					a<br />
-					h1-6, p, br, <br />
-					strong, em, i, b, u, sub, sup, del, mark, small, big, <br />
-					cite, q, abbr, dfn, ins, date, time, meter <br />
-					pre, code, kbd, var, samp <br />
-					span
+				<section id="hn">
+					<h2>Títulos y Subtítulos</h2>
+					<p>h1 - h2 - h3 - h4 - h5 - h6</p>
+					<p>&lt;h1>Título&lt;/h1></p>
+					<p><br /></p>
+					<p>describe brevemente el tema de la sección que presenta</p>
+				</section>
+				<section id="parrafos">
+					<h2>Parrafos</h2>
+					<p>&lt;p> Parrafo &lt;/p></p>
+					<h3>Salto de linea</h3>
+					<p class="fragment">
+						&lt;p> Linea1 del Parrafo &lt;br> linea 2 del parrafo &lt;/p>
+					</p>
+					<p><br /></p>
+					<p class="fragment">
+						Linea 1 del Parrafo <br />
+						linea 2 del mismo parrafo
+					</p>
+				</section>
+				<section id="posicion">
+					<h2>Marcas en el texto</h2>
+					<p>sub</p>
+					<p>sup</p>
+					<p><br /></p>
+					<p class="fragment">
+						log&lt;sub>2&lt;/sub>(8)=3 &nbsp;&nbsp;&nbsp; &amp;hArr;
+						&nbsp;&nbsp;&nbsp;2&lt;sup>3&lt;/sup> = 8
+					</p>
+					<p class="fragment">
+						log<sub>2</sub>(8)=3 &nbsp;&nbsp;&nbsp; &hArr;
+						&nbsp;&nbsp;&nbsp;2<sup>3</sup> = 8
+					</p>
+				</section>
+				<section id="enfasis">
+					<h2>Marcas de Enfasis</h2>
+					<p>em</p>
+					<p>strong</p>
+				</section>
+				<section id="marcas">
+					<h2>Anotaciones</h2>
+					<p>i</p>
+					<p>u</p>
+					<p>mark</p>
+				</section>
+				<section id="edicion">
+					<h2>Marcas de Edición</h2>
+					<p>del</p>
+					<p>ins</p>
+				</section>
+				<section id="abreviaturas">
+					<h2>Abreviaturas</h2>
+					<p>abbr</p>
+					<p><br /></p>
+					<p class="fragment">
+						&lt;abbr title="Hipertext Markup Language">HTML&lt;/abbr>
+					</p>
+					<p class="fragment">
+						<abbr title="Hipertext Markup Language">HTML</abbr>
+					</p>
+				</section>
+				<section id="citas">
+					<h2>Cita estricta</h2>
+					<p>blockquote</p>
+					<p><br /></p>
+					<p class="fragment">
+						&lt;blockquote cite="URL"> Texto citado &lt;/blockquote>
+					</p>
+				</section>
+				<section id="citas2">
+					<h2>Marcas de citas</h2>
+					<p>cite</p>
+					<p>q</p>
+					<p class="fragment">
+						&lt;cite>Tomás&gt;/cite> dijo: &lt;q>avancen con la práctica.&lt;/q>
+					</p>
+					<p class="fragment">
+						<cite>Tomás</cite> dijo: <q>avancen con la práctica.</q>
+					</p>
+				</section>
+				<section id="definiciones">
+					<h2>Definiciones</h2>
+					<p>dfn</p>
+				</section>
+				<section id="comentarios">
+					<h2>Comentarios adicionales</h2>
+					<p>small</p>
+				</section>
+				<section id="preformateado">
+					<h2>Preformateado</h2>
+					<p>pre</p>
+					<pre class="fragment">
+       Programación
+                 en
+                   ambiente
+                        web
+                                     Preformateada
+					</pre
+					>
+				</section>
+				<section id="codigo">
+					<h2>Código</h2>
+					<p>code</p>
+					<p>kbd</p>
+					<p>samp</p>
+					<p>var</p>
+				</section>
+				<section id="data">
+					<h2>Machine-readable</h2>
+					<p>time</p>
+					<p class="fragment">
+						&lt;time datetime="2005-10-05">5 de octubre&lt;/time>
+					</p>
+					<p><br /></p>
+					<p>meter</p>
+					<p class="fragment">
+						Calificación: &lt;meter min="1" max="5" value="3">3
+						puntos&lt;/meter>
+					</p>
+					<p class="fragment">
+						Calificación:
+						<meter min="1" max="5" value="3">3 puntos</meter>
+					</p>
+				</section>
+				<section id="generico">
+					<h2>¿Necesitas más?</h2>
+					<p>span</p>
+				</section>
+				<section id="anchors">
+					<h2 style="margin-top: 1rem; margin-bottom: 0">Hipertexto</h2>
+					<h3 style="margin-top: 0">Anchors</h3>
+					<p class="fragment">&lt;a href="URL"> texto &lt;/a></p>
+					<h3 style="margin-top: 0">Atributos</h3>
+					<p class="fragment">href="URL"</p>
+					<p class="fragment">target="_blank"</p>
+					<p class="fragment">rel="LINKtype"</p>
+					<p class="fragment">type="MIMEtype"</p>
+					<p class="fragment">download="nombreDelArchivoDestino"</p>
 				</section>
 			</div>
 		</div>
