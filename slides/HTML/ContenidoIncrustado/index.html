@@ -3,32 +3,14 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>PAW | HTML 5 - Estructura del documento</title>
+		<title>PAW | HTML 5 - Contenido incrustado</title>
 
 		<!-- Favicon-->
-		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="../../images/apple-touch-icon.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="../../images/favicon-32x32.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="../../images/favicon-16x16.png"
-		/>
+		<link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png" />
 		<link rel="manifest" href="../../images/site.webmanifest" />
-		<link
-			rel="mask-icon"
-			href="../../images/safari-pinned-tab.svg"
-			color="#5bbad5"
-		/>
+		<link rel="mask-icon" href="../../images/safari-pinned-tab.svg" color="#5bbad5" />
 		<meta name="msapplication-TileColor" content="#00a300" />
 		<meta name="theme-color" content="#ffffff" />
 
@@ -38,11 +20,7 @@
 		<link rel="stylesheet" href="../../style/paw.css" id="theme" />
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link
-			rel="stylesheet"
-			href="../../reveal/plugin/highlight/monokai.css"
-			id="highlight-theme"
-		/>
+		<link rel="stylesheet" href="../../reveal/plugin/highlight/monokai.css" id="highlight-theme" />
 
 		<link rel="stylesheet" href="../style/html.css" id="slideStyle" />
 	</head>
@@ -74,7 +52,7 @@
 					</div>
 					<div class="paw-tituloContenido">
 						<h1>HTML</h1>
-						<h2>Estructura del Documento</h2>
+						<h2>Contenido incrustado</h2>
 					</div>
 				</section>
 				<!-- Indice -->
@@ -88,6 +66,30 @@
 						<li>Estructuras Especiales</li>
 						<li><strong>Contenido Incrustado</strong></li>
 					</ol>
+				</section>
+				<section>
+					<h2>Imágenes</h2>
+				</section>
+				<section>
+					<h2>IMG</h2>
+					<h3>Atributos</h3>
+					<p>src="URL"</p>
+					<p>alt="Texto Alternativo"</p>
+					<p>longDesc="URL a Descripción detallada"</p>
+					<p>width="ancho"</p>
+					<p>height="alto"</p>
+				</section>
+				<section>
+					<h2>IMG</h2>
+					<pre>
+						<code class="language-html" data-line-numbers="1|2|3|5-6">
+							&lt;img
+							src="../images/HTML5.png"
+							alt="Logo escudo HTML5"
+							longdesc="https://www.w3.org/html/logo/"
+							width="300"
+							height="300"
+							/></code></pre>
 				</section>
 				<section>
 					img, picture, figure, <br />
@@ -129,19 +131,19 @@
 					// pregunto si la presentacion tiene subtitulo
 					document.querySelector(".paw-presentacion .paw-tituloContenido h2")
 						? //Si tiene lo incorporo a la cabecera de la slide
-						  [
-								document.querySelector(
-									".paw-presentacion .paw-tituloContenido h1"
-								).textContent,
-								" | ",
-								document.querySelector(
-									".paw-presentacion .paw-tituloContenido h2"
-								).textContent,
-						  ].join(" ")
-						: //Sino solo uso el titulo
-						  document.querySelector(
+						[
+							document.querySelector(
 								".paw-presentacion .paw-tituloContenido h1"
-						  ).textContent;
+							).textContent,
+							" | ",
+							document.querySelector(
+								".paw-presentacion .paw-tituloContenido h2"
+							).textContent,
+						].join(" ")
+						: //Sino solo uso el titulo
+						document.querySelector(
+							".paw-presentacion .paw-tituloContenido h1"
+						).textContent;
 			});
 		</script>
 	</body>
