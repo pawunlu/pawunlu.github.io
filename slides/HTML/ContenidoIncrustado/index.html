@@ -110,50 +110,47 @@
 				<section>
 					<h2>IMG</h2>
 					<pre>
-						<code class="language-html" data-line-numbers="1|2|3|5-6">
-							&lt;img
-							src="../images/HTML5.png"
-							alt="Logo escudo HTML5"
-							longdesc="https://www.w3.org/html/logo/"
-							width="300"
-							height="300"
-							/></code></pre>
+						<code class="language-html" data-line-numbers="1|2|3|5-6">&lt;img
+src="../images/HTML5.png"
+alt="Logo escudo HTML5"
+longdesc="https://www.w3.org/html/logo/"
+width="300"
+height="300"
+/></code></pre>
 				</section>
 				<section>
-					<h2>Elemento Picture</h2>
-					<pre><code data-line-numbers="1,4|2|3">
-							&lt;picture>
-								&lt;source srcset="imagen-wide.png" media="(min-width: 600px)">
-								&lt;img src="imagen-narrow.png" alt="MDN">
-							&lt;/picture>
+					<h2>Picture</h2>
+					<pre><code data-line-numbers="1,4|2|3">&lt;picture>
+	&lt;source srcset="imagen-wide.png" media="(min-width: 600px)">
+	&lt;img src="imagen-narrow.png" alt="MDN">
+&lt;/picture>
 						</code></pre>
 				</section>
 				<section>
-					<h2>Elemento Figure</h2>
-					<pre><code data-line-numbers="1,4|2|3">
-							<figure>
-								<!-- Contenido a mostrar
-									Por ejemlo una imagen o un video 
-									o codigo de ejemplo -->
-								<figcaption>Descripcion del contenido</figcaption>
-							</figure>
+					<h2>Figure</h2>
+					<pre><code data-line-numbers="1,4|2|3">&lt;figure>
+	&lt;!-- Contenido a mostrar
+		Por ejemlo una imagen o un video 
+		o codigo de ejemplo -->
+	&lt;figcaption>Descripcion del contenido&lt;/figcaption>
+&lt;/figure>
 						</code></pre>
 				</section>
+				<section><h2>Multimedia</h2></section>
 				<section>
-					<h2>Elemento Audio</h2>
+					<h2>Audio</h2>
 					<pre>
-						<code data-line-numbers="1,3|4,9|5-6|7">
-							&lt;audio src="URL" controls>
-								&lt;p>Tu navegador no soporta la reproducción nativa de audio. &lt;/p>
-							&lt;/audio>
+						<code data-line-numbers="1,3|5,11|6-7|8">&lt;audio src="URL" controls>
+	&lt;p>Tu navegador no soporta la reproducción nativa de audio. &lt;/p>
+&lt;/audio>
 
-							&lt;audio controls>
-								&lt;source src="URL.ogg" type="audio/ogg">
-								&lt;source src="URL.mp3" type="audio/mpeg">
-								&lt;track kind="captions" label="Captions" src="URL.vtt" srclang="en">
-								&lt;/track>
-								&lt;p>Tu navegador no soporta la reproducción nativa de audio. &lt;/p>
-							&lt;/audio>
+&lt;audio controls>
+	&lt;source src="URL.ogg" type="audio/ogg">
+	&lt;source src="URL.mp3" type="audio/mpeg">
+	&lt;track kind="captions" label="Captions" src="URL.vtt" srclang="en">
+	&lt;/track>
+	&lt;p>Tu navegador no soporta la reproducción nativa de audio. &lt;/p>
+&lt;/audio>
 						</code>
 					</pre>
 					<footer>
@@ -187,8 +184,7 @@
 					</p>
 				</section>
 				<section>
-					<pre><code data-line-numbers="">
-&lt;video controls width="250">
+					<pre><code data-line-numbers="">&lt;video controls width="250">
     &lt;source src="URL.webm" type="video/webm">
     &lt;source src="UEL.mp4" type="video/mp4">
 	&lt;track kind="captions" label="Captions" src="URL.vtt" srclang="en">
@@ -200,7 +196,44 @@
 					</code></pre>
 				</section>
 				<section>
-					<h2>Elemento IFRAME</h2>
+					<h2>IFRAME</h2>
+					<h3>Atributos Obligatorios</h3>
+					<p>name="nombre"</p>
+					<p>src="URL"</p>
+					<h3>Atributos de Integración</h3>
+					<p>seamless</p>
+				</section>
+
+				<section>
+					<h2>IFRAME</h2>
+					<h3>Atributos de seguridad</h3>
+					<p>allow</p>
+					<p>allowfullscreen</p>
+					<p>allowpaymentrequest</p>
+					<p>referrerpolicy</p>
+					<p>sandbox</p>
+				</section>
+				<section>
+					<h2>Object</h2>
+					data="URL" name="nombre" type="MIMEType" typemustmatch
+				</section>
+				<section>
+					<h2>Object</h2>
+					<pre><code data-line-numbers="1,4|">&lt;object type="application/pdf"
+  data="ejemplo.pdf"
+  width="250"
+  height="200">
+&lt;/object>
+
+&lt;object 
+  data="../../../flash/light-bulb.swf" 
+  type="application/x-shockwave-flash" 
+  width="180" height="350">
+	&lt;param name="movie" value="flash.swf" />
+	&lt;param name="quality" value="high"/>
+	&lt;param name="wmode" value="transparent"/>
+&lt;/object>
+					</code></pre>
 				</section>
 			</div>
 		</div>
