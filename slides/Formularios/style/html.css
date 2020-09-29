@@ -83,9 +83,11 @@
 }
 
 .reveal .paw-etapas pre,
-.reveal .paw-etapas figure {
+.reveal .paw-etapas figure,
+.reveal .paw-etapas form {
 	display: inline-block;
 	width: 80vw;
+	vertical-align: top;
 }
 .reveal .paw-ancho {
 	width: 80vw;
@@ -94,10 +96,32 @@
 	width: 20vw;
 }
 
+.reveal .paw-etapas input {
+	width: 50%;
+	vertical-align: middle;
+}
+
+.reveal .paw-etapas form {
+	margin-top: 1rem;
+	width: 30vw;
+	margin-right: -10vw;
+}
+
 .reveal fieldset {
 	border: 3px solid;
 }
 
 .reveal fieldset legend {
 	font-size: 0.7em;
+}
+
+.reveal fieldset label {
+	font-size: 0.6em;
+	display: block;
+	text-align: right;
+	padding: 0.15rem;
+}
+
+.reveal fieldset input {
+	font-size: 0.7rem;
 }
