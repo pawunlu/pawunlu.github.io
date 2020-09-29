@@ -93,3 +93,11 @@
 .reveal .paw-etapas figure {
 	width: 20vw;
 }
+
+.reveal fieldset {
+	border: 3px solid;
+}
+
+.reveal fieldset legend {
+	font-size: 0.7em;
+}

@@ -34,11 +34,7 @@
 
 		<link rel="stylesheet" href="../../reveal/reset.css" />
 		<link rel="stylesheet" href="../../reveal/reveal.css" />
-		<link
-			rel="stylesheet"
-			href="../../reveal/theme/pawTheme.css"
-			id="theme"
-		/>
+		<link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
 		<link rel="stylesheet" href="../../style/paw.css" id="theme" />
 
 		<!-- Theme used for syntax highlighting of code -->
@@ -73,9 +69,7 @@
 						<p class="paw-speaker">Speaker:</p>
 						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
 						<address>
-							<a href="mailto:pcchale@gmail.com"
-								>pcchale@gmail.com</a
-							>
+							<a href="mailto:pcchale@gmail.com">pcchale@gmail.com</a>
 						</address>
 					</div>
 					<div class="paw-tituloContenido">
@@ -110,46 +104,63 @@
 				<section>
 					<h2>IMG</h2>
 					<pre>
-						<code class="language-html" data-line-numbers="1|2|3|5-6">&lt;img
-src="../images/HTML5.png"
-alt="Logo escudo HTML5"
-longdesc="https://www.w3.org/html/logo/"
-width="300"
-height="300"
+						<code class="language-html" data-line-numbers="1|2|3|4|5-6">&lt;img
+	src="../images/HTML5.png"
+	alt="Logo escudo HTML5"
+	longdesc="https://www.w3.org/html/logo/"
+	width="300"
+	height="300"
 /></code></pre>
 				</section>
 				<section>
 					<h2>Picture</h2>
-					<pre><code data-line-numbers="1,4|2|3">&lt;picture>
-	&lt;source srcset="imagen-wide.png" media="(min-width: 600px)">
-	&lt;img src="imagen-narrow.png" alt="MDN">
+					<pre><code data-line-numbers="1,8|2-4|5-7">&lt;picture>
+	&lt;source 
+		srcset="imagen-grande.png" 
+		media="(min-width: 600px)">
+	&lt;img 
+		src="imagen-chica.png" 
+		alt="Imagen de Ejemplo">
 &lt;/picture>
 						</code></pre>
 				</section>
 				<section>
 					<h2>Figure</h2>
-					<pre><code data-line-numbers="1,4|2|3">&lt;figure>
+					<div class="paw-etapas">
+						<pre><code class="paw-ancho language-html" data-line-numbers="1,6|2-4|5">&lt;figure>
 	&lt;!-- Contenido a mostrar
 		Por ejemlo una imagen o un video 
 		o codigo de ejemplo -->
 	&lt;figcaption>Descripcion del contenido&lt;/figcaption>
 &lt;/figure>
 						</code></pre>
+
+						<figure>
+							<picture><img src="../images/HTML5.png" alt="HTML5" /></picture>
+							<figcaption>Estandar HTML 5</figcaption>
+						</figure>
+					</div>
 				</section>
 				<section><h2>Multimedia</h2></section>
 				<section>
 					<h2>Audio</h2>
 					<pre>
-						<code data-line-numbers="1,3|5,11|6-7|8">&lt;audio src="URL" controls>
-	&lt;p>Tu navegador no soporta la reproducción nativa de audio. &lt;/p>
+						<code class="language-html" data-line-numbers="1,4|2-3|6,17|7-8|9-14|15-16">&lt;audio src="URL" controls>
+	&lt;p>Tu navegador no soporta 
+	la reproducción nativa de audio. &lt;/p>
 &lt;/audio>
 
 &lt;audio controls>
 	&lt;source src="URL.ogg" type="audio/ogg">
 	&lt;source src="URL.mp3" type="audio/mpeg">
-	&lt;track kind="captions" label="Captions" src="URL.vtt" srclang="en">
+	&lt;track 
+		kind="captions" 
+		label="Captions" 
+		src="URL.vtt" 
+		srclang="en">
 	&lt;/track>
-	&lt;p>Tu navegador no soporta la reproducción nativa de audio. &lt;/p>
+	&lt;p>Tu navegador no soporta 
+	la reproducción nativa de audio. &lt;/p>
 &lt;/audio>
 						</code>
 					</pre>
@@ -162,34 +173,37 @@ height="300"
 				</section>
 				<section>
 					<h2>Elemento Audio</h2>
-					<h3>Atributos</h3>
-					<p>controls</p>
-					<p>autoplay</p>
-					<p>loop</p>
-					<p>muted</p>
-					<p>currentTime</p>
-					<p>preload="idMetadata"</p>
+					<div class="fragment">
+						<h3>Atributos</h3>
+						<p>controls</p>
+						<p>autoplay</p>
+						<p>loop</p>
+						<p>muted</p>
+						<p>currentTime</p>
+						<p>preload="idMetadata"</p>
+					</div>
 				</section>
 				<section>
 					<h2>Elemento Video</h2>
 					<p>Misma idea que el &lt;audio></p>
-					<h3>Atributos propios</h3>
-					<p>poster="URL"</p>
-					<p>buffered=""</p>
-					<p>autoPictureInPicture</p>
-					<p>disablePictureInPicture</p>
-					<p>
-						controlslist="nodownload | nofullscreen |
-						noremoteplayback"
-					</p>
+					<div class="fragment">
+						<h3>Atributos propios</h3>
+						<p>poster="URL"</p>
+						<p>buffered=""</p>
+						<p>autoPictureInPicture</p>
+						<p>disablePictureInPicture</p>
+						<p>controlslist="nodownload | nofullscreen | noremoteplayback"</p>
+					</div>
 				</section>
 				<section>
-					<pre><code data-line-numbers="">&lt;video controls width="250">
+					<pre><code class="language-html" data-line-numbers="1,11|2-3|4-9|10">&lt;video controls width="250">
     &lt;source src="URL.webm" type="video/webm">
     &lt;source src="UEL.mp4" type="video/mp4">
-	&lt;track kind="captions" label="Captions" src="URL.vtt" srclang="en">
+	&lt;track kind="captions" label="Captions" 
+		src="URL.vtt" srclang="en">
 	&lt;/track>
-	&lt;track kind="captions" label="Captions" src="URL2.vtt" srclang="es">
+	&lt;track kind="captions" label="Captions" 
+		src="URL2.vtt" srclang="es">
 	&lt;/track>
 	&lt;p>Tu navegador no soporta la reproducción nativa de video. &lt;/p>
 &lt;/video>
@@ -197,29 +211,37 @@ height="300"
 				</section>
 				<section>
 					<h2>IFRAME</h2>
-					<h3>Atributos Obligatorios</h3>
-					<p>name="nombre"</p>
-					<p>src="URL"</p>
-					<h3>Atributos de Integración</h3>
-					<p>seamless</p>
+					<div class="fragment">
+						<h3>Atributos Obligatorios</h3>
+						<p>name="nombre"</p>
+						<p>src="URL"</p>
+					</div>
+					<div class="fragment">
+						<h3>Atributos de Integración</h3>
+						<p>seamless</p>
+					</div>
 				</section>
-
 				<section>
 					<h2>IFRAME</h2>
-					<h3>Atributos de seguridad</h3>
-					<p>allow</p>
-					<p>allowfullscreen</p>
-					<p>allowpaymentrequest</p>
-					<p>referrerpolicy</p>
-					<p>sandbox</p>
+					<div class="fragement">
+						<h3>Atributos de seguridad</h3>
+						<p>allow</p>
+						<p>allowfullscreen</p>
+						<p>allowpaymentrequest</p>
+						<p>referrerpolicy</p>
+						<p>sandbox</p>
+					</div>
 				</section>
 				<section>
 					<h2>Object</h2>
-					data="URL" name="nombre" type="MIMEType" typemustmatch
+					<p>data="URL"</p>
+					<p>name="nombre"</p>
+					<p>type="MIMEType"</p>
+					<p>typemustmatch</p>
 				</section>
 				<section>
 					<h2>Object</h2>
-					<pre><code data-line-numbers="1,4|">&lt;object type="application/pdf"
+					<pre><code data-line-numbers="1-5|7,8,9,10,14|11-13">&lt;object type="application/pdf"
   data="ejemplo.pdf"
   width="250"
   height="200">
@@ -234,6 +256,10 @@ height="300"
 	&lt;param name="wmode" value="transparent"/>
 &lt;/object>
 					</code></pre>
+				</section>
+				<section>
+					<h2>Canvas / SVG</h2>
+					<h2>MathML</h2>
 				</section>
 			</div>
 		</div>
@@ -269,9 +295,7 @@ height="300"
 			Reveal.on("slidechanged", (event) => {
 				document.querySelector(".paw-comision").innerHTML =
 					// pregunto si la presentacion tiene subtitulo
-					document.querySelector(
-						".paw-presentacion .paw-tituloContenido h2"
-					)
+					document.querySelector(".paw-presentacion .paw-tituloContenido h2")
 						? //Si tiene lo incorporo a la cabecera de la slide
 						  [
 								document.querySelector(
