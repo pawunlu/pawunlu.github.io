@@ -80,6 +80,7 @@
 
 .reveal .paw-etapas {
 	width: 100%;
+	margin-left: 3rem;
 }
 
 .reveal .paw-etapas pre,
@@ -102,9 +103,8 @@
 }
 
 .reveal .paw-etapas form {
-	margin-top: 1rem;
+	margin: 1rem;
 	width: 30vw;
-	margin-right: -10vw;
 }
 
 .reveal fieldset {
@@ -113,6 +113,8 @@
 
 .reveal fieldset legend {
 	font-size: 0.7em;
+	margin: 0 0.5rem;
+	padding: 0.2rem;
 }
 
 .reveal fieldset label {
@@ -120,8 +122,29 @@
 	display: block;
 	text-align: right;
 	padding: 0.15rem;
+	margin: 0 0.3rem;
 }
 
 .reveal fieldset input {
 	font-size: 0.7rem;
+}
+
+.reveal input[type="submit"] {
+	font-size: 0.7rem;
+}
+
+.reveal input[type="checkbox"],
+.reveal input[type="radio"] {
+	width: 0.6rem;
+	height: 0.6rem;
+	margin: 0 0.5rem;
+}
+
+.reveal label[for="inputCheckbox"],
+.reveal label[for="inputRadio"] {
+	text-align: center;
+}
+
+.reveal output {
+	display: block;
 }

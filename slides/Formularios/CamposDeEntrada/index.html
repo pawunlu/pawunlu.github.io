@@ -34,11 +34,7 @@
 
 		<link rel="stylesheet" href="../../reveal/reset.css" />
 		<link rel="stylesheet" href="../../reveal/reveal.css" />
-		<link
-			rel="stylesheet"
-			href="../../reveal/theme/pawTheme.css"
-			id="theme"
-		/>
+		<link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
 		<link rel="stylesheet" href="../../style/paw.css" id="theme" />
 
 		<!-- Theme used for syntax highlighting of code -->
@@ -73,9 +69,7 @@
 						<p class="paw-speaker">Speaker:</p>
 						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
 						<address>
-							<a href="mailto:pcchale@gmail.com"
-								>pcchale@gmail.com</a
-							>
+							<a href="mailto:pcchale@gmail.com">pcchale@gmail.com</a>
 						</address>
 					</div>
 					<div class="paw-tituloContenido">
@@ -103,19 +97,21 @@
 &lt;/label>
 						</code>
 						</pre>
-						<fieldset>
-							<label for="inputTexto">
-								Texto:
-								<input type="text" name="inputTexto" />
-							</label>
-						</fieldset>
+						<form action="">
+							<fieldset>
+								<label for="inputTexto">
+									Texto:
+									<input type="text" name="inputTexto" />
+								</label>
+							</fieldset>
+						</form>
 					</div>
 				</section>
 				<section id="inputNumber">
 					<h2>input</h2>
 					<h3>Numeros</h3>
 					<div class="paw-etapas">
-						<pre><code>&lt;label for="inputNumber">
+						<pre><code data-line-numbers="1-5|7-11">&lt;label for="inputNumber">
 	Número:
 	&lt;input type="number" name="inputNumber"
 		value="0" min="0" max="2" step="0.1" />
@@ -124,8 +120,7 @@
 &lt;label for="inputRange">
 	Número:
 	&lt;input type="range" name="inputRange"
-		step="10" min="0" max="100"
-	/>
+		step="10" min="0" max="100"	/>
 &lt;/label></code></pre>
 						<form action="">
 							<fieldset>
@@ -158,7 +153,7 @@
 					<h2>Input</h2>
 					<h3>Datos de contacto</h3>
 					<div class="paw-etapas">
-						<pre><code>&lt;label for="inputTel">
+						<pre><code data-line-numbers="1-5|7-10|12-15">&lt;label for="inputTel">
 	Teléfono:
 	&lt;input type="tel" name="inputTel"
 	pattern="/^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/" />
@@ -191,8 +186,8 @@
 									URL:
 									<input type="url" name="inputURL" />
 								</label>
-								<input type="submit" value="Enviar" />
 							</fieldset>
+							<input type="submit" value="Enviar" />
 						</form>
 					</div>
 				</section>
@@ -200,7 +195,7 @@
 					<h2>Input</h2>
 					<h3>Fecha y Hora</h3>
 					<div class="paw-etapas">
-						<pre><code>&lt;label for="inputTime">
+						<pre><code data-line-numbers="1-4|6-9|11-14|16-19|21-24">&lt;label for="inputTime">
 	Horas y Min:
 	&lt;input type="time" />
 &lt;/label>
@@ -236,21 +231,17 @@
 									<input type="date" name="inputDate" />
 								</label>
 								<label for="inputDatetime">
-									Fechas:
-									<input
-										type="datetime"
-										name="inputDatetime"
-									/>
+									Fecha y Hora:
+									<input type="datetime" name="inputDatetime" />
 								</label>
 								<label for="inputWeek">
-									Fechas:
+									Semana:
 									<input type="week" name="inputWeek" />
 								</label>
 								<label for="inputMonth">
-									Fechas:
+									Mes:
 									<input type="month" name="inputMonth" />
 								</label>
-								<input type="submit" value="Enviar" />
 							</fieldset>
 							<input type="submit" value="Enviar" />
 						</form>
@@ -260,20 +251,20 @@
 					<h2>Input</h2>
 					<h3>Un poco más</h3>
 					<div class="paw-etapas">
-						<pre><code>&lt;label for="inputSearch">
-								Busquedas:
-								&lt;input type="search" name="inputSearch" />
-							&lt;/label>
+						<pre><code data-line-numbers="1-4|6-9|11-14">&lt;label for="inputSearch">
+	Busquedas:
+	&lt;input type="search" name="inputSearch" />
+&lt;/label>
 
-							&lt;label for="inputPassword">
-								Password:
-								&lt;input type="password" name="inputPassword" />
-							&lt;/label>
+&lt;label for="inputPassword">
+	Password:
+	&lt;input type="password" name="inputPassword" />
+&lt;/label>
 
-							&lt;label for="inputColor">
-								Color:
-								&lt;input type="color" name="inputColor" />
-							&lt;/label>
+&lt;label for="inputColor">
+	Color:
+	&lt;input type="color" name="inputColor" />
+&lt;/label>
 						</code></pre>
 						<form action="">
 							<fieldset>
@@ -283,10 +274,7 @@
 								</label>
 								<label for="inputPassword">
 									Password:
-									<input
-										type="password"
-										name="inputPassword"
-									/>
+									<input type="password" name="inputPassword" />
 								</label>
 								<label for="inputColor">
 									Color:
@@ -301,157 +289,109 @@
 					<h2>Input</h2>
 					<h3>Opciones</h3>
 					<div class="paw-etapas">
-						<pre><code>&lt;fieldset>
+						<pre><code data-line-numbers="3-15|20-31">&lt;fieldset>
 	&lt;legend>Checkbox: &lt;/legend>
 	&lt;label for="inputCheckbox">
-		&lt;input
-		type="checkbox"
-		name="inputCheckbox"
-		value="opcion1"
-		/> Opción 1
+		&lt;input type="checkbox" name="inputCheckbox" value="opcion1" /> 
+		Opción 1
 	&lt;/label>
-
 	&lt;label for="inputCheckbox">
-		&lt;input
-		checked="checked"
-		type="checkbox"
-		name="inputCheckbox"
-		value="opcion2"
-		/> Opción 2
+		&lt;input type="checkbox" name="inputCheckbox" value="opcion2"
+	           checked="checked" /> 
+		Opción 2
 	&lt;/label>
-
 	&lt;label for="inputCheckbox">
-		&lt;input
-		type="checkbox"
-		name="inputCheckbox"
-		value="opcion3"
-		/> Opción 3
+		&lt;input type="checkbox" name="inputCheckbox"	value="opcion3" /> 
+		Opción 3
 	&lt;/label>
 &lt;/fieldset>
 
 &lt;fieldset>
 	&lt;legend>Radio: &lt;/legend>
 	&lt;label for="inputRadio">
-		&lt;input
-		type="radio"
-		name="inputRadio"
-		value="opcion1"
-		/> Opción 1
+		&lt;input type="radio" name="inputRadio" value="opcion1"/> 
+		Opción 1
 	&lt;/label>
-
 	&lt;label for="inputRadio">
-		&lt;input
-		checked="checked"
-		type="radio"
-		name="inputRadio"
-		value="opcion2"
-		/> Opción 2
+		&lt;input type="radio" name="inputRadio"	value="opcion2"
+			  checked="checked" /> Opción 2
 	&lt;/label>
-
 	&lt;label for="inputRadio">
-		&lt;input
-		type="radio"
-		name="inputRadio"
-		value="opcion3"
-	/> Opción 3
+		&lt;input type="radio"	name="inputRadio" value="opcion3" /> 
+		Opción 3
 	&lt;/label>
-&lt;/fieldset>	
-							</code></pre>
-						<div>
-							<form action="">
-								<fieldset>
-									<legend>Chaeckbox:</legend>
-									<label for="inputCheckbox">
-										<input
-											type="checkbox"
-											name="inputCheckbox"
-											value="opcion1"
-										/>
-										Opción 1
-									</label>
-
-									<label for="inputCheckbox">
-										<input
-											checked="checked"
-											type="checkbox"
-											name="inputCheckbox"
-											value="opcion2"
-										/>
-										Opción 2
-									</label>
-									<label for="inputCheckbox">
-										<input
-											type="checkbox"
-											name="inputCheckbox"
-											value="opcion3"
-										/>
-										Opción 3
-									</label>
-								</fieldset>
-								<fieldset>
-									<legend>Radio</legend>
-									<label for="inputRadio">
-										<input
-											type="radio"
-											name="inputRadio"
-											value="opcion1"
-										/>
-										Opción 1
-									</label>
-									<label for="inputRadio">
-										<input
-											checked="checked"
-											type="radio"
-											name="inputRadio"
-											value="opcion2"
-										/>
-										Opción 2
-									</label>
-									<label for="inputRadio">
-										<input
-											type="radio"
-											name="inputRadio"
-											value="opcion3"
-										/>
-										Opción 3
-									</label>
-								</fieldset>
-								<input type="submit" value="Enviar" />
-							</form>
-						</div>
+&lt;/fieldset></code></pre>
+						<form action="">
+							<fieldset>
+								<legend>Checkbox:</legend>
+								<label for="inputCheckbox">
+									<input type="checkbox" name="inputCheckbox" value="opcion1" />
+									Opción 1
+								</label>
+								<label for="inputCheckbox">
+									<input
+										checked="checked"
+										type="checkbox"
+										name="inputCheckbox"
+										value="opcion2"
+									/>
+									Opción 2
+								</label>
+								<label for="inputCheckbox">
+									<input type="checkbox" name="inputCheckbox" value="opcion3" />
+									Opción 3
+								</label>
+							</fieldset>
+							<fieldset>
+								<legend>Radio</legend>
+								<label for="inputRadio">
+									<input type="radio" name="inputRadio" value="opcion1" />
+									Opción 1
+								</label>
+								<label for="inputRadio">
+									<input
+										checked="checked"
+										type="radio"
+										name="inputRadio"
+										value="opcion2"
+									/>
+									Opción 2
+								</label>
+								<label for="inputRadio">
+									<input type="radio" name="inputRadio" value="opcion3" />
+									Opción 3
+								</label>
+							</fieldset>
+							<input type="submit" value="Enviar" />
+						</form>
 					</div>
 				</section>
 				<section>
 					<h2>Input</h2>
 					<h3>oculto</h3>
 					<div class="paw-etapas">
-						<pre><code>&lt;label for="inputHidden">
-								Hidden:
-								&lt;input type="hidden" name="inputHidden" />
-							&lt;/label>
+						<pre><code data-line-numbers="1-4">&lt;label for="inputHidden">
+	Hidden:
+	&lt;input type="hidden" name="inputHidden" />
+&lt;/label>
 						</code></pre>
-						<div>
-							<form action="">
-								<fieldset>
-									<label for="inputHidden">
-										Hidden:
-										<input
-											type="hidden"
-											name="inputHidden"
-										/>
-									</label>
-								</fieldset>
-								<input type="submit" value="Enviar" />
-							</form>
-						</div>
+						<form action="">
+							<fieldset>
+								<label for="inputHidden">
+									Hidden:
+									<input type="hidden" name="inputHidden" />
+								</label>
+							</fieldset>
+							<input type="submit" value="Enviar" />
+						</form>
 					</div>
 				</section>
 				<section>
 					<h2>Input</h2>
 					<h3>Botones</h3>
 					<div class="paw-etapas">
-						<pre><code>&lt;label for="inputSubmit">
-	&lt;input type="submit" name="inputSubmit" />
+						<pre><code data-line-numbers="1-3|5-7|9-11|13-15|17-21">&lt;label for="inputSubmit">
+	&lt;input type="submit" name="inputSubmit" value="Enviar" />
 &lt;/label>
 
 &lt;label for="inputReset">
@@ -463,39 +403,36 @@
 &lt;/label>
 
 &lt;label for="inputImage">
-	Imagen:
-	&lt;input type="image" name="inputImage" src="images/ok.png" />
+	&lt;input type="image" name="inputImage" src="URL" />
 &lt;/label>
+
 &lt;label for="inputFile">
-	Imagen:
+	Archivo:
 	&lt;input type="file" name="inputFile" />
 &lt;/label>
 						</code></pre>
 						<form action="">
 							<fieldset>
 								<label for="inputSubmit">
-									<input type="submit" name="inputSubmit" />
+									<input type="submit" name="inputSubmit" value="Enviar" />
 								</label>
 								<label for="inputReset">
 									<input type="reset" name="inputReset" />
 								</label>
 								<label for="inputButton">
-									<input
-										type="button"
-										name="inputButton"
-										value="Accion"
-									/>
+									<input type="button" name="inputButton" value="Accion" />
 								</label>
 								<label for="inputImage">
-									Imagen:
 									<input
 										type="image"
 										name="inputImage"
-										src="images/ok.png"
+										src="../../images/logoPAW.svg"
+										height="100"
+										onclick=""
 									/>
 								</label>
 								<label for="inputFile">
-									Imagen:
+									Archivo:
 									<input type="file" name="inputFile" />
 								</label>
 							</fieldset>
@@ -509,12 +446,11 @@
 					<p>size="numero"</p>
 					<p>readonly</p>
 					<p>required</p>
-					<p>placeholders</p>
 					<p>autofocus</p>
+					<p>placeholders="explicacion"</p>
 					<p>pattern:"[0-9] {4} - [A-Z] {3}"</p>
 					<footer>
-						<a
-							href="https://support.google.com/a/answer/1371415?hl=es"
+						<a href="https://support.google.com/a/answer/1371415?hl=es"
 							>Expresiones Regulares</a
 						>
 					</footer>
@@ -553,9 +489,7 @@
 			Reveal.on("slidechanged", (event) => {
 				document.querySelector(".paw-comision").innerHTML =
 					// pregunto si la presentacion tiene subtitulo
-					document.querySelector(
-						".paw-presentacion .paw-tituloContenido h2"
-					)
+					document.querySelector(".paw-presentacion .paw-tituloContenido h2")
 						? //Si tiene lo incorporo a la cabecera de la slide
 						  [
 								document.querySelector(
