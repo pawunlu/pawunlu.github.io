@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>PAW | Formularios HTML 5 - Estructura</title>
+		<title>PAW | Formularios HTML - Estructura</title>
 
 		<!-- Favicon-->
 		<link
@@ -73,7 +73,7 @@
 						</address>
 					</div>
 					<div class="paw-tituloContenido">
-						<h1>Formularios HTML5</h1>
+						<h1>Formularios HTML</h1>
 						<h2>Estructura</h2>
 					</div>
 				</section>
@@ -82,49 +82,73 @@
 					<img src="../images/HTML5.png" alt="" />
 					<h2 style="margin-bottom: 0; margin-top: 1rem">Índice:</h2>
 					<ol class="paw-indice">
-						<li><strong>Estructura del Formulario</strong></li>
+						<li><strong>Estructura del formulario</strong></li>
+						<li>Campos de entrada</li>
+						<li>Más Controles</li>
 					</ol>
 				</section>
-				<section>
+				<section id="tagForm">
 					<h2>FORM</h2>
 					<p>action="URL"</p>
 					<p>method="get | post"</p>
 					<p>name="nombre</p>
 				</section>
-				<section>
+				<section id="tagFormAttr">
 					<h2>FORM</h2>
 					<p>autocomplete</p>
 					<p>enctype</p>
 					<p>novalidate</p>
 					<p>target="nameFrame"</p>
 				</section>
-				<section>
+				<section id="tagFieldset">
 					<h2>Fieldset</h2>
 					<div class="paw-etapas">
 						<pre><code data-line-numbers="1,9|2,8|3">&lt;form action="search.php" method="get">
 	&lt;fieldset>
 		&lt;legend>Buscar:&lt;/legend>
-		&lt;label for="buscador">
-			&lt;input type="search" 
-				name="buscador" id="buscador">
-		&lt;/label>
+		&lt;input type="search" 
+			name="buscador" id="buscador">
 		&lt;input type="submit" 
 			name="buscar" id="buscar" value=">">
 	&lt;/fieldset>					
 &lt;/form>
 					</code></pre>
-						<figure>
-							<form method="get">
-								<fieldset>
-									<legend>Buscar:</legend>
-									<label for="buscador">
-										<input type="search" name="buscador" id="buscador" />
-									</label>
-									<input type="submit" name="buscar" id="buscar" value=">" />
-								</fieldset>
-							</form>
-						</figure>
+						<form method="get">
+							<fieldset>
+								<legend>Buscar:</legend>
+								<input
+									autofocus
+									type="search"
+									name="buscador"
+									id="buscador"
+									accesskey="b"
+								/>
+								<input
+									type="submit"
+									name="buscar"
+									id="buscar"
+									value=">"
+									style="width: 1rem"
+								/>
+							</fieldset>
+						</form>
 					</div>
+				</section>
+				<section id="attr1">
+					<h2>Atributos globales</h2>
+					<p>required</p>
+					<p>disabled</p>
+					<p>readonly</p>
+				</section>
+				<section id="attr2">
+					<h2>
+						¡que alguien piense en los <del>niños</del> <ins>usuarios</ins>!
+					</h2>
+					<h3>Atributos</h3>
+					<p>placeholder="textContent"</p>
+					<p>autofocus</p>
+					<p>tabindex="numero"</p>
+					<p>accesskey="tecla"</p>
 				</section>
 			</div>
 		</div>

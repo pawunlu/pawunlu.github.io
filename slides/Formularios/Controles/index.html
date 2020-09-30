@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>PAW | Formularios HTML 5 - Estructura</title>
+		<title>PAW | Formularios HTML - Más controles</title>
 
 		<!-- Favicon-->
 		<link
@@ -73,8 +73,8 @@
 						</address>
 					</div>
 					<div class="paw-tituloContenido">
-						<h1>Formularios HTML5</h1>
-						<h2>Campos de Entrada</h2>
+						<h1>Formularios HTML</h1>
+						<h2>Más Controles</h2>
 					</div>
 				</section>
 				<!-- Indice -->
@@ -83,24 +83,36 @@
 					<h2 style="margin-bottom: 0; margin-top: 1rem">Índice:</h2>
 					<ol class="paw-indice">
 						<li>Estructura del formulario</li>
-						<li><strong>Campos de entrada</strong></li>
-						<li>Controles</li>
+						<li>Campos de entrada</li>
+						<li><strong>Más Controles</strong></li>
 					</ol>
 				</section>
-				<section>
+				<section id="tagTextarea">
+					<h2>Textarea</h2>
+					<p> control para la edición mutilínea <br>de texto sin formato.</p>
+					<h3>Atributos</h3>
+						<p>cols="numero"</p>
+						<p>rows="numero"</p>
+				</section>
+				<section id="tagButton">
+					<h2>Button</h2>
+					<p>Elemento cliqueable</p>
+					<p>Puede pertenecer o no a un formulario</p>
+				</section>
+				<section id="tagSelect">
 					<h2>Select</h2>
 					<h3>Atributos</h3>
 					<p>form</p>
 					<p>multiple</p>
 					<p>size</p>
 				</section>
-				<section>
+				<section id="tagSelect2">
 					<h2>Select</h2>
 					<h3>Opciones</h3>
 					<p>optgroup</p>
 					<p>option</p>
 				</section>
-				<section>
+				<section id="tagSelectEj">
 					<h2>Select</h2>
 					<div class="paw-etapas">
 						<pre><code>&lt;label for="opciones">
@@ -138,14 +150,14 @@
 						</form>
 					</div>
 				</section>
-				<section>
+				<section id="tagDatalist">
 					<h2>Datalist</h2>
 					<p>lista que se puede relacionar con un input</p>
 					<p>text | url | tel | color | range | datetime</p>
 					<p>se enlaca con el atributo list</p>
 					<p>Ej: Autocompletar | Rango de Valores</p>
 				</section>
-				<section>
+				<section id="tagDatalist2">
 					<h2>Datalist</h2>
 					<div class="paw-etapas">
 						<pre><code>&lt;label>Asignatura:
@@ -178,14 +190,14 @@
 						</form>
 					</div>
 				</section>
-				<section>
+				<section id="tagOutput">
 					<h2>Output</h2>
 					<h3>Atributos</h3>
 					<p>for</p>
 					<p>form</p>
 					<p>name</p>
 				</section>
-				<section>
+				<section id="tagOutput2">
 					<h2>Output</h2>
 					<div class="paw-etapas">
 						<pre><code data-line-numbers="3">&lt;label>Asignatura:
@@ -224,7 +236,7 @@
 						</form>
 					</div>
 				</section>
-				<section>
+				<section id="tagKeygen">
 					<h2>Keygen</h2>
 					<p>
 						Facilita la generación de llaves, y el envío de la clave pública
@@ -235,6 +247,13 @@
 					<p>keyparams</p>
 					<pre><code>&lt;keygen name="llavaPublica" challenge="challenge string" 
 	keytype="type" keyparams="pqg-params"></code></pre>
+				</section>
+				<section id="tagProgress">
+					<h2>Progress</h2>
+					<pre><code>
+						&lt;progress value="70" max="100">70 %</progress>
+					</code></pre>
+					<progress value="70" max="100">70 %</progress>
 				</section>
 			</div>
 		</div>
