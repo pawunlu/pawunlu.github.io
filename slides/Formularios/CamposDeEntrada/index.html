@@ -94,7 +94,8 @@
 						<pre>
 						<code class="language-html" data-line-numbers="">&lt;label for="inputTexto">
 	Texto:
-	&lt;input type="text" name="inputTexto" />
+	&lt;input type="text" name="inputTexto" 
+		maxlength="10" minlength="5"/>
 &lt;/label>
 						</code>
 						</pre>
@@ -102,7 +103,12 @@
 							<fieldset>
 								<label for="inputTexto">
 									Texto:
-									<input type="text" name="inputTexto" />
+									<input
+										type="text"
+										name="inputTexto"
+										maxlength="10"
+										minlength="5"
+									/>
 								</label>
 							</fieldset>
 						</form>
@@ -110,7 +116,7 @@
 				</section>
 				<section id="inputNumber">
 					<h2>input</h2>
-					<h3>Numeros</h3>
+					<h3>Números</h3>
 					<div class="paw-etapas">
 						<pre><code data-line-numbers="1-5|7-11">&lt;label for="inputNumber">
 	Número:
@@ -151,8 +157,8 @@
 					</div>
 				</section>
 				<section id="inputVarios1">
-					<h2>Input</h2>
-					<h3>Datos de contacto</h3>
+					<h2 style="margin: 2.3rem auto 0 auto">Input</h2>
+					<h3 style="margin-top: 0">Datos de contacto</h3>
 					<div class="paw-etapas">
 						<pre><code data-line-numbers="1-5|7-10|12-15">&lt;label for="inputTel">
 	Teléfono:
@@ -169,7 +175,7 @@
 	URL:
 	&lt;input type="url" name="inputURL" />
 &lt;/label></code></pre>
-						<form action="">
+						<form action="" autocomplete="off">
 							<fieldset>
 								<label for="inputTel">
 									Teléfono:
@@ -191,10 +197,15 @@
 							<input type="submit" value="Enviar" />
 						</form>
 					</div>
+					<footer style="margin-top: 0">
+						<a href="https://support.google.com/a/answer/1371415?hl=es"
+							>Expresiones Regulares</a
+						>
+					</footer>
 				</section>
 				<section id="inputTime">
-					<h2>Input</h2>
-					<h3>Fecha y Hora</h3>
+					<h2 style="margin: 2.3rem auto 0 auto">Input</h2>
+					<h3 style="margin-top: -0.5rem">Fecha y Hora</h3>
 					<div class="paw-etapas">
 						<pre><code data-line-numbers="1-4|6-9|11-14|16-19|21-24">&lt;label for="inputTime">
 	Horas y Min:
@@ -249,8 +260,8 @@
 					</div>
 				</section>
 				<section id="inputVarios2">
-					<h2>Input</h2>
-					<h3>Un poco más</h3>
+					<h2 style="margin: 2.3rem auto 0 auto">Input</h2>
+					<h3 style="margin-top: 0">Algunos más</h3>
 					<div class="paw-etapas">
 						<pre><code data-line-numbers="1-4|6-9|11-14">&lt;label for="inputSearch">
 	Busquedas:
@@ -287,8 +298,8 @@
 					</div>
 				</section>
 				<section id="inputOpciones">
-					<h2>Input</h2>
-					<h3>Opciones</h3>
+					<h2 style="margin: 2.3rem auto 0 auto">Input</h2>
+					<h3 style="margin-top: 0">Opciones</h3>
 					<div class="paw-etapas">
 						<pre><code data-line-numbers="3-15|20-31">&lt;fieldset>
 	&lt;legend>Checkbox: &lt;/legend>
@@ -388,8 +399,8 @@
 					</div>
 				</section>
 				<section>
-					<h2>Input</h2>
-					<h3>Botones</h3>
+					<h2 style="margin: 2.5rem auto 0 auto">Input</h2>
+					<h3 style="margin-top: -0.5rem">Botones</h3>
 					<div class="paw-etapas">
 						<pre><code data-line-numbers="1-3|5-7|9-11|13-15|17-21">&lt;label for="inputSubmit">
 	&lt;input type="submit" name="inputSubmit" value="Enviar" />
@@ -440,21 +451,6 @@
 							<input type="submit" value="Enviar" />
 						</form>
 					</div>
-				</section>
-				<section>
-					<h2>Input</h2>
-					<h3>Atributos</h3>
-					<p>size="numero"</p>
-					<p>readonly</p>
-					<p>required</p>
-					<p>autofocus</p>
-					<p>placeholders="explicacion"</p>
-					<p>pattern:"[0-9] {4} - [A-Z] {3}"</p>
-					<footer>
-						<a href="https://support.google.com/a/answer/1371415?hl=es"
-							>Expresiones Regulares</a
-						>
-					</footer>
 				</section>
 			</div>
 		</div>

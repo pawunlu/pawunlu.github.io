@@ -146,6 +146,20 @@
 										</optgroup>
 									</select>
 								</label>
+																<label for="opciones">
+									Multiple:
+									<select name="opciones" id="opciones" multiple size="6">
+										<option checked>...</option>
+										<optgroup label="Grupo 1">
+											<option value="opcion1">Opción 1</option>
+											<option value="opcion2">Opción 2</option>
+										</optgroup>
+										<optgroup label="Grupo 2">
+											<option value="opcionA">Opción A</option>
+											<option value="opcionB">Opción B</option>
+										</optgroup>
+									</select>
+								</label>
 							</fieldset>
 						</form>
 					</div>
@@ -154,7 +168,7 @@
 					<h2>Datalist</h2>
 					<p>lista que se puede relacionar con un input</p>
 					<p>text | url | tel | color | range | datetime</p>
-					<p>se enlaca con el atributo list</p>
+					<p>se enlaza con el elemento input a travez del atributo list</p>
 					<p>Ej: Autocompletar | Rango de Valores</p>
 				</section>
 				<section id="tagDatalist2">
@@ -173,9 +187,9 @@
 							<fieldset>
 								<label>
 									Materia:
-									<input list="listaMaterias" name="profesor" />
+									<input list="listaCursos" name="curso" />
 								</label>
-								<datalist id="listaMaterias">
+								<datalist id="listaCursos">
 									<option value="Seminario de Integración Profesional"></option>
 									<option value="Programación en Ambiente Web"></option>
 									<option
@@ -213,15 +227,15 @@
 					</code></pre>
 						<form
 							action=""
-							oninput="if (materia.value == 'Programación en Ambiente Web') {salida.innerHTML = 'Genial' } else {salida.innerHTML = 'MAL' }"
+							oninput="if (curso2.value == 'Programación en Ambiente Web') {salida.innerHTML = 'Genial' } else {salida.innerHTML = 'MAL' }"
 						>
 							<fieldset>
 								<label>
 									Materia:
-									<input list="listaMaterias" name="materia" />
+									<input list="listaCursos2" name="curso2" />
 									<output for="materia" name="salida" id="paw-salida"></output>
 								</label>
-								<datalist id="listaMaterias">
+								<datalist id="listaCursos2">
 									<option value="Seminario de Integración Profesional"></option>
 									<option value="Programación en Ambiente Web"></option>
 									<option
