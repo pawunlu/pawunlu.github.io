@@ -1,7 +1,8 @@
 .reveal pre {
-	width: 65%;
+	width: 62%;
 	font-size: 0.7rem;
 	max-height: 15rem;
+	margin-left: 12%;
 }
 .reveal pre code {
 	max-height: 15rem;
@@ -14,10 +15,19 @@
 }
 
 .reveal .paw-ejemplo > div {
-	width: 30%;
+	width: 20%;
 }
 
 .reveal .paw-ejemplo h2 {
 	font-size: 1rem;
 	margin: 0;
+}
+
+.reveal section > h2 {
+	margin-top: 2rem;
+	margin-bottom: 0;
+}
+
+.reveal section > h3 {
+	margin-top: 0;
 }

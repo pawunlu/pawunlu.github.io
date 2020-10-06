@@ -6,11 +6,7 @@
 		<title>PAW | CSS - Selectores</title>
 		<link rel="stylesheet" href="../../reveal/reset.css" />
 		<link rel="stylesheet" href="../../reveal/reveal.css" />
-		<link
-			rel="stylesheet"
-			href="../../reveal/theme/pawTheme.css"
-			id="theme"
-		/>
+		<link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
 		<link rel="stylesheet" href="../../style/paw.css" id="paw-theme" />
 		<link rel="stylesheet" href="../style/slidesCSS.css" />
 		<link rel="stylesheet" href="style/ejemplos.css" />
@@ -45,9 +41,7 @@
 						<p class="paw-speaker">Speaker:</p>
 						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
 						<address>
-							<a href="mailto:pcchale@gmail.com"
-								>pcchale@gmail.com</a
-							>
+							<a href="mailto:pcchale@gmail.com">pcchale@gmail.com</a>
 						</address>
 					</div>
 					<div class="paw-tituloContenido">
@@ -56,10 +50,24 @@
 						<h2>Selectores</h2>
 					</div>
 				</section>
+				<!-- Indice -->
+				<section id="indice">
+					<img src="images/HTML5.png" alt="" />
+					<h2 style="margin-bottom: 0">Índice:</h2>
+					<ol class="paw-indice">
+						<li>Introducción</li>
+						<li><strong> Selectores </strong></li>
+						<li>Formateando Texto</li>
+						<li>Fuentes Web</li>
+						<li>El modelo de caja</li>
+						<li>Layouts</li>
+						<li>Media Querys</li>
+						<li>Animaciones</li>
+					</ol>
+				</section>
 				<section>
 					<p>
-						Indican que caracteristicas deben cumplir los
-						elementos<br />
+						Indican que caracteristicas deben cumplir los elementos<br />
 						a los que se les apliquen los estilos
 					</p>
 				</section>
@@ -225,7 +233,7 @@
 				<section id="hijos">
 					<h2>Combinaciones</h2>
 					<h3>Contexto</h3>
-					<p>selector1 selector2 { declaraciones }</p>
+					<p>selector1 > selector2 { declaraciones }</p>
 					<div class="paw-ejemplo">
 						<pre><code class="language-html" data-line-numbers="1-4|5-11|2,10|3,7,8"><style> 
 	ul span {color: darkred}
@@ -333,10 +341,7 @@
 				<section id="pseudoclases">
 					<h2>Pseudoclases</h2>
 					<h3>:pseudoselector</h3>
-					<p>
-						Depende de ciertas características variantes de los
-						elementos
-					</p>
+					<p>Depende de ciertas características variantes de los elementos</p>
 				</section>
 				<section id="pseudoclases2">
 					<h2>Pseudoclases</h2>
@@ -387,7 +392,7 @@
 	h2 { color: orange; }
 	h2::before { content: "< "; color: darkred; }
 	h2::after { content: " >"; color: darkred; }
-	li::first-letter { color: orange; }
+	li::first-letter { color: darkred; }
 </style>
 		<h2 class="ejemplo">Listado</h2>
 		<ul>
@@ -444,9 +449,7 @@
 			Reveal.on("slidechanged", (event) => {
 				document.querySelector(".paw-comision").innerHTML =
 					// pregunto si la presentacion tiene subtitulo
-					document.querySelector(
-						".paw-presentacion .paw-tituloContenido h2"
-					)
+					document.querySelector(".paw-presentacion .paw-tituloContenido h2")
 						? //Si tiene lo incorporo a la cabecera de la slide
 						  // Titulo | Subtitulo
 						  [
