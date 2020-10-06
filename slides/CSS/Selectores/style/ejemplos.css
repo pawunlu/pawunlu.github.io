@@ -1,0 +1,71 @@
+.paw-ejemplo1 li {
+	color: orange;
+}
+
+.paw-ejemplo2 .ejemplo {
+	color: orange;
+}
+
+.paw-ejemplo3 #unico {
+	color: orange;
+}
+
+.paw-ejemplo4 * {
+	color: orange !important;
+}
+
+.paw-ejemplo5 ul .ejemplo {
+	color: orange !important;
+}
+
+.paw-ejemplo6-2 ul span {
+	color: darkred;
+}
+
+.paw-ejemplo5-2 ul .ejemplo {
+	color: orange !important;
+}
+
+.paw-ejemplo6 ul span {
+	color: darkred;
+}
+
+.paw-ejemplo6 ul > .ejemplo {
+	color: orange !important;
+}
+
+.paw-ejemplo7 .ejemplo ~ li {
+	color: orange !important;
+}
+
+.paw-ejemplo8 #unico + li {
+	color: orange !important;
+}
+
+.paw-ejemplo9 h2,
+.paw-ejemplo9 #unico + li {
+	color: orange !important;
+}
+
+.paw-ejemplo10 li:first-child {
+	color: orange;
+}
+
+.paw-ejemplo10 li:not(.ejemplo) {
+	color: darkred;
+}
+
+.paw-ejemplo11 h2 {
+	color: orange;
+}
+.paw-ejemplo11 h2::before {
+	content: "< ";
+	color: darkred;
+}
+.paw-ejemplo11 h2::after {
+	content: " >";
+	color: darkred;
+}
+.paw-ejemplo11 li::first-letter {
+	color: darkred;
+}

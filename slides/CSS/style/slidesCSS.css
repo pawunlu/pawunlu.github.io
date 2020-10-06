@@ -1,0 +1,23 @@
+.reveal pre {
+	width: 65%;
+	font-size: 0.7rem;
+	max-height: 15rem;
+}
+.reveal pre code {
+	max-height: 15rem;
+}
+
+.reveal .paw-ejemplo > pre,
+.reveal .paw-ejemplo > div {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.reveal .paw-ejemplo > div {
+	width: 30%;
+}
+
+.reveal .paw-ejemplo h2 {
+	font-size: 1rem;
+	margin: 0;
+}

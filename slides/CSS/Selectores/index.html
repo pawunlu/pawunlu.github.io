@@ -6,9 +6,14 @@
 		<title>PAW | CSS - Selectores</title>
 		<link rel="stylesheet" href="../../reveal/reset.css" />
 		<link rel="stylesheet" href="../../reveal/reveal.css" />
-		<link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
+		<link
+			rel="stylesheet"
+			href="../../reveal/theme/pawTheme.css"
+			id="theme"
+		/>
 		<link rel="stylesheet" href="../../style/paw.css" id="paw-theme" />
-
+		<link rel="stylesheet" href="../style/slidesCSS.css" />
+		<link rel="stylesheet" href="style/ejemplos.css" />
 		<!-- Theme used for syntax highlighting of code -->
 		<link
 			rel="stylesheet"
@@ -40,7 +45,9 @@
 						<p class="paw-speaker">Speaker:</p>
 						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
 						<address>
-							<a href="mailto:pcchale@gmail.com">pcchale@gmail.com</a>
+							<a href="mailto:pcchale@gmail.com"
+								>pcchale@gmail.com</a
+							>
 						</address>
 					</div>
 					<div class="paw-tituloContenido">
@@ -50,8 +57,358 @@
 					</div>
 				</section>
 				<section>
+					<p>
+						Indican que caracteristicas deben cumplir los
+						elementos<br />
+						a los que se les apliquen los estilos
+					</p>
+				</section>
+				<section>
 					<h2>Tipos de Selectores</h2>
 				</section>
+				<section id="selectorElemento">
+					<h2>Simples</h2>
+					<h3>Tipo de elemento</h3>
+					<p>nombreTag { declaraciones }</p>
+					<div class="paw-ejemplo">
+						<pre><code class="language-html" data-line-numbers="1|2-8|4-7"><style> li {color: orange}</style>
+		<h2 class="ejemplo">Listado</h2>
+		<ul>
+			<li class="ejemplo"> Item 1</li>
+			<li class="ejemplo"> Item 2</li>
+			<li id="unico">Item 3</li>
+			<li>Item <span class="ejemplo">4</span></li>
+		</ul>
+					</code></pre>
+						<div class="fragment paw-ejemplo1">
+							<h2 class="ejemplo">Listado</h2>
+							<ul>
+								<li class="ejemplo">Item 1</li>
+								<li class="ejemplo">Item 2</li>
+								<li id="unico">Item 3</li>
+								<li>Item <span class="ejemplo">4</span></li>
+							</ul>
+						</div>
+					</div>
+					<footer>Peso : 1</footer>
+				</section>
+				<section id="selectorClase">
+					<h2>Simples</h2>
+					<h3>Nombre de clase</h3>
+					<p>.clase { declaraciones }</p>
+					<div class="paw-ejemplo">
+						<pre><code class="language-html" data-line-numbers="1|2-8|2,4,5,7"><style> .ejemplo {color: orange}</style>
+		<h2 class="ejemplo">Listado</h2>
+		<ul>
+			<li class="ejemplo"> Item 1</li>
+			<li class="ejemplo"> Item 2</li>
+			<li id="unico">Item 3</li>
+			<li>Item <span class="ejemplo">4</span></li>
+		</ul>
+					</code></pre>
+						<div class="fragment paw-ejemplo2">
+							<h2 class="ejemplo">Listado</h2>
+							<ul>
+								<li class="ejemplo">Item 1</li>
+								<li class="ejemplo">Item 2</li>
+								<li id="unico">Item 3</li>
+								<li>Item <span class="ejemplo">4</span></li>
+							</ul>
+						</div>
+					</div>
+					<footer>Peso : 10</footer>
+				</section>
+				<section id="selectorId">
+					<h2>Simples</h2>
+					<h3>Identificador</h3>
+					<p>#identificador { declaraciones }</p>
+					<div class="paw-ejemplo">
+						<pre><code class="language-html" data-line-numbers="1|2-8|6"><style> #unico {color: orange}</style>
+		<h2 class="ejemplo">Listado</h2>
+		<ul>
+			<li class="ejemplo"> Item 1</li>
+			<li class="ejemplo"> Item 2</li>
+			<li id="unico">Item 3</li>
+			<li>Item <span class="ejemplo">4</span></li>
+		</ul>
+					</code></pre>
+						<div class="fragment paw-ejemplo3">
+							<h2 class="ejemplo">Listado</h2>
+							<ul>
+								<li class="ejemplo">Item 1</li>
+								<li class="ejemplo">Item 2</li>
+								<li id="unico">Item 3</li>
+								<li>Item <span class="ejemplo">4</span></li>
+							</ul>
+						</div>
+					</div>
+					<footer>Peso : 100</footer>
+				</section>
+				<section id="selectorUniversal">
+					<h2>Simples</h2>
+					<h3>Universal</h3>
+					<p>* { declaraciones }</p>
+					<div class="paw-ejemplo">
+						<pre><code class="language-html" data-line-numbers="1|2-8"><style> * {color: orange}</style>
+		<h2 class="ejemplo">Listado</h2>
+		<ul>
+			<li class="ejemplo"> Item 1</li>
+			<li class="ejemplo"> Item 2</li>
+			<li id="unico">Item 3</li>
+			<li>Item <span class="ejemplo">4</span></li>
+		</ul>
+					</code></pre>
+						<div class="fragment paw-ejemplo4">
+							<h2 class="ejemplo">Listado</h2>
+							<ul>
+								<li class="ejemplo">Item 1</li>
+								<li class="ejemplo">Item 2</li>
+								<li id="unico">Item 3</li>
+								<li>Item <span class="ejemplo">4</span></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section id="descendientes">
+					<h2>Combinaciones</h2>
+					<h3>Descendientes</h3>
+					<p>selector1 selector2 { declaraciones }</p>
+					<div class="paw-ejemplo">
+						<pre><code class="language-html" data-line-numbers="1|2-8|4-5"><style> ul .ejemplo {color: orange}</style>
+		<h2 class="ejemplo">Listado</h2>
+		<ul>
+			<li class="ejemplo"> Item 1</li>
+			<li class="ejemplo"> Item 2</li>
+			<li id="unico">Item 3</li>
+			<li>Item <span class="ejemplo">4</span></li>
+		</ul>
+					</code></pre>
+						<div class="fragment paw-ejemplo5">
+							<h2 class="ejemplo">Listado</h2>
+							<ul>
+								<li class="ejemplo">Item 1</li>
+								<li class="ejemplo">Item 2</li>
+								<li id="unico">Item 3</li>
+								<li>Item <span class="ejemplo">4</span></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section id="descendientes2">
+					<h2>Combinaciones</h2>
+					<h3>Contexto</h3>
+					<p>selector1 selector2 { declaraciones }</p>
+					<div class="paw-ejemplo">
+						<pre><code class="language-html" data-line-numbers="1-4|5-11|5,7,8,10"><style>
+	ul span {color: darkred} /* Peso 2 */
+	ul .ejemplo {color: orange} /* Peso 11 */
+</style>
+		<h2 class="ejemplo">Listado</h2>
+		<ul>
+			<li class="ejemplo"> Item 1</li>
+			<li class="ejemplo"> Item 2</li>
+			<li id="unico">Item 3</li>
+			<li>Item <span class="ejemplo">4</span></li>
+		</ul>
+					</code></pre>
+						<div class="fragment paw-ejemplo5-2">
+							<h2 class="ejemplo">Listado</h2>
+							<ul>
+								<li class="ejemplo">Item 1</li>
+								<li class="ejemplo">Item 2</li>
+								<li id="unico">Item 3</li>
+								<li>Item <span class="ejemplo">4</span></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section id="hijos">
+					<h2>Combinaciones</h2>
+					<h3>Contexto</h3>
+					<p>selector1 selector2 { declaraciones }</p>
+					<div class="paw-ejemplo">
+						<pre><code class="language-html" data-line-numbers="1-4|5-11|2,10|3,7,8"><style> 
+	ul span {color: darkred}
+	ul > .ejemplo {color: orange}
+</style>
+		<h2 class="ejemplo">Listado</h2>
+		<ul>
+			<li class="ejemplo"> Item 1</li>
+			<li class="ejemplo"> Item 2</li>
+			<li id="unico">Item 3</li>
+			<li>Item <span class="ejemplo">4</span></li>
+		</ul>
+					</code></pre>
+						<div class="fragment paw-ejemplo6">
+							<h2 class="ejemplo">Listado</h2>
+							<ul>
+								<li class="ejemplo">Item 1</li>
+								<li class="ejemplo">Item 2</li>
+								<li id="unico">Item 3</li>
+								<li>Item <span class="ejemplo">4</span></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section id="hermanosPosteriores">
+					<h2>Combinaciones</h2>
+					<h3>Hermanos posteriores</h3>
+					<p>selector1 ~ selector2 { declaraciones }</p>
+					<div class="paw-ejemplo">
+						<pre><code class="language-html" data-line-numbers="1|2-8|5-7"><style>.ejemplo ~ li {color: orange}</style>
+		<h2 class="ejemplo">Listado</h2>
+		<ul>
+			<li class="ejemplo"> Item 1</li>
+			<li class="ejemplo"> Item 2</li>
+			<li id="unico">Item 3</li>
+			<li>Item <span class="ejemplo">4</span></li>
+		</ul>
+					</code></pre>
+						<div class="fragment paw-ejemplo7">
+							<h2 class="ejemplo">Listado</h2>
+							<ul>
+								<li class="ejemplo">Item 1</li>
+								<li class="ejemplo">Item 2</li>
+								<li id="unico">Item 3</li>
+								<li>Item <span class="ejemplo">4</span></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section id="hermano">
+					<h2>Combinaciones</h2>
+					<h3>Hermano Adyacente</h3>
+					<p>selector1 + selector2 { declaraciones }</p>
+					<div class="paw-ejemplo">
+						<pre><code class="language-html" data-line-numbers="1|2-8|7"><style>#unico + li {color: orange}</style>
+		<h2 class="ejemplo">Listado</h2>
+		<ul>
+			<li class="ejemplo"> Item 1</li>
+			<li class="ejemplo"> Item 2</li>
+			<li id="unico">Item 3</li>
+			<li>Item <span class="ejemplo">4</span></li>
+		</ul>
+					</code></pre>
+						<div class="fragment paw-ejemplo8">
+							<h2 class="ejemplo">Listado</h2>
+							<ul>
+								<li class="ejemplo">Item 1</li>
+								<li class="ejemplo">Item 2</li>
+								<li id="unico">Item 3</li>
+								<li>Item <span class="ejemplo">4</span></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section id="multiples">
+					<h2>Multiples</h2>
+					<p>selector1, selector2 { declaraciones }</p>
+					<div class="paw-ejemplo">
+						<pre><code class="language-html" data-line-numbers="1|2-8|2,7"><style>h2, #unico + li {color: orange}</style>
+		<h2 class="ejemplo">Listado</h2>
+		<ul>
+			<li class="ejemplo"> Item 1</li>
+			<li class="ejemplo"> Item 2</li>
+			<li id="unico">Item 3</li>
+			<li>Item <span class="ejemplo">4</span></li>
+		</ul>
+					</code></pre>
+						<div class="fragment paw-ejemplo9">
+							<h2 class="ejemplo">Listado</h2>
+							<ul>
+								<li class="ejemplo">Item 1</li>
+								<li class="ejemplo">Item 2</li>
+								<li id="unico">Item 3</li>
+								<li>Item <span class="ejemplo">4</span></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section id="attr">
+					<h3>Selectores por Atributo</h3>
+					<p>[attr]</p>
+					<p>[attr="valor"]</p>
+					<p>[attr <strong>comparacion</strong> "valor"]</p>
+				</section>
+				<section id="pseudoclases">
+					<h2>Pseudoclases</h2>
+					<h3>:pseudoselector</h3>
+					<p>
+						Depende de ciertas características variantes de los
+						elementos
+					</p>
+				</section>
+				<section id="pseudoclases2">
+					<h2>Pseudoclases</h2>
+					<p>links</p>
+					<p>acciones de usuario</p>
+					<p>UI (formularios)</p>
+					<p>estructuras</p>
+				</section>
+				<section id="pseudoclasesEj">
+					<h2>pseudoclases</h2>
+					<div class="paw-ejemplo">
+						<pre><code class="language-html" data-line-numbers="1-4|5-11|2,7|3,9,10"><style>
+	li:first-child {color: orange}
+	li:not(.ejemplo) {color: darkred}
+</style>
+		<h2 class="ejemplo">Listado</h2>
+		<ul>
+			<li class="ejemplo"> Item 1</li>
+			<li class="ejemplo"> Item 2</li>
+			<li id="unico">Item 3</li>
+			<li>Item <span class="ejemplo">4</span></li>
+		</ul>
+					</code></pre>
+						<div class="fragment paw-ejemplo10">
+							<h2 class="ejemplo">Listado</h2>
+							<ul>
+								<li class="ejemplo">Item 1</li>
+								<li class="ejemplo">Item 2</li>
+								<li id="unico">Item 3</li>
+								<li>Item <span class="ejemplo">4</span></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section id="pseudoelementos">
+					<h2>Pseudoelementos</h2>
+					<h3>::pseudoselector</h3>
+					<p>::after</p>
+					<p>::before</p>
+					<p>::first-letter</p>
+					<p>::first-line</p>
+					<p>::selection</p>
+				</section>
+				<section id="pseudoelementosEj">
+					<h2>pseudoelementos</h2>
+					<div class="paw-ejemplo">
+						<pre><code class="language-html" data-line-numbers="1-6|7-13|2,7|3,4,7|5,9,10,11,12"><style>
+	h2 { color: orange; }
+	h2::before { content: "< "; color: darkred; }
+	h2::after { content: " >"; color: darkred; }
+	li::first-letter { color: orange; }
+</style>
+		<h2 class="ejemplo">Listado</h2>
+		<ul>
+			<li class="ejemplo"> Item 1</li>
+			<li class="ejemplo"> Item 2</li>
+			<li id="unico">Item 3</li>
+			<li>Item <span class="ejemplo">4</span></li>
+		</ul>
+					</code></pre>
+						<div class="fragment paw-ejemplo11">
+							<h2 class="ejemplo">Listado</h2>
+							<ul>
+								<li class="ejemplo">Item 1</li>
+								<li class="ejemplo">Item 2</li>
+								<li id="unico">Item 3</li>
+								<li>Item <span class="ejemplo">4</span></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section><h2>Conclusión</h2></section>
 			</div>
 		</div>
 
@@ -87,7 +444,9 @@
 			Reveal.on("slidechanged", (event) => {
 				document.querySelector(".paw-comision").innerHTML =
 					// pregunto si la presentacion tiene subtitulo
-					document.querySelector(".paw-presentacion .paw-tituloContenido h2")
+					document.querySelector(
+						".paw-presentacion .paw-tituloContenido h2"
+					)
 						? //Si tiene lo incorporo a la cabecera de la slide
 						  // Titulo | Subtitulo
 						  [

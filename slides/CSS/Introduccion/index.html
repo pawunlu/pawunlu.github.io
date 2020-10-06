@@ -6,9 +6,13 @@
 		<title>PAW | CSS - Introducción</title>
 		<link rel="stylesheet" href="../../reveal/reset.css" />
 		<link rel="stylesheet" href="../../reveal/reveal.css" />
-		<link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
+		<link
+			rel="stylesheet"
+			href="../../reveal/theme/pawTheme.css"
+			id="theme"
+		/>
 		<link rel="stylesheet" href="../../style/paw.css" id="paw-theme" />
-
+		<link rel="stylesheet" href="../style/slidesCSS.css" />
 		<!-- Theme used for syntax highlighting of code -->
 		<link
 			rel="stylesheet"
@@ -40,7 +44,9 @@
 						<p class="paw-speaker">Speaker:</p>
 						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
 						<address>
-							<a href="mailto:pcchale@gmail.com">pcchale@gmail.com</a>
+							<a href="mailto:pcchale@gmail.com"
+								>pcchale@gmail.com</a
+							>
 						</address>
 					</div>
 					<div class="paw-tituloContenido">
@@ -65,7 +71,9 @@
 					<p>CSS Fonts Level 3</p>
 					<p>etc</p>
 					<footer>
-						<a href="https://www.w3.org/Style/CSS/">W3C CSS Home Page</a>
+						<a href="https://www.w3.org/Style/CSS/"
+							>W3C CSS Home Page</a
+						>
 					</footer>
 				</section>
 				<section>
@@ -74,7 +82,10 @@
 				</section>
 				<section>
 					<h2>Estilo</h2>
-					<p>Aplica propiedades de apariencia a los distintos elementos.</p>
+					<p>
+						Aplica propiedades de apariencia a los distintos
+						elementos.
+					</p>
 				</section>
 				<section>
 					<h2>Hojas</h2>
@@ -102,8 +113,15 @@
 					<img src="images/cssom.png" alt="CSSOM" class="fragment" />
 				</section>
 				<section>
-					<p>Se combina el DOM y el CSSOM en un árbol de representación.</p>
-					<img src="images/RenderTree.png" alt="RenderTree" class="fragment" />
+					<p>
+						Se combina el DOM y el CSSOM en un árbol de
+						representación.
+					</p>
+					<img
+						src="images/RenderTree.png"
+						alt="RenderTree"
+						class="fragment"
+					/>
 				</section>
 				<section>
 					<p>
@@ -113,7 +131,9 @@
 					<p class="fragment">
 						¿De qué tamaño y en qué ubicación se vería cada cosa?
 					</p>
-					<p class="fragment">Traduce las unidades relativas a estáticas</p>
+					<p class="fragment">
+						Traduce las unidades relativas a estáticas
+					</p>
 				</section>
 				<section>
 					<p>Se dibuja cada nodo en la pantalla.</p>
@@ -142,8 +162,8 @@
 				<section id="embed">
 					<h3>Embed styles</h3>
 					<p>
-						<strong>&lt;style></strong> selector/es { propiedad: valor;
-						propiedad: valor; }
+						<strong>&lt;style></strong> selector/es { propiedad:
+						valor; propiedad: valor; }
 						<strong>&lt;/style></strong>
 					</p>
 					<footer>
@@ -156,8 +176,8 @@
 				<section id="inline">
 					<h3>inline styles</h3>
 					<p>
-						&lt;tag <strong>style="</strong>propiedad:valor; propiedad:
-						valor<strong>"</strong>> contenido &lt;/tag>
+						&lt;tag <strong>style="</strong>propiedad:valor;
+						propiedad: valor<strong>"</strong>> contenido &lt;/tag>
 					</p>
 					<footer>Evitar de ser posible</footer>
 				</section>
@@ -226,7 +246,9 @@ h2
 			Reveal.on("slidechanged", (event) => {
 				document.querySelector(".paw-comision").innerHTML =
 					// pregunto si la presentacion tiene subtitulo
-					document.querySelector(".paw-presentacion .paw-tituloContenido h2")
+					document.querySelector(
+						".paw-presentacion .paw-tituloContenido h2"
+					)
 						? //Si tiene lo incorporo a la cabecera de la slide
 						  // Titulo | Subtitulo
 						  [
