@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PAW | CSS - Selectores</title>
+		<link rel="stylesheet" href="../../reveal/reset.css" />
+		<link rel="stylesheet" href="../../reveal/reveal.css" />
+		<link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
+		<link rel="stylesheet" href="../../style/paw.css" id="paw-theme" />
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link
+			rel="stylesheet"
+			href="../../reveal/plugin/highlight/monokai.css"
+			id="highlight-theme"
+		/>
+	</head>
+	<body>
+		<!-- Encabezado de diaspos NO TOCAR -->
+		<header class="paw-encabezado">
+			<img src="../../images/logoPAW.svg" alt="" />
+			<h2 class="paw-asignatura">PAW</h2>
+			<h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+		</header>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Diapositiva PRESENTACION NO TOCAR -->
+				<section class="paw-presentacion">
+					<div class="paw-logo">
+						<img src="../../images/logoPAW.svg" alt="" />
+					</div>
+					<div class="paw-asignatura">
+						<h1>PAW</h1>
+					</div>
+					<div class="paw-comision">
+						<h2>Lic. en Sistemas de Información</h2>
+					</div>
+					<div class="paw-autor">
+						<p class="paw-speaker">Speaker:</p>
+						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
+						<address>
+							<a href="mailto:pcchale@gmail.com">pcchale@gmail.com</a>
+						</address>
+					</div>
+					<div class="paw-tituloContenido">
+						<!-- TITULO de las SLIDES -->
+						<h1>CSS</h1>
+						<h2>Selectores</h2>
+					</div>
+				</section>
+				<section>
+					<h2>Tipos de Selectores</h2>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../reveal/reveal.js"></script>
+		<script src="../../reveal/plugin/zoom/zoom.js"></script>
+		<script src="../../reveal/plugin/notes/notes.js"></script>
+		<script src="../../reveal/plugin/search/search.js"></script>
+		<script src="../../reveal/plugin/markdown/markdown.js"></script>
+		<script src="../../reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				width: 1920,
+				height: 1080,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [
+					RevealZoom,
+					RevealNotes,
+					RevealSearch,
+					RevealMarkdown,
+					RevealHighlight,
+				],
+			});
+
+			//Configuro el Plugin Highlight para que los tab se reemplacen por 2 espacios
+			Reveal.getPlugin("highlight").hljs.configure({
+				tabReplace: "  ",
+			});
+
+			Reveal.on("slidechanged", (event) => {
+				document.querySelector(".paw-comision").innerHTML =
+					// pregunto si la presentacion tiene subtitulo
+					document.querySelector(".paw-presentacion .paw-tituloContenido h2")
+						? //Si tiene lo incorporo a la cabecera de la slide
+						  // Titulo | Subtitulo
+						  [
+								document.querySelector(
+									".paw-presentacion .paw-tituloContenido h1"
+								).textContent,
+								" | ",
+								document.querySelector(
+									".paw-presentacion .paw-tituloContenido h2"
+								).textContent,
+						  ].join(" ")
+						: //Sino solo uso el titulo
+						  document.querySelector(
+								".paw-presentacion .paw-tituloContenido h1"
+						  ).textContent;
+			});
+		</script>
+	</body>
+</html>

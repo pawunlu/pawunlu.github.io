@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PAW | CSS - Introducción</title>
+		<link rel="stylesheet" href="../../reveal/reset.css" />
+		<link rel="stylesheet" href="../../reveal/reveal.css" />
+		<link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
+		<link rel="stylesheet" href="../../style/paw.css" id="paw-theme" />
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link
+			rel="stylesheet"
+			href="../../reveal/plugin/highlight/monokai.css"
+			id="highlight-theme"
+		/>
+	</head>
+	<body>
+		<!-- Encabezado de diaspos NO TOCAR -->
+		<header class="paw-encabezado">
+			<img src="../../images/logoPAW.svg" alt="" />
+			<h2 class="paw-asignatura">PAW</h2>
+			<h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+		</header>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Diapositiva PRESENTACION NO TOCAR -->
+				<section class="paw-presentacion">
+					<div class="paw-logo">
+						<img src="../../images/logoPAW.svg" alt="" />
+					</div>
+					<div class="paw-asignatura">
+						<h1>PAW</h1>
+					</div>
+					<div class="paw-comision">
+						<h2>Lic. en Sistemas de Información</h2>
+					</div>
+					<div class="paw-autor">
+						<p class="paw-speaker">Speaker:</p>
+						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
+						<address>
+							<a href="mailto:pcchale@gmail.com">pcchale@gmail.com</a>
+						</address>
+					</div>
+					<div class="paw-tituloContenido">
+						<!-- TITULO de las SLIDES -->
+						<h1>CSS</h1>
+						<h2>Intruducción</h2>
+					</div>
+				</section>
+				<section>
+					<h2>
+						Cascading <br />
+						Style<br />
+						Sheets
+					</h2>
+				</section>
+				<section>
+					<h2>CSS Working Group</h2>
+					<p>CSS Snapshot 2018</p>
+					<p>Selectors Level 3</p>
+					<p>CSS Style Atributtes</p>
+					<p>CSS Color Level 3</p>
+					<p>CSS Fonts Level 3</p>
+					<p>etc</p>
+					<footer>
+						<a href="https://www.w3.org/Style/CSS/">W3C CSS Home Page</a>
+					</footer>
+				</section>
+				<section>
+					<h2>Cascada</h2>
+					<p>Los estilos se propagan a los elementos que contiene.</p>
+				</section>
+				<section>
+					<h2>Estilo</h2>
+					<p>Aplica propiedades de apariencia a los distintos elementos.</p>
+				</section>
+				<section>
+					<h2>Hojas</h2>
+					<p>Los estilos se añaden en archivos aparte</p>
+					<h2><strong>.css</strong></h2>
+				</section>
+				<section>
+					<h2>¿Qué pasa en <br />el navegador?</h2>
+				</section>
+				<section>
+					<img src="images/sourceToRender.svg" alt="" height="600" />
+				</section>
+				<section>
+					<p>
+						Se procesa el lenguaje de marcado HTML y<br />
+						construye el árbol de DOM.
+					</p>
+					<img src="images/dom.png" alt="DOM" class="fragment" />
+				</section>
+				<section>
+					<p>
+						Se procesa el lenguaje de marcado CSS y <br />
+						construye el árbol de CSSOM.
+					</p>
+					<img src="images/cssom.png" alt="CSSOM" class="fragment" />
+				</section>
+				<section>
+					<p>Se combina el DOM y el CSSOM en un árbol de representación.</p>
+					<img src="images/RenderTree.png" alt="RenderTree" class="fragment" />
+				</section>
+				<section>
+					<p>
+						Se ejecuta el diseño en el árbol de representación<br />
+						para calcular la geometría de cada nodo.
+					</p>
+					<p class="fragment">
+						¿De qué tamaño y en qué ubicación se vería cada cosa?
+					</p>
+					<p class="fragment">Traduce las unidades relativas a estáticas</p>
+				</section>
+				<section>
+					<p>Se dibuja cada nodo en la pantalla.</p>
+					<h2 class="fragment">Renderizado</h2>
+				</section>
+				<section>
+					<h2>Prioridad de Carga</h2>
+					<p>¿Cómo se aplican los estilos?</p>
+				</section>
+				<section>
+					<h3>Estilos de usuario-agente</h3>
+				</section>
+				<section>
+					<h3>
+						Estilos definidos por el usuario<br />
+						en el navegador o por una extensión
+					</h3>
+				</section>
+				<section>
+					<h3>Hojas de estilo</h3>
+					<p>
+						&lt;link rel="stylesheet" type="text/css" href="URL.css"
+						media="mediaQuery" />
+					</p>
+				</section>
+				<section id="embed">
+					<h3>Embed styles</h3>
+					<p>
+						<strong>&lt;style></strong> selector/es { propiedad: valor;
+						propiedad: valor; }
+						<strong>&lt;/style></strong>
+					</p>
+					<footer>
+						<p>
+							Solo se recomiendan estilos de base <br />
+							para una carga rápida
+						</p>
+					</footer>
+				</section>
+				<section id="inline">
+					<h3>inline styles</h3>
+					<p>
+						&lt;tag <strong>style="</strong>propiedad:valor; propiedad:
+						valor<strong>"</strong>> contenido &lt;/tag>
+					</p>
+					<footer>Evitar de ser posible</footer>
+				</section>
+
+				<section>
+					<h2>Hojas de estilo importadas</h2>
+					<h3>At-Rule: @import</h3>
+					<p>@import url('URL') mediaQuery;</p>
+				</section>
+				<section>
+					<h2>Comentarios</h2>
+					<p>/* Comentario */</p>
+				</section>
+				<section>
+					<h2>Sintaxis</h2>
+					<pre><code class="language-css" data-line-numbers>/* Selector */
+h2 
+{
+	/* propiedad: valor */
+	font-family: roboto;
+	font-size: 1.7rem;
+	text-transform: uppercase;
+	color: white;
+}</code></pre>
+				</section>
+				<section>
+					<h2>reset.css</h2>
+					<footer>
+						<a href="https://unpkg.com/reset-css@5.0.1/reset.css"
+							>Eric Meyer Reset CSS</a
+						>
+					</footer>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../reveal/reveal.js"></script>
+		<script src="../../reveal/plugin/zoom/zoom.js"></script>
+		<script src="../../reveal/plugin/notes/notes.js"></script>
+		<script src="../../reveal/plugin/search/search.js"></script>
+		<script src="../../reveal/plugin/markdown/markdown.js"></script>
+		<script src="../../reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				width: 1920,
+				height: 1080,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [
+					RevealZoom,
+					RevealNotes,
+					RevealSearch,
+					RevealMarkdown,
+					RevealHighlight,
+				],
+			});
+
+			//Configuro el Plugin Highlight para que los tab se reemplacen por 2 espacios
+			Reveal.getPlugin("highlight").hljs.configure({
+				tabReplace: "  ",
+			});
+
+			Reveal.on("slidechanged", (event) => {
+				document.querySelector(".paw-comision").innerHTML =
+					// pregunto si la presentacion tiene subtitulo
+					document.querySelector(".paw-presentacion .paw-tituloContenido h2")
+						? //Si tiene lo incorporo a la cabecera de la slide
+						  // Titulo | Subtitulo
+						  [
+								document.querySelector(
+									".paw-presentacion .paw-tituloContenido h1"
+								).textContent,
+								" | ",
+								document.querySelector(
+									".paw-presentacion .paw-tituloContenido h2"
+								).textContent,
+						  ].join(" ")
+						: //Sino solo uso el titulo
+						  document.querySelector(
+								".paw-presentacion .paw-tituloContenido h1"
+						  ).textContent;
+			});
+		</script>
+	</body>
+</html>
