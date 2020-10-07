@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PAW | CSS - Selectores</title>
+		<link rel="stylesheet" href="../../reveal/reset.css" />
+		<link rel="stylesheet" href="../../reveal/reveal.css" />
+		<link
+			rel="stylesheet"
+			href="../../reveal/theme/pawTheme.css"
+			id="theme"
+		/>
+		<link rel="stylesheet" href="../../style/paw.css" id="paw-theme" />
+		<link rel="stylesheet" href="../style/slidesCSS.css" />
+		<link rel="stylesheet" href="style/ejemplos.css" />
+		<!-- Theme used for syntax highlighting of code -->
+		<link
+			rel="stylesheet"
+			href="../../reveal/plugin/highlight/monokai.css"
+			id="highlight-theme"
+		/>
+	</head>
+	<body>
+		<!-- Encabezado de diaspos NO TOCAR -->
+		<header class="paw-encabezado">
+			<img src="../../images/logoPAW.svg" alt="" />
+			<h2 class="paw-asignatura">PAW</h2>
+			<h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+		</header>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Diapositiva PRESENTACION NO TOCAR -->
+				<section class="paw-presentacion">
+					<div class="paw-logo">
+						<img src="../../images/logoPAW.svg" alt="" />
+					</div>
+					<div class="paw-asignatura">
+						<h1>PAW</h1>
+					</div>
+					<div class="paw-comision">
+						<h2>Lic. en Sistemas de Información</h2>
+					</div>
+					<div class="paw-autor">
+						<p class="paw-speaker">Speaker:</p>
+						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
+						<address>
+							<a href="mailto:pcchale@gmail.com"
+								>pcchale@gmail.com</a
+							>
+						</address>
+					</div>
+					<div class="paw-tituloContenido">
+						<!-- TITULO de las SLIDES -->
+						<h1>CSS</h1>
+						<h2>Selectores</h2>
+					</div>
+				</section>
+				<!-- Indice -->
+				<section id="indice">
+					<img src="images/HTML5.png" alt="" />
+					<h2 style="margin-bottom: 0">Índice:</h2>
+					<ol class="paw-indice">
+						<li>Introducción</li>
+						<li><strong> Selectores </strong></li>
+						<li>Formato de Texto</li>
+						<li>Fuentes Web</li>
+						<li>El modelo de caja</li>
+						<li>Layouts</li>
+						<li>Media Querys</li>
+						<li>Animaciones</li>
+					</ol>
+				</section>
+				<section>
+					<h2>COLORES</h2>
+					<footer>
+						<a href="https://www.w3.org/TR/css-color-3"
+							>CSS Color Level 3</a
+						>
+					</footer>
+				</section>
+				<section>
+					<h2>Lista de nombres</h2>
+					<p>
+						<a href="https://www.w3.org/TR/css-color-3/#html4">
+							Básica
+						</a>
+					</p>
+					<p style="background-color: var(--paw-verde-claro)">
+						<span style="color: Black"> Black </span>,
+						<span style="color: Silver"> Silver </span>,
+						<span style="color: Gray"> Gray </span>,
+						<span style="color: White"> White </span>,
+						<span style="color: Maroon"> Maroon </span>,
+						<span style="color: Red"> Red </span>,
+						<span style="color: Purple"> Purple </span>,
+						<span style="color: Fuchsia"> Fuchsia </span><br />
+						<span style="color: Green"> Green </span>,
+						<span style="color: Lime"> Lime </span>,
+						<span style="color: Olive"> Olive </span>,
+						<span style="color: Yellow"> Yellow </span>,
+						<span style="color: Navy"> Navy </span>,
+						<span style="color: Blue"> Blue </span>,
+						<span style="color: Teal"> Teal </span>,
+						<span style="color: Aqua"> Aqua </span>
+					</p>
+					<p>
+						<a href="https://www.w3.org/TR/css-color-3/#svg-color"
+							>Extendida</a
+						>
+					</p>
+				</section>
+				<section>
+					<h2>Forma Numérica</h2>
+					<h3>Hexadecimal</h3>
+					<p>#rgb</p>
+					<p>#rrggbb</p>
+					<footer>
+						<p>
+							#ff0000 ->
+							<span style="background-color: #ff0000"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p>
+							#00ff00 ->
+							<span style="background-color: #00ff00"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p>
+							#0000ff ->
+							<span style="background-color: #0000ff"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p>
+							#555555 ->
+							<span style="background-color: #555555"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p>
+							#11AAFF ->
+							<span style="background-color: #11aaff"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+					</footer>
+				</section>
+				<section>
+					<h2>Forma Numérica</h2>
+					<h3>RGB Byte</h3>
+					<p>rgb(0..256, 0..256, 0..256)</p>
+					<p>rgba(0..256, 0..256, 0..256, 0..1)</p>
+					<footer>
+						<p class="paw-color">
+							rgb(256, 0, 0) ->
+							<span style="background-color: rgb(2565, 0, 0)"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p class="paw-color2">
+							rgba(256, 0, 0, 0.5) ->
+							<span style="background-color: rgba(256, 0, 0, 0.5)"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p class="paw-color">
+							rgb(0, 256, 0) ->
+							<span style="background-color: rgb(0, 256, 0)"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p class="paw-color2">
+							rgb(0, 256, 0, 0.5) ->
+							<span style="background-color: rgba(0, 256, 0, 0.5)"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p class="paw-color">
+							rgb(0, 0, 256) ->
+							<span style="background-color: rgb(0, 0, 256)"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p class="paw-color2">
+							rgb(0, 0, 256, 0.5) ->
+							<span style="background-color: rgba(0, 0, 256, 0.5)"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p class="paw-color">
+							rgb(85, 85, 85) ->
+							<span style="background-color: rgb(85, 85, 85)"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p class="paw-color2">
+							rgba(85, 85, 85, 0.5) ->
+							<span
+								style="background-color: rgba(85, 85, 85, 0.5)"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p class="paw-color">
+							rgb(17, 170, 256) ->
+							<span style="background-color: rgb(17, 170, 256)"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p class="paw-color2">
+							rgba(17, 170, 256, 0.5) ->
+							<span
+								style="
+									background-color: rgba(17, 170, 256, 0.5);
+								"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+					</footer>
+				</section>
+				<section>
+					<h2>Forma Numérica</h2>
+					<h3>RGB Porcentaje</h3>
+					<p>rgb(0..100%, 0..100%, 0..100%)</p>
+					<p>rgba(0..100%, 0..100%, 0..100%, 0..100%)</p>
+					<footer>
+						<p class="paw-color">
+							rgb(100%, 0, 0) ->
+							<span style="background-color: rgb(2565, 0, 0)"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p class="paw-color2">
+							rgba(100%, 0, 0, 50%) ->
+							<span style="background-color: rgba(256, 0, 0, 0.5)"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p class="paw-color">
+							rgb(0, 100%, 0) ->
+							<span style="background-color: rgb(0, 256, 0)"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p class="paw-color2">
+							rgba(0, 100%, 0, 50%) ->
+							<span style="background-color: rgba(0, 256, 0, 0.5)"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p class="paw-color">
+							rgb(0, 0, 100%) ->
+							<span style="background-color: rgb(0, 0, 256)"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p class="paw-color2">
+							rgba(0, 0, 100%, 50%) ->
+							<span style="background-color: rgba(0, 0, 256, 0.5)"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p class="paw-color">
+							rgb(33%, 33%, 33%) ->
+							<span style="background-color: rgb(85, 85, 85)"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p class="paw-color2">
+							rgba(33%, 33%, 33%, 50%) ->
+							<span
+								style="background-color: rgba(85, 85, 85, 0.5)"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p class="paw-color">
+							rgb(6%, 66%, 100%) ->
+							<span style="background-color: rgb(6%, 66%, 100%)"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+						<p class="paw-color2">
+							rgba(6%, 66%, 100%, 50%) ->
+							<span
+								style="
+									background-color: rgba(6%, 66%, 100%, 50%);
+								"
+								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+							>
+						</p>
+					</footer>
+				</section>
+			</div>
+		</div>
+		<script src="../../reveal/reveal.js"></script>
+		<script src="../../reveal/plugin/zoom/zoom.js"></script>
+		<script src="../../reveal/plugin/notes/notes.js"></script>
+		<script src="../../reveal/plugin/search/search.js"></script>
+		<script src="../../reveal/plugin/markdown/markdown.js"></script>
+		<script src="../../reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				width: 1920,
+				height: 1080,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [
+					RevealZoom,
+					RevealNotes,
+					RevealSearch,
+					RevealMarkdown,
+					RevealHighlight,
+				],
+			});
+
+			//Configuro el Plugin Highlight para que los tab se reemplacen por 2 espacios
+			Reveal.getPlugin("highlight").hljs.configure({
+				tabReplace: "  ",
+			});
+
+			Reveal.on("slidechanged", (event) => {
+				document.querySelector(".paw-comision").innerHTML =
+					// pregunto si la presentacion tiene subtitulo
+					document.querySelector(
+						".paw-presentacion .paw-tituloContenido h2"
+					)
+						? //Si tiene lo incorporo a la cabecera de la slide
+						  // Titulo | Subtitulo
+						  [
+								document.querySelector(
+									".paw-presentacion .paw-tituloContenido h1"
+								).textContent,
+								" | ",
+								document.querySelector(
+									".paw-presentacion .paw-tituloContenido h2"
+								).textContent,
+						  ].join(" ")
+						: //Sino solo uso el titulo
+						  document.querySelector(
+								".paw-presentacion .paw-tituloContenido h1"
+						  ).textContent;
+			});
+		</script>
+	</body>
+</html>

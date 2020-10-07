@@ -31,3 +31,14 @@
 .reveal section > h3 {
 	margin-top: 0;
 }
+.paw-color,
+.paw-color2 {
+	display: inline-block;
+	width: 45%;
+	border-left: 2px solid white;
+	padding: 0 0.5rem;
+}
+
+.paw-color {
+	border-left: none;
+}
