@@ -1,0 +1,35 @@
+.reveal :not(.paw-presentacion) h2 {
+	margin-bottom: 1rem;
+}
+.reveal :not(.paw-presentacion) h3 {
+	margin-top: 1rem;
+}
+
+.reveal .paw-ejemploFamily p {
+	font-family: "Courier New", Courier, monospace;
+}
+
+.reveal .paw-ejemplo1 {
+	color: white;
+}
+
+.reveal .paw-ejemplo2 .espacio1 {
+	letter-spacing: 0.5rem;
+}
+.reveal .paw-ejemplo2 .espacio2 {
+	letter-spacing: -0.1rem;
+}
+
+.reveal .paw-ejemplo3 .sombra {
+	text-shadow: 5px 5px 0 darkred;
+}
+
+.reveal th {
+	background-color: var(--paw-verde-oscuro);
+}
+
+.reveal td,
+.reveal th,
+.reveal table:not(.hljs-ln) {
+	border: 2px solid white;
+}

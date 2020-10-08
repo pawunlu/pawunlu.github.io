@@ -3,14 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>PAW | CSS - Selectores</title>
+		<title>PAW | CSS - Formato de texto</title>
 		<link rel="stylesheet" href="../../reveal/reset.css" />
 		<link rel="stylesheet" href="../../reveal/reveal.css" />
-		<link
-			rel="stylesheet"
-			href="../../reveal/theme/pawTheme.css"
-			id="theme"
-		/>
+		<link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
 		<link rel="stylesheet" href="../../style/paw.css" id="paw-theme" />
 		<link rel="stylesheet" href="../style/slidesCSS.css" />
 		<link rel="stylesheet" href="style/ejemplos.css" />
@@ -45,15 +41,13 @@
 						<p class="paw-speaker">Speaker:</p>
 						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
 						<address>
-							<a href="mailto:pcchale@gmail.com"
-								>pcchale@gmail.com</a
-							>
+							<a href="mailto:pcchale@gmail.com">pcchale@gmail.com</a>
 						</address>
 					</div>
 					<div class="paw-tituloContenido">
 						<!-- TITULO de las SLIDES -->
 						<h1>CSS</h1>
-						<h2>Selectores</h2>
+						<h2>Formato de texto</h2>
 					</div>
 				</section>
 				<!-- Indice -->
@@ -62,9 +56,8 @@
 					<h2 style="margin-bottom: 0">Índice:</h2>
 					<ol class="paw-indice">
 						<li>Introducción</li>
-						<li><strong> Selectores </strong></li>
-						<li>Formato de Texto</li>
-						<li>Fuentes Web</li>
+						<li>Selectores</li>
+						<li><strong> Formato de Texto</strong></li>
 						<li>El modelo de caja</li>
 						<li>Layouts</li>
 						<li>Media Querys</li>
@@ -72,20 +65,233 @@
 					</ol>
 				</section>
 				<section>
-					<h2>COLORES</h2>
+					<h2>Tipografía</h2>
+					<h3>font-family:</h3>
+					<p>Lista de fuentes a utilizar</p>
+					<p class="fragment">Terminar con la familia genérica</p>
+					<p class="fragment">
+						[ <span style="font-family: serif">serif</span> |
+						<span style="font-family: sans-serif">Sans Serif</span> |
+						<span style="font-family: Cursive">Cursive</span> |
+						<span style="font-family: Fantasy">Fantasy</span> |
+						<span style="font-family: Monospace">Monospace</span> ]
+					</p>
+					<div class="fragment paw-ejemplo">
+						<pre><code class="languaje-html" data-line-numbers><style>	p { font-family: 'Courier New', Courier, monospace; } </style>
+		<p> Texto de Ejemplo </p>							
+						</code></pre>
+						<div class="paw-ejemploFamily">
+							<p>Texto de Ejemplo</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h2>¿Serif?</h2>
+					<img
+						src="images/serif-vs-san-serif.png"
+						alt=""
+						height="400"
+						style="filter: hue-rotate(-135deg) invert(100%)"
+					/>
+				</section>
+				<section>
+					<h2>WebFonts</h2>
+					<h3>@font-face</h3>
 					<footer>
-						<a href="https://www.w3.org/TR/css-color-3"
-							>CSS Color Level 3</a
+						<a href="https://fonts.google.com/">Google Fonts</a>
+					</footer>
+				</section>
+				<section>
+					<h2>Ancho de la letra</h2>
+					<h3>font-weight:</h3>
+					<p class="fragment">
+						[ <span style="font-weight: 100">100</span> |
+						<span style="font-weight: 200">200</span> |
+						<span style="font-weight: 300">300</span> |
+						<span style="font-weight: 400">400</span> |
+						<span style="font-weight: 500">500</span> |
+						<span style="font-weight: 600">600</span> |
+						<span style="font-weight: 700">700</span> |
+						<span style="font-weight: 800">800</span> |
+						<span style="font-weight: 900">900</span> ]
+					</p>
+					<p class="fragment">
+						[ normal | <span style="font-weight: bold">bold</span> ]
+					</p>
+					<p class="fragment">
+						[ <span style="font-weight: bolder">bolder</span> |
+						<span style="font-weight: lighter">lighter</span> ]
+					</p>
+				</section>
+				<section>
+					<h2>Inclinación de la letra</h2>
+					<h3>font-style:</h3>
+					<p class="fragment">
+						[ normal | <span style="font-style: italic">italic</span> |
+						<span style="font-style: oblique">oblique</span> ]
+					</p>
+				</section>
+				<section>
+					<h2>Tamaño de la letra</h2>
+					<h3>font-size:</h3>
+					<p>Tamaño Absoluto</p>
+					<p class="fragment">
+						[ <span style="font-size: xx-small">xx-small</span> |
+						<span style="font-size: x-small">x-small</span> |
+						<span style="font-size: small">small</span> |
+						<span style="font-size: medium">medium</span> |
+						<span style="font-size: large">large</span> |
+						<span style="font-size: x-large">x-large</span> |
+						<span style="font-size: xx-large">xx-large</span> ]
+					</p>
+					<p>Tamaño relativo</p>
+					<p class="fragment">
+						[ <span style="font-size: larger">larger</span> |
+						<span style="font-size: smaller">smaller</span> ]
+					</p>
+				</section>
+				<section>
+					<h2>Unidades de medida de longitud</h2>
+					<footer>
+						<a href="https://www.w3.org/TR/css-values/#lengths"
+							>CSS Values and Units Module Level 4</a
 						>
 					</footer>
 				</section>
 				<section>
+					<h3>Font-relative</h3>
+					<p>em, ex, rem,</p>
+					<p>lh, rlh</p>
+					<footer class="fragment"><strong>Ojo con los %</strong></footer>
+				</section>
+				<section>
+					<h3>Viewport-percentage</h3>
+					<p>vw, vh, vmin, vmax</p>
+				</section>
+				<section>
+					<h3>Absolute lengths</h3>
+					<table>
+						<thead>
+							<tr>
+								<th>unit</th>
+								<th>name</th>
+								<th>equivalence</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>
+									<dfn
+										class="dfn-paneled css"
+										data-dfn-for="<length>"
+										data-dfn-type="value"
+										data-export=""
+										id="cm"
+										>cm</dfn
+									>
+								</th>
+								<td>centimeters</td>
+								<td>1cm</td>
+							</tr>
+							<tr>
+								<th>
+									<dfn
+										class="dfn-paneled css"
+										data-dfn-for="<length>"
+										data-dfn-type="value"
+										data-export=""
+										id="mm"
+										>mm</dfn
+									>
+								</th>
+								<td>millimeters</td>
+								<td>1mm = 1/10th of 1cm</td>
+							</tr>
+							<tr>
+								<th>
+									<dfn
+										class="dfn-paneled css"
+										data-dfn-for="<length>"
+										data-dfn-type="value"
+										data-export=""
+										id="Q"
+										>Q</dfn
+									>
+								</th>
+								<td>quarter-millimeters</td>
+								<td>1Q = 1/40th of 1cm</td>
+							</tr>
+							<tr>
+								<th>
+									<dfn
+										class="dfn-paneled css"
+										data-dfn-for="<length>"
+										data-dfn-type="value"
+										data-export=""
+										id="in"
+										>in</dfn
+									>
+								</th>
+								<td>inches</td>
+								<td>1in = 2.54cm = 96px</td>
+							</tr>
+							<tr>
+								<th>
+									<dfn
+										class="dfn-paneled css"
+										data-dfn-for="<length>"
+										data-dfn-type="value"
+										data-export=""
+										id="pc"
+										>pc</dfn
+									>
+								</th>
+								<td>picas</td>
+								<td>1pc = 1/6th of 1in</td>
+							</tr>
+							<tr>
+								<th>
+									<dfn
+										class="dfn-paneled css"
+										data-dfn-for="<length>"
+										data-dfn-type="value"
+										data-export=""
+										id="pt"
+										>pt</dfn
+									>
+								</th>
+								<td>points</td>
+								<td>1pt = 1/72th of 1in</td>
+							</tr>
+							<tr>
+								<th>
+									<dfn
+										class="dfn-paneled css"
+										data-dfn-for="<length>"
+										data-dfn-type="value"
+										data-export=""
+										id="px"
+										>px</dfn
+									>
+								</th>
+								<td>pixels</td>
+								<td>1px = 1/96th of 1in</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<h2>Color de la letra</h2>
+					<h3>color:</h3>
+					<footer>
+						<a href="https://www.w3.org/TR/css-color-3">CSS Color Level 3</a>
+					</footer>
+				</section>
+				<section>
 					<h2>Lista de nombres</h2>
-					<p>
-						<a href="https://www.w3.org/TR/css-color-3/#html4">
-							Básica
-						</a>
-					</p>
+					<h3>
+						<a href="https://www.w3.org/TR/css-color-3/#html4"> Básica </a>
+					</h3>
 					<p style="background-color: var(--paw-verde-claro)">
 						<span style="color: Black"> Black </span>,
 						<span style="color: Silver"> Silver </span>,
@@ -104,18 +310,20 @@
 						<span style="color: Teal"> Teal </span>,
 						<span style="color: Aqua"> Aqua </span>
 					</p>
-					<p>
-						<a href="https://www.w3.org/TR/css-color-3/#svg-color"
-							>Extendida</a
-						>
-					</p>
+					<p>transparent</p>
+				</section>
+				<section>
+					<h2>Lista de nombres</h2>
+					<h3>
+						<a href="https://www.w3.org/TR/css-color-3/#svg-color">Extendida</a>
+					</h3>
 				</section>
 				<section>
 					<h2>Forma Numérica</h2>
 					<h3>Hexadecimal</h3>
 					<p>#rgb</p>
 					<p>#rrggbb</p>
-					<footer>
+					<footer class="fragment">
 						<p>
 							#ff0000 ->
 							<span style="background-color: #ff0000"
@@ -153,7 +361,7 @@
 					<h3>RGB Byte</h3>
 					<p>rgb(0..256, 0..256, 0..256)</p>
 					<p>rgba(0..256, 0..256, 0..256, 0..1)</p>
-					<footer>
+					<footer class="fragment">
 						<p class="paw-color">
 							rgb(256, 0, 0) ->
 							<span style="background-color: rgb(2565, 0, 0)"
@@ -198,8 +406,7 @@
 						</p>
 						<p class="paw-color2">
 							rgba(85, 85, 85, 0.5) ->
-							<span
-								style="background-color: rgba(85, 85, 85, 0.5)"
+							<span style="background-color: rgba(85, 85, 85, 0.5)"
 								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
 							>
 						</p>
@@ -211,10 +418,7 @@
 						</p>
 						<p class="paw-color2">
 							rgba(17, 170, 256, 0.5) ->
-							<span
-								style="
-									background-color: rgba(17, 170, 256, 0.5);
-								"
+							<span style="background-color: rgba(17, 170, 256, 0.5)"
 								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
 							>
 						</p>
@@ -225,7 +429,7 @@
 					<h3>RGB Porcentaje</h3>
 					<p>rgb(0..100%, 0..100%, 0..100%)</p>
 					<p>rgba(0..100%, 0..100%, 0..100%, 0..100%)</p>
-					<footer>
+					<footer class="fragment">
 						<p class="paw-color">
 							rgb(100%, 0, 0) ->
 							<span style="background-color: rgb(2565, 0, 0)"
@@ -270,8 +474,7 @@
 						</p>
 						<p class="paw-color2">
 							rgba(33%, 33%, 33%, 50%) ->
-							<span
-								style="background-color: rgba(85, 85, 85, 0.5)"
+							<span style="background-color: rgba(85, 85, 85, 0.5)"
 								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
 							>
 						</p>
@@ -283,14 +486,117 @@
 						</p>
 						<p class="paw-color2">
 							rgba(6%, 66%, 100%, 50%) ->
-							<span
-								style="
-									background-color: rgba(6%, 66%, 100%, 50%);
-								"
+							<span style="background-color: rgba(6%, 66%, 100%, 50%)"
 								>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
 							>
 						</p>
 					</footer>
+				</section>
+				<section>
+					<h2>Subrayado y más</h2>
+					<h3>text-decoration:</h3>
+					<p class="fragment">
+						[<span style="text-decoration: underline">underline</span> |
+						<span style="text-decoration: overline">overline</span> |
+						<span style="text-decoration: line-through">line-through</span> |
+						<span style="text-decoration: blink">blink</span> ]
+					</p>
+				</section>
+				<section>
+					<h3>text-decoration-style</h3>
+					<p class="fragment">
+						[<span
+							style="text-decoration: underline; text-decoration-style: solid"
+							>solid</span
+						>
+						|
+						<span
+							style="text-decoration: underline; text-decoration-style: double"
+							>double</span
+						>
+						|
+						<span
+							style="text-decoration: underline; text-decoration-style: dotted"
+							>dotted</span
+						>
+						|
+						<span
+							style="text-decoration: underline; text-decoration-style: dashed"
+							>dashed</span
+						>
+						|
+						<span
+							style="text-decoration: underline; text-decoration-style: wavy"
+							>wavy</span
+						>
+						]
+					</p>
+					<h3 class="fragment">text-decoration-color:</h3>
+					<h3 class="fragment">text-decoration-skip:</h3>
+				</section>
+				<section>
+					<h2>mayúsculas y / o minúsculas</h2>
+					<h3>text-transform:</h3>
+					<p class="fragment">
+						[<span style="text-transform: capitalize">capitalize</span> |
+						<span style="text-transform: uppercase">uppercase</span> |
+						<span style="text-transform: lowercase">lowercase</span> ]
+					</p>
+				</section>
+				<section>
+					<h2>Espacio entre las letras</h2>
+					<h3>letter-spacing:</h3>
+					<div class="paw-ejemplo">
+						<pre><code data-line-numbers><style> 
+	.espacio1 { letter-spacing: 0.5rem;}
+	.espacio2 { letter-spacing: -0.1rem;}
+</style>
+		<p> Texto </p>
+		<p class="espacio1"> Texto </p>
+		<p class="espacio2"> Texto </p>
+					</code></pre>
+						<div class="paw-ejemplo2">
+							<p>Texto</p>
+							<p class="espacio1">Texto</p>
+							<p class="espacio2">Texto</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h2>Espacio entre palabras</h2>
+					<h3>word-spacing:</h3>
+				</section>
+				<section>
+					<h2>Alto de la linea</h2>
+					<h3>line-height:</h3>
+				</section>
+				<section>
+					<h2>Alineación</h2>
+					<h3>text-align:</h3>
+					<p class="fragment">[ left | right | center | justify ]</p>
+				</section>
+				<section>
+					<h2>Sangría de primera línea</h2>
+					<h3>text-indent:</h3>
+				</section>
+				<section>
+					<h2>Sombras</h2>
+					<h3>text-shadow:</h3>
+					<p class="fragment">offset-x | offset-y | blur-radius | color</p>
+					<div class="paw-ejemplo fragment">
+						<pre><code data-line-numbers><style> 
+	.sombra { text-shadow: 5px 5px 0 darkred; }
+</style>
+		<p class="sombra"> Texto </p>
+>
+					</code></pre>
+						<div class="paw-ejemplo3">
+							<p class="sombra">Texto</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h2>y mucho más</h2>
 				</section>
 			</div>
 		</div>
@@ -326,9 +632,7 @@
 			Reveal.on("slidechanged", (event) => {
 				document.querySelector(".paw-comision").innerHTML =
 					// pregunto si la presentacion tiene subtitulo
-					document.querySelector(
-						".paw-presentacion .paw-tituloContenido h2"
-					)
+					document.querySelector(".paw-presentacion .paw-tituloContenido h2")
 						? //Si tiene lo incorporo a la cabecera de la slide
 						  // Titulo | Subtitulo
 						  [

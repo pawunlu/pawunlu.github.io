@@ -31,14 +31,44 @@
 .reveal section > h3 {
 	margin-top: 0;
 }
-.paw-color,
-.paw-color2 {
+.reveal p.paw-color,
+.reveal p.paw-color2 {
 	display: inline-block;
 	width: 45%;
 	border-left: 2px solid white;
 	padding: 0 0.5rem;
+	margin: 0.3rem 0;
+	font-size: 0.8em;
+}
+.reveal p.paw-color span,
+.reveal p.paw-color2 span {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
 }
 
-.paw-color {
+.reveal p.paw-color2 span:hover::before {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	background-color: white;
+	width: 100%;
+	height: 1rem;
+	content: " ";
+}
+
+.reveal p.paw-color2 span:hover::after {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 1rem;
+	content: " ";
+	background-color: inherit;
+}
+
+.reveal p.paw-color {
 	border-left: none;
 }
