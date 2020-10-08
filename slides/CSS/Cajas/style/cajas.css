@@ -1,0 +1,31 @@
+.reveal .paw-ejemplo {
+	background-color: var(--paw-verde-claro);
+	position: relative;
+	width: 80vw;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 0;
+	background-color: var(--paw-verde-claro);
+}
+
+.reveal .paw-ejemplo .paw-contenedor {
+	background-color: var(--paw-verde-oscuro);
+	margin: 10%;
+	padding: 10%;
+	border: 10px solid var(--paw-amarillo);
+	outline: 10px solid black;
+}
+
+.reveal .paw-ejemplo .paw-limite-margin {
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+	border: 2px dotted black;
+	width: 40vw;
+	margin: 0 -6px;
+	padding: 0;
+}
+.reveal .paw-ejemplo .paw-contenido {
+	display: block;
+	background-color: var(--paw-verde-medio-claro);
+}

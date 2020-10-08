@@ -23,14 +23,7 @@
 	margin: 0;
 }
 
-.reveal section > h2 {
-	margin-top: 2rem;
-	margin-bottom: 0;
-}
 
-.reveal section > h3 {
-	margin-top: 0;
-}
 .reveal p.paw-color,
 .reveal p.paw-color2 {
 	display: inline-block;

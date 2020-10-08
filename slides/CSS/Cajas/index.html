@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PAW | CSS - El modelo de cajas</title>
+		<link rel="stylesheet" href="../../reveal/reset.css" />
+		<link rel="stylesheet" href="../../reveal/reveal.css" />
+		<link
+			rel="stylesheet"
+			href="../../reveal/theme/pawTheme.css"
+			id="theme"
+		/>
+		<link rel="stylesheet" href="../../style/paw.css" id="paw-theme" />
+		<link rel="stylesheet" href="../style/slidesCSS.css" />
+		<link rel="stylesheet" href="style/cajas.css" />
+		<!-- Theme used for syntax highlighting of code -->
+		<link
+			rel="stylesheet"
+			href="../../reveal/plugin/highlight/monokai.css"
+			id="highlight-theme"
+		/>
+	</head>
+	<body>
+		<!-- Encabezado de diaspos NO TOCAR -->
+		<header class="paw-encabezado">
+			<img src="../../images/logoPAW.svg" alt="" />
+			<h2 class="paw-asignatura">PAW</h2>
+			<h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+		</header>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Diapositiva PRESENTACION NO TOCAR -->
+				<section class="paw-presentacion">
+					<div class="paw-logo">
+						<img src="../../images/logoPAW.svg" alt="" />
+					</div>
+					<div class="paw-asignatura">
+						<h1>PAW</h1>
+					</div>
+					<div class="paw-comision">
+						<h2>Lic. en Sistemas de Información</h2>
+					</div>
+					<div class="paw-autor">
+						<p class="paw-speaker">Speaker:</p>
+						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
+						<address>
+							<a href="mailto:pcchale@gmail.com"
+								>pcchale@gmail.com</a
+							>
+						</address>
+					</div>
+					<div class="paw-tituloContenido">
+						<!-- TITULO de las SLIDES -->
+						<h1>CSS</h1>
+						<h2>El modelo de cajas</h2>
+					</div>
+				</section>
+				<!-- Indice -->
+				<section id="indice">
+					<img src="images/HTML5.png" alt="" />
+					<h2 style="margin-bottom: 0">Índice:</h2>
+					<ol class="paw-indice">
+						<li>Introducción</li>
+						<li>Selectores</li>
+						<li>Formato de Texto</li>
+						<li><strong>El modelo de caja</strong></li>
+						<li>Layouts</li>
+						<li>Media Querys</li>
+						<li>Animaciones</li>
+					</ol>
+				</section>
+				<section>
+					<img
+						src="images/boxmodel.png"
+						alt=""
+						width="1000"
+						style="margin-top: 3rem; filter: hue-rotate(235deg)"
+					/>
+				</section>
+				<section>
+					<div>
+						<div class="paw-ejemplo">
+							<div class="paw-limite-margin">
+								<div class="paw-contenedor paw-caja1">
+									<div class="paw-contenido">&nbsp;</div>
+								</div>
+							</div>
+							<div class="paw-limite-margin">
+								<div class="paw-contenedor paw-caja2">
+									<div class="paw-contenido">&nbsp;</div>
+								</div>
+							</div>
+							<div class="paw-limite-margin">
+								<div class="paw-contenedor paw-caja3">
+									<div class="paw-contenido">&nbsp;</div>
+								</div>
+							</div>
+							<div class="paw-limite-margin">
+								<div class="paw-contenedor paw-caja4">
+									<div class="paw-contenido">&nbsp;</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h2>Tipos de cajas</h2>
+					<h3>display:</h3>
+					<p>[ inline | inline-block | block | none ]</p>
+				</section>
+				<section>
+					<h2>Tamaño</h2>
+					<h3>width:</h3>
+					<h3>height:</h3>
+				</section>
+				<section>
+					<h2>¿qué pasa con el contenido?</h2>
+					<div class="paw-ejemplo">
+						Lorem ipsum dolor sit, amet consectetur adipisicing
+						elit. Aperiam fuga quibusdam quis corporis! Reiciendis,
+						minima! Modi laborum similique quia ad officiis tenetur
+						quisquam, voluptatem aliquid dolorem non ex deleniti
+						ducimus.
+					</div>
+				</section>
+				<section>
+					<h2>¿qué pasa con el contenido?</h2>
+					<div class="paw-ejemplo" style="height: 30vh">
+						Lorem ipsum dolor sit, amet consectetur adipisicing
+						elit. Aperiam fuga quibusdam quis corporis! Reiciendis,
+						minima! Modi laborum similique quia ad officiis tenetur
+						quisquam, voluptatem aliquid dolorem non ex deleniti
+						ducimus.
+					</div>
+				</section>
+				<section>
+					<h2>desborde</h2>
+					<h3>overflow:</h3>
+					<p>[ visible | hidden | scroll | auto ]</p>
+				</section>
+				<section>
+					<h2>overflow: hidden;</h2>
+					<div
+						class="paw-ejemplo"
+						style="height: 30vh; overflow: hidden"
+					>
+						Lorem ipsum dolor sit, amet consectetur adipisicing
+						elit. Aperiam fuga quibusdam quis corporis! Reiciendis,
+						minima! Modi laborum similique quia ad officiis tenetur
+						quisquam, voluptatem aliquid dolorem non ex deleniti
+						ducimus.
+					</div>
+				</section>
+				<section>
+					<h2>overflow: auto;</h2>
+					<div
+						class="paw-ejemplo"
+						style="height: 30vh; overflow: auto"
+					>
+						Lorem ipsum dolor sit, amet consectetur adipisicing
+						elit. Aperiam fuga quibusdam quis corporis! Reiciendis,
+						minima! Modi laborum similique quia ad officiis tenetur
+						quisquam, voluptatem aliquid dolorem non ex deleniti
+						ducimus.
+					</div>
+				</section>
+				<section>
+					<h2>margenes externos</h2>
+					<h3>margin:</h3>
+					<p class="fragement">
+						<strong>4 valores:</strong> arriba derecha abajo
+						izquierda
+					</p>
+					<p class="fragement">
+						<strong>2 valores:</strong> arriba-abajo
+						derecha-izquierda
+					</p>
+					<p class="fragement">
+						margin-top: | margin-right: | margin-bottom: |
+						margin-left:
+					</p>
+				</section>
+				<section>
+					<h2>margenes internos</h2>
+					<h3>padding:</h3>
+					<p class="fragement">
+						<strong>4 valores:</strong> arriba derecha abajo
+						izquierda
+					</p>
+					<p class="fragement">
+						<strong>2 valores:</strong> arriba-abajo
+						derecha-izquierda
+					</p>
+					<p class="fragement">
+						padding-top: | padding-right: | padding-bottom: |
+						padding-left:
+					</p>
+				</section>
+				<section>
+					<h2>Bordes</h2>
+					<h3>border:</h3>
+					<p>color estilo tamaño</p>
+					<p></p>
+					<p>
+						border-top: | border-right: | border-bottom: |
+						border-left:
+					</p>
+				</section>
+				<section>
+					<h2>Esquinas</h2>
+					<h3>border-radius:</h3>
+					<div class="paw-ejemplo">
+						<div
+							class="paw-contenedor"
+							style="border-radius: 1rem"
+						></div>
+						<div
+							class="paw-contenedor"
+							style="border-radius: 50%"
+						></div>
+					</div>
+				</section>
+				<section>
+					<h2>Contorno</h2>
+				</section>
+			</div>
+		</div>
+		<script src="../../reveal/reveal.js"></script>
+		<script src="../../reveal/plugin/zoom/zoom.js"></script>
+		<script src="../../reveal/plugin/notes/notes.js"></script>
+		<script src="../../reveal/plugin/search/search.js"></script>
+		<script src="../../reveal/plugin/markdown/markdown.js"></script>
+		<script src="../../reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				width: 1920,
+				height: 1080,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [
+					RevealZoom,
+					RevealNotes,
+					RevealSearch,
+					RevealMarkdown,
+					RevealHighlight,
+				],
+			});
+
+			//Configuro el Plugin Highlight para que los tab se reemplacen por 2 espacios
+			Reveal.getPlugin("highlight").hljs.configure({
+				tabReplace: "  ",
+			});
+
+			Reveal.on("slidechanged", (event) => {
+				document.querySelector(".paw-comision").innerHTML =
+					// pregunto si la presentacion tiene subtitulo
+					document.querySelector(
+						".paw-presentacion .paw-tituloContenido h2"
+					)
+						? //Si tiene lo incorporo a la cabecera de la slide
+						  // Titulo | Subtitulo
+						  [
+								document.querySelector(
+									".paw-presentacion .paw-tituloContenido h1"
+								).textContent,
+								" | ",
+								document.querySelector(
+									".paw-presentacion .paw-tituloContenido h2"
+								).textContent,
+						  ].join(" ")
+						: //Sino solo uso el titulo
+						  document.querySelector(
+								".paw-presentacion .paw-tituloContenido h1"
+						  ).textContent;
+			});
+		</script>
+	</body>
+</html>

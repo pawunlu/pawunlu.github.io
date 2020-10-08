@@ -1,3 +1,12 @@
+.reveal section > h2 {
+	margin-top: 2rem;
+	margin-bottom: 0;
+}
+
+.reveal section > h3 {
+	margin-top: 0;
+}
+
 .paw-ejemplo1 li {
 	color: orange;
 }
