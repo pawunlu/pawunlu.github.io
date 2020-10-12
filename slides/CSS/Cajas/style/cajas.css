@@ -14,6 +14,15 @@
 	padding: 10%;
 	border: 10px solid var(--paw-amarillo);
 	outline: 10px solid black;
+	outline-offset: 15px;
+}
+
+.reveal .paw-ejemplo .paw-offset {
+	outline-offset: 25px;
+}
+
+.reveal .paw-ejemplo .paw-offset:hover {
+	outline-offset: 100px;
 }
 
 .reveal .paw-ejemplo .paw-limite-margin {
@@ -28,4 +37,21 @@
 .reveal .paw-ejemplo .paw-contenido {
 	display: block;
 	background-color: var(--paw-verde-medio-claro);
+}
+
+.reveal .paw-ejemplo .paw-sombraAfuera {
+	box-shadow: 0 0 30px 5px black;
+	outline: none;
+}
+
+.reveal .paw-ejemplo .paw-sombraAdentro {
+	box-shadow: inset 0 0 20px 5px black;
+	outline: none;
+}
+
+.reveal .paw-ejemplo .paw-flotandoDer {
+	float: right;
+}
+.reveal .paw-ejemplo .paw-flotandoIzq {
+	float: left;
 }
