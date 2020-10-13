@@ -1,3 +1,72 @@
+.reveal .paw-ejemplo .paw-flotandoDer {
+	float: right;
+}
+.reveal .paw-ejemplo .paw-flotandoIzq {
+	float: left;
+}
+
+.reveal .paw-ejemplo .paw-limite-margin {
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+	border: 2px dotted black;
+	width: 40vw;
+	margin: 0 -6px;
+	padding: 0;
+}
+
 .reveal .paw-ejemplo {
-	
+	position: relative;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.reveal .paw-ejemplo .paw-contenedor {
+	background-color: var(--paw-verde-oscuro);
+	margin: 10%;
+	padding: 10%;
+	border: 10px solid var(--paw-amarillo);
+	outline: 10px solid black;
+	outline-offset: 15px;
+}
+
+.reveal .paw-ejemplo .paw-ejemplo1 {
+	width: 25vw;
+	background-color: var(--paw-verde-claro);
+	border: 3px solid black;
+	position: relative;
+	height: 12rem;
+	overflow: auto;
+}
+.reveal .paw-ejemplo .paw-ejemplo1 div {
+	width: 4rem;
+	height: 3.5rem;
+	border: 5px solid black;
+	background-color: var(--paw-verde-medio-oscuro);
+	margin: 0.3rem auto;
+}
+
+.reveal .paw-ejemplo1 div.div7 {
+	position: sticky;
+	bottom: 0;
+	background-color: var(--paw-verde-oscuro);
+}
+
+.reveal .paw-ejemplo1 .div6 {
+	position: relative;
+	top: 25px;
+	left: -40px;
+}
+
+.reveal .paw-ejemplo1 .div3 {
+	position: absolute;
+	top: 60px;
+	left: 25px;
+}
+
+.reveal .paw-ejemplo1 .div5 {
+	position: fixed;
+	bottom: 0;
+	right: 0;
 }
