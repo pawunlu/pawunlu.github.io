@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seguridad</title>
+    <link rel="stylesheet" href="../../reveal/reset.css" />
+    <link rel="stylesheet" href="../../reveal/reveal.css" />
+    <link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
+    <link rel="stylesheet" href="../../style/paw.css" id="theme" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link
+      rel="stylesheet"
+      href="../../reveal/plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+  </head>
+  <body>
+    <!-- Encabezado de diaspos NO TOCAR -->
+    <header class="paw-encabezado">
+      <img src="../../images/logoPAW.svg" alt="" />
+      <h2 class="paw-asignatura">PAW</h2>
+      <h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+    </header>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Diapositiva PRESENTACION NO TOCAR -->
+        <section class="paw-presentacion">
+          <div class="paw-logo">
+            <img src="../../images/logoPAW.svg" alt="" />
+          </div>
+          <div class="paw-asignatura">
+            <h1>PAW</h1>
+          </div>
+          <div class="paw-comision">
+            <h2>Lic. en Sistemas de Información</h2>
+          </div>
+          <div class="paw-autor">
+            <p class="paw-speaker">Speaker:</p>
+            <p class="paw-docente">Tomás DELVECHIO</p>
+            <address>
+              <a href="mailto:tdelvechio@unlu.edu.ar">tdelvechio@unlu.edu.ar</a>
+            </address>
+          </div>
+          <div class="paw-tituloContenido">
+            <!-- TITULO de las SLIDES -->
+            <h1>Desarrollo Web Seguro</h1>
+          </div>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Desarrollo Web Seguro</h2>
+          <p class="fragment">Contexto: Internet</p>
+          <p class="fragment">
+            Posibles ataques desde cualquier lugar del mundo
+          </p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Concepto: Superficie de Ataque</h2>
+          <p class="fragment">
+            ¿Que Cosas estan fuera de nuestro control (como desarrolladores)?
+          </p>
+          <p class="fragment">Hardware</p>
+          <p class="fragment">Red</p>
+          <p class="fragment">Plataforma (nube)</p>
+          <p class="fragment">La aplicación debe ser en si misma segura</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>¿Como abordar todo esto?</h2>
+          <p class="fragment">Estandares</p>
+          <p class="fragment">Controles</p>
+          <p class="fragment">Metodologías</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Controles</h2>
+          <p class="fragment">Controlar el Estandar y las Metodologias</p>
+          <p class="fragment">Control de Versiones</p>
+          <p class="fragment">Testing</p>
+          <p class="fragment">CI -> CD</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Estandares</h2>
+          <p class="fragment">Estandarizar como Proceso</p>
+          <p class="fragment">Formato de Código</p>
+          <p class="fragment">Como se gestiona una excepción</p>
+          <p class="fragment">Como se valida / sanitiza</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Metodologías</h2>
+          <p class="fragment">Como detectar vulnerabilidades</p>
+          <p class="fragment">Como <em>Rankear</em> vulnerabilidades</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Metodologías - STRIDE</h2>
+          <p class="fragment">
+            <strong>S</strong>poofing Identity - Suplantación
+          </p>
+          <p class="fragment">
+            <strong>T</strong>ampering Data - Manipulación de datos
+          </p>
+          <p class="fragment">
+            <strong>R</strong>epudiation - Negar la autoría de una acción.
+          </p>
+          <p class="fragment">
+            <strong>I</strong>nformation Disclosure - Revelación de Información
+          </p>
+          <p class="fragment">
+            <strong>D</strong>enial of Service - Denegación de Servicio
+          </p>
+          <p class="fragment">
+            <strong>E</strong>levation of Privilege - Obtener mayores
+            capacidades que las permitidas
+          </p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Metodologías - DREAD</h2>
+          <pre><code>(DAMAGE + REPRODUCIBILITY + EXPLOITABILITY + AFFECTED USERS + DISCOVERABILITY) / 5</code></pre>
+        </section>
+
+        <section data-auto-animate>
+          <h2>OWASP</h2>
+          <p class="fragment">Open Web Application Security Project</p>
+          <p class="fragment">
+            <a href="https://owasp.org/">https://owasp.org/</a>
+          </p>
+          <p class="fragment">
+            Si lo tuyo no es la seguridad, algunos de sus proyectos es lo mínimo
+            necesario para saber
+          </p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>OWASP Top Ten</h2>
+          <p>
+            Esfuerzo global por catalogar las 10 vulnerabilidades mas comunes en
+            proyectos web
+          </p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>OWASP Top Ten</h2>
+          <p class="fragment">A1:2017 - Inyección de Código</p>
+          <pre><code data-line-numbers data-trim data-noescape class="php">
+              $query = "SELECT * FROM accounts WHERE custID='" . request->getParameter("id") . "'";
+              // URL: http://example.com/app/accountView?id=' or '1'='1
+              // $query == SELECT * FROM accounts WHERE custID='' or '1'='1'
+          </code></pre>
+          <footer>
+            <a
+              href="https://owasp.org/www-project-top-ten/2017/A1_2017-Injection"
+              >A1:2017 - Inyección de Código</a
+            ><br />
+            <a
+              href="https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html"
+              >OWASP CheatSheet - Inyección de Código</a
+            >
+          </footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>OWASP Top Ten</h2>
+          <p class="fragment">A2:2017 - Pérdida de autenticación</p>
+          <ul>
+            <li class="fragment">Ataques de Fuerza Bruta</li>
+            <li class="fragment">No usar MultiFactor de autenticación</li>
+            <li class="fragment">
+              Permitir
+              <a href="https://haveibeenpwned.com/">contraseñas "debiles"</a>
+            </li>
+            <li class="fragment">Sesiones "extensas"</li>
+          </ul>
+          <footer class="fragment">
+            <a
+              href="https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication"
+              >A2:2017 - Pérdida de autenticación</a
+            ><br />
+            <a href="https://github.com/danielmiessler/SecLists"
+              >Listas de Password comunes</a
+            >
+          </footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>OWASP Top Ten</h2>
+          <p class="fragment">A3:2017 - Exposición de datos sensibles</p>
+          <ul>
+            <li class="fragment">No usar mecanismo de encriptación</li>
+            <li class="fragment">O usarlos de forma incorrecta</li>
+            <li class="fragment">O usarlos de forma parcial</li>
+            <li class="fragment">
+              Datos hasheados de forma incorrecta o debil
+            </li>
+          </ul>
+          <footer class="fragment">
+            <a
+              href="https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure"
+              >A3:2017 Exposición de datos sensibles</a
+            >
+          </footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>OWASP Top Ten</h2>
+          <p>A3:2017 - Exposición de datos sensibles</p>
+          <pre
+            class="fragment"
+          ><code data-line-numbers data-trim data-noescape class="php">
+            $password = 'Password';
+            $hash_pass = password_hash($password, PASSWORD_DEFAULT);
+            password_verify('Password', $hash_default_salt ) # true
+          </code></pre>
+          <img
+            class="fragment"
+            src="img/password_hash_salt.svg"
+            alt="Password Hash With Salt"
+            style="background-color: white; width: 60%"
+          />
+          <footer class="fragment">
+            <a
+              href="https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure"
+              >A3:2017 Exposición de datos sensibles</a
+            ><br />
+            <a href="https://www.php.net/manual/es/faq.passwords.php">
+              PHP - Hash de contraseñas seguros
+            </a>
+          </footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2></h2>
+          <p class="fragment"></p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Referencias Bibliográficas</h2>
+          <p>
+            Mitnick, K. D., & Simon, W. L. (2011).
+            <em
+              >The art of deception: Controlling the human element of
+              security</em
+            >. John Wiley & Sons.
+          </p>
+          <p>Tori, C. (2008). <em>Hacking ético</em>.</p>
+          <p>
+            Viega, J., & McGraw, G. R. (2001).
+            <em
+              >Building secure software: how to avoid security problems the
+              right way</em
+            >. Pearson Education.
+          </p>
+          <footer></footer>
+        </section>
+      </div>
+    </div>
+
+    <script src="../../reveal/reveal.js"></script>
+    <script src="../../reveal/plugin/zoom/zoom.js"></script>
+    <script src="../../reveal/plugin/notes/notes.js"></script>
+    <script src="../../reveal/plugin/search/search.js"></script>
+    <script src="../../reveal/plugin/markdown/markdown.js"></script>
+    <script src="../../reveal/plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        width: 1920,
+        height: 1080,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [
+          RevealZoom,
+          RevealNotes,
+          RevealSearch,
+          RevealMarkdown,
+          RevealHighlight,
+        ],
+      });
+
+      //Configuro el Plugin Highlight para que los tab se reemplacen por 2 espacios
+      Reveal.getPlugin("highlight").hljs.configure({
+        tabReplace: "  ",
+      });
+
+      Reveal.on("slidechanged", (event) => {
+        document.querySelector(".paw-comision").innerHTML =
+          // pregunto si la presentacion tiene subtitulo
+          document.querySelector(".paw-presentacion .paw-tituloContenido h2")
+            ? //Si tiene lo incorporo a la cabecera de la slide
+              // Titulo | Subtitulo
+              [
+                document.querySelector(
+                  ".paw-presentacion .paw-tituloContenido h1"
+                ).textContent,
+                " | ",
+                document.querySelector(
+                  ".paw-presentacion .paw-tituloContenido h2"
+                ).textContent,
+              ].join(" ")
+            : //Sino solo uso el titulo
+              document.querySelector(
+                ".paw-presentacion .paw-tituloContenido h1"
+              ).textContent;
+      });
+    </script>
+  </body>
+</html>
