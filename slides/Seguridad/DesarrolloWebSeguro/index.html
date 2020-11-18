@@ -244,8 +244,137 @@
         </section>
 
         <section data-auto-animate>
-          <h2></h2>
-          <p class="fragment"></p>
+          <h2>OWASP Top Ten</h2>
+          <p class="fragment">A5:2017 - Pérdida del Control de Acceso</p>
+          <ul>
+            <li class="fragment">Carencia de Controles sobre autorizaciones</li>
+            <li class="fragment">
+              Otorgar privilegios a partir de datos que vienen de Cliente
+            </li>
+            <li class="fragment">Elevación de privilegios no autorizada</li>
+          </ul>
+          <footer class="fragment">
+            <a
+              href="https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control"
+              >A5:2017 - Pérdida del Control de Acceso</a
+            >
+          </footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>OWASP Top Ten</h2>
+          <p class="fragment">
+            A6:2017 - Configuraciones de Seguridad Incorrectas
+          </p>
+          <ul>
+            <li class="fragment">Web Servers</li>
+            <li class="fragment">Lenguaje</li>
+            <li class="fragment">Framework</li>
+            <li class="fragment">Dependencias</li>
+          </ul>
+          <footer class="fragment">
+            <a
+              href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration"
+              >A6:2017 - Configuraciones de Seguridad Incorrectas</a
+            >
+          </footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>OWASP Top Ten</h2>
+          <p>A6:2017 - Configuraciones de Seguridad Incorrectas</p>
+          <p>Web Server Configs En produccion</p>
+          <pre><code data-line-numbers data-trim data-noescape>
+            ServerSignature Off
+            ServerTokens Prod
+            FileETag None
+
+            # En virtualhosts
+            Options -Indexes
+            AllowOverride None
+          </code></pre>
+          <p>
+            Ejemplos de Apache Dir Index:
+            <a href="http://bdzalba.fau.unlp.edu.ar/greenstone/">1</a>,
+            <a href="http://ftp.uvigo.es/apache/httpd/">2</a>
+          </p>
+          <footer>
+            <a
+              href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration"
+              >A6:2017 - Configuraciones de Seguridad Incorrectas</a
+            >
+          </footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>OWASP Top Ten</h2>
+          <p>A6:2017 - Configuraciones de Seguridad Incorrectas</p>
+          <p>Configuraciones de Seguridad en Lenguajes</p>
+          <pre><code data-line-numbers data-trim data-noescape class="bash">
+            php -m # ver modulos activos
+            
+            # En php.ini
+            display_errors=Off # production; On para dev
+            max_execution_time =  30
+            max_input_time = 30
+            memory_limit = 40M
+            post_max_size=1K
+            upload_max_filesize=1M
+          </code></pre>
+          <footer>
+            <a
+              href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration"
+              >A6:2017 - Configuraciones de Seguridad Incorrectas</a
+            >
+          </footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>OWASP Top Ten</h2>
+          <p class="fragment">
+            A7:2017 - Secuencia de Comandos en Sitios Cruzados (XSS)
+          </p>
+          <p class="fragment">
+            <a
+              href="https://owasp.org/www-project-top-ten/2017/A7_2017-Cross-Site_Scripting_(XSS)"
+              >Ver Ejemplo</a
+            >
+          </p>
+          <footer class="fragment">
+            <a
+              href="https://owasp.org/www-project-top-ten/2017/A7_2017-Cross-Site_Scripting_(XSS)"
+              >A7:2017 - Secuencia de Comandos en Sitios Cruzados (XSS)</a
+            >
+          </footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>OWASP Top Ten - Otras vulnerabilidades</h2>
+          <p class="fragment">No mantenerse actualizado (A9:2017)</p>
+          <p class="fragment">Falta de Logs (A10:2017)</p>
+          <p class="fragment">Falta de Monitoreo (A10:2017)</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Otros Proyectos de OWASP</h2>
+          <p class="fragment">
+            <a
+              href="https://owasp.org/www-project-application-security-verification-standard/"
+              >OWASP ASVS - Application Security Verification Standard</a
+            >
+          </p>
+          <p class="fragment">
+            <a
+              href="https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs"
+              >OWASP Proactive Controls</a
+            >
+          </p>
+          <p class="fragment">
+            <a href="https://owasp.org/www-project-samm/"
+              >OWASP SAMM - Software Assurance Maturity Model</a
+            >
+          </p>
           <footer></footer>
         </section>
 
