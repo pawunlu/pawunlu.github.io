@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PAW | Introducción al maquetado</title>
+		<!-- Favicon-->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="../images/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../images/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="../images/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="../images/site.webmanifest" />
+		<link
+			rel="mask-icon"
+			href="../images/safari-pinned-tab.svg"
+			color="#5bbad5"
+		/>
+		<meta name="msapplication-TileColor" content="#00a300" />
+		<meta name="theme-color" content="#ffffff" />
+
+		<link rel="stylesheet" href="../reveal/reset.css" />
+		<link rel="stylesheet" href="../reveal/reveal.css" />
+		<link rel="stylesheet" href="../reveal/theme/pawTheme.css" id="theme" />
+		<link rel="stylesheet" href="../style/paw.css" id="theme" />
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link
+			rel="stylesheet"
+			href="../reveal/plugin/highlight/monokai.css"
+			id="highlight-theme"
+		/>
+
+		<link rel="stylesheet" href="style/seo.css" id="slideStyle" />
+	</head>
+	<body>
+		<header class="paw-encabezado">
+			<img src="../images/logoPAW.svg" alt="" />
+			<h2 class="paw-asignatura">PAW</h2>
+			<h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+		</header>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Presentación -->
+				<section class="paw-presentacion">
+					<div class="paw-logo">
+						<img src="../images/logoPAW.svg" alt="" />
+					</div>
+					<div class="paw-asignatura">
+						<h1>PAW</h1>
+					</div>
+					<div class="paw-comision">
+						<h2>Lic. en Sistemas de Información</h2>
+					</div>
+					<div class="paw-autor">
+						<p class="paw-speaker">Speaker:</p>
+						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
+						<address>
+							<a href="mailto:pcchale@gmail.com">pcchale@gmail.com</a>
+						</address>
+					</div>
+					<div class="paw-tituloContenido">
+						<h1>Search engine <br />optimization</h1>
+					</div>
+				</section>
+				<section id="googleManda">
+					<h2>Google manda!</h2>
+				</section>
+				<section id="googleManda2">
+					<h2>
+						Todo lo que hacemos <br />lo hacemos para que <br />nos encuentren
+						en Google
+					</h2>
+				</section>
+				<section id="serp">
+					<h2>SERP</h2>
+					<p>search engine's results page</p>
+					<p>Incrementar la visibilidad de las páginas web sin pagar</p>
+				</section>
+				<section id="SEOvsSEM">
+					<h2>SEM vs SEO</h2>
+					<h3>Search Engine Marketing</h3>
+					<p>Anuncios pagos</p>
+					<p>Pagar a cada buscador</p>
+					<p>Estrategia a corto plazo</p>
+				</section>
+				<section id="SEOvsSEM">
+					<h2>SEO vs SEM</h2>
+					<h3>Search Engine Optimization</h3>
+					<p>Gratis</p>
+					<p>Trabajando para todos los buscadores</p>
+					<p>Estrategia a mediano - largo plazo</p>
+				</section>
+				<section id="navegacional">
+					<h2>Tipos de Búsquedas</h2>
+					<h3>Búsqueda navegacional</h3>
+					<p>el usuario ya sabe a donde quiere ir</p>
+				</section>
+				<section id="informacional">
+					<h2>Tipos de Búsquedas</h2>
+					<h3>Búsqueda informacional</h3>
+					<p>no se busca un sitio, se busca un contenido</p>
+				</section>
+				<section id="transaccional">
+					<h2>Tipos de Búsquedas</h2>
+					<h3>Búsqueda transaccional</h3>
+					<p>Se busca un producto o servicio</p>
+					<p></p>
+					<p class="fragment"><strong> e-commerce!!!! </strong></p>
+				</section>
+				<section id="local">
+					<h2>Tipos de Búsquedas</h2>
+					<h3>Búsqueda local</h3>
+					<p>Se busca un lugar / negocio / local físico</p>
+				</section>
+				<section>
+					<h2>Google recomienda</h2>
+					<p>Expresa el contenido visual también en forma de texto.</p>
+				</section>
+				<section>
+					<h2>Google recomienda</h2>
+					<p>
+						Comprueba que cada página tenga <br />
+						un título descriptivo y una metadescripción.
+					</p>
+				</section>
+				<section>
+					<h2>Google recomienda</h2>
+					<p>Usa código HTML semántico.</p>
+				</section>
+				<section>
+					<h2>Google recomienda</h2>
+					<p>crea un archivo robots.txt</p>
+				</section>
+				<section>
+					<h2>Google recomienda</h2>
+					<p>
+						El crawler no detecta si hay paginas en tu sitio<br />
+						que son DISTINTAS VERSIONES del mismo contenido
+					</p>
+					<p></p>
+					<p>
+						rel="canonical"&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;rel="alternate"
+					</p>
+				</section>
+
+				<section id="pagerank">
+					<h2>Page rank</h2>
+					<img src="images/pageRank.svg" alt="" width="800px" />
+					<h3 class="fragent">
+						El valor de <strong>d</strong> no es conocido.
+					</h3>
+					<footer clasS="fragent">
+						<strong>Mito?</strong><br />
+						Se decía que era 0.85<br />
+						la probabilidad de que un usuario llegue a un sitio
+						<br />haciendo click en otro sitio y no escribiendo la url.
+					</footer>
+				</section>
+				<section id="panda">
+					<h2>Google Panda</h2>
+					<h3>2011</h3>
+					<p class="fragent"><strong> Calidad de sus contenidos. </strong></p>
+					<p class="fragent">Gramática | Originalidad | Actualización</p>
+				</section>
+				<section id="penguin">
+					<h2>Google Penguin</h2>
+					<h3>2012</h3>
+					<p clasS="fragent"><strong> Calidad de los enlaces. </strong></p>
+				</section>
+				<section id="schema">
+					<h2>schema.org</h2>
+					<h3>2012</h3>
+					<p clasS="fragent">Google, Microsoft, Yahoo y Yandex</p>
+					<p clasS="fragent"><strong> Entidades. Semántica especifica. </strong></p>
+				</section>
+				<section id="hummingbird">
+					<h2>Google Hummingbird</h2>
+					<h3>2013</h3>
+					<p clasS="fragent"><strong> Comprende el lenguaje natural. </strong></p>
+					<p clasS="fragent">variaciones de las palabras clave</p>
+				</section>
+				<section id="pigeon">
+					<h2>Google Pigeon</h2>
+					<h3>2014</h3>
+					<p clasS="fragent">
+						<strong> Ubicación geográfica de los usuarios. </strong>
+					</p>
+				</section>
+				<section id="mobilegeddon">
+					<h2>Google Mobilegeddon</h2>
+					<h3 clasS="fragent">2015</h3>
+					<p>
+						<strong> sitios mobile-friendly </strong>
+					</p>
+				</section>
+				<section id="rankbrain">
+					<h2>Google RankBrain</h2>
+					<h3>2015</h3>
+					<p clasS="fragent"><strong> Inteligencia Artificial </strong></p>
+					<p>
+						es capaz de analizar patrones entre búsquedas que están
+						aparentemente desconectadas
+					</p>
+				</section>
+				<section id="bert">
+					<h2>BERT</h2>
+					<h3 clasS="fragent">2019</h3>
+					<p>
+						<strong> Análisis de contexto </strong>
+					</p>
+					<p clasS="fragent">depurar y comprender las consultas e intenciones de los usuario</p>
+				</section>
+				<section id="factors">
+					<h2>Google’s 200 Ranking Factors</h2>
+					<footer>
+						<a href="https://backlinko.com/google-ranking-factors"
+							>https://backlinko.com/google-ranking-factors</a
+						>
+					</footer>
+				</section>
+				<section id="onpagefactors">
+					<h2>On page Factors</h2>
+					<ol>
+						<li>Calidad del contenido</li>
+						<li>Tiempo de carga</li>
+						<li>Red de links internos</li>
+						<li>Tasa de rebote</li>
+						<li>Tiempo de retención</li>
+					</ol>
+				</section>
+				<section id="offpagefactors">
+					<h2>Off page Factors</h2>
+					<ol>
+						<li>Click-through Rates (CTR)</li>
+						<li>Redes sociales</li>
+						<li>Backlinks</li>
+						<li>HTTPS</li>
+					</ol>
+				</section>
+				<section>
+					<h2>Google recomienda</h2>
+					<p>informe "Métricas web principales".</p>
+					<p>LCP: Largest Contentful Paint</p>
+					<p>FID: First Input Delay</p>
+					<p>CLS: Cumulative Layout Shift</p>
+					<footer>
+						<a href="https://web.dev/vitals-tools/"
+							>https://web.dev/vitals-tools/</a
+						>
+					</footer>
+				</section>
+				<section>
+					<h2>Google recomienda</h2>
+					<p>prueba de optimización para móviles</p>
+					<footer>
+						<a href="https://search.google.com/test/mobile-friendly">
+							https://search.google.com/test/mobile-friendly</a
+						>
+					</footer>
+				</section>
+				<section>
+					<h2>Google recomienda</h2>
+					<p>informe "Problemas de seguridad"</p>
+					<footer>
+						<a href="https://support.google.com/webmasters/answer/9044101">
+							https://support.google.com/webmasters/answer/9044101</a
+						>
+					</footer>
+				</section>
+			</div>
+		</div>
+		<script src="../reveal/reveal.js"></script>
+		<script src="../reveal/plugin/zoom/zoom.js"></script>
+		<script src="../reveal/plugin/notes/notes.js"></script>
+		<script src="../reveal/plugin/search/search.js"></script>
+		<script src="../reveal/plugin/markdown/markdown.js"></script>
+		<script src="../reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				width: 1920,
+				height: 1080,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [
+					RevealZoom,
+					RevealNotes,
+					RevealSearch,
+					RevealMarkdown,
+					RevealHighlight,
+				],
+			});
+
+			Reveal.on("slidechanged", (event) => {
+				document.querySelector(
+					".paw-comision"
+				).innerHTML = document.querySelector(
+					".paw-tituloContenido h1"
+				).textContent;
+			});
+		</script>
+	</body>
+</html>
