@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloud Computing</title>
+    <link rel="stylesheet" href="../../reveal/reset.css" />
+    <link rel="stylesheet" href="../../reveal/reveal.css" />
+    <link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
+    <link rel="stylesheet" href="../../style/paw.css" id="theme" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link
+      rel="stylesheet"
+      href="../../reveal/plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+  </head>
+  <body>
+    <!-- Encabezado de diaspos NO TOCAR -->
+    <header class="paw-encabezado">
+      <img src="../../images/logoPAW.svg" alt="" />
+      <h2 class="paw-asignatura">PAW</h2>
+      <h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+    </header>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Diapositiva PRESENTACION NO TOCAR -->
+        <section class="paw-presentacion">
+          <div class="paw-logo">
+            <img src="../../images/logoPAW.svg" alt="" />
+          </div>
+          <div class="paw-asignatura">
+            <h1>PAW</h1>
+          </div>
+          <div class="paw-comision">
+            <h2>Lic. en Sistemas de Información</h2>
+          </div>
+          <div class="paw-autor">
+            <p class="paw-speaker">Speaker:</p>
+            <p class="paw-docente">Tomás DELVECHIO</p>
+            <address>
+              <a href="mailto:tdelvechio@unlu.edu.ar">tdelvechio@unlu.edu.ar</a>
+            </address>
+          </div>
+          <div class="paw-tituloContenido">
+            <!-- TITULO de las SLIDES -->
+            <h1>Cloud Computing</h1>
+          </div>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Cloud Computing</h2>
+          <p class="fragment">Concepto: Computación como Servicio</p>
+          <p class="fragment">Se paga por lo que se usa</p>
+          <p class="fragment">Periodo de prueba</p>
+          <p class="fragment">Free Tier</p>
+          <p class="fragment">
+            Surge de la idea "Esto nos anda, ¿podemos venderlo?"
+          </p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Cloud Computing</h2>
+          <p class="fragment">Definición</p>
+          <blockquote class="fragment">
+            Permite acceso por red sencillo y a demanda a un grupo compartido de
+            recursos de computación (red, servidores, almacenamiento,
+            aplicaciones, servicios) que se puedan proveer de forma rapida y
+            liberados con gestion minima de los proveedores del servicio.
+          </blockquote>
+          <footer class="fragment">
+            <a href="https://csrc.nist.gov/publications/detail/sp/800-145/final"
+              >NIST Definition of Cloud Computing</a
+            >
+          </footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Cloud Computing</h2>
+          <p class="fragment">
+            Surgió como evolución y luego de la maduración de
+          </p>
+          <ul>
+            <li class="fragment">Virtualización</li>
+            <li class="fragment">Sistemas Distribuidos</li>
+            <li class="fragment">APIs</li>
+          </ul>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Cloud Computing</h2>
+          <p class="fragment">Algunas características</p>
+          <ul>
+            <li class="fragment">No requiere inversión inicial</li>
+            <li class="fragment">Bajo costo operativo</li>
+            <li class="fragment">Alta Escalabilidad</li>
+            <li class="fragment">Bajo Riesgo</li>
+          </ul>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Conceptos Relacionados</h2>
+          <p class="fragment">Grid Computing</p>
+          <p class="fragment">Utility Computing</p>
+          <p class="fragment">Virtualización</p>
+          <p class="fragment">Autonomous Computing</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Componentes</h2>
+          <img
+            src="img/cc-arquitectura.png"
+            alt="Componentes de un modelo orientado al cloud computing"
+            style="width: 70%"
+          />
+          <footer>
+            Zhang, Q., Cheng, L., & Boutaba, R. (2010). Cloud computing:
+            state-of-the-art and research challenges. Journal of internet
+            services and applications.
+          </footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Clasificación</h2>
+          <p class="fragment">Segun capa que virtualiza</p>
+          <ul>
+            <li class="fragment">IaaS</li>
+            <li class="fragment">PaaS</li>
+            <li class="fragment">SaaS</li>
+            <li class="fragment">XaaS</li>
+          </ul>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Clasificación</h2>
+          <p class="fragment">Segun capa que virtualiza</p>
+          <img
+            class="fragment"
+            src="img/cc-managed.png"
+            alt="Clasificación segun quien gestiona cada capa"
+            style="width: 50%"
+          />
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Tipos de Cloud Computing</h2>
+          <p class="fragment">Nubes Públicas</p>
+          <p class="fragment">Nubes Privadas</p>
+          <p class="fragment">Hibridas</p>
+          <p class="fragment">VPC</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <img
+            src="img/cc-example-1.png"
+            alt="Ejemplo de Instancia de Computación en Amazon"
+            style="width: 50%"
+          />
+          <footer style="font-size: smaller">
+            <ul>
+              <li>
+                <a
+                  href="https://aws.amazon.com/es/getting-started/use-cases/websites/"
+                  >Ejemplos de Amazon</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://cloud.google.com/solutions/websites/#development_guides"
+                  >Ejemplos de Google</a
+                >
+              </li>
+            </ul>
+          </footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Serverless</h2>
+          <p class="fragment">FaaS - Function as a Service</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Serverless</h2>
+          <p class="fragment">Desacoplar funcionalidad</p>
+          <p class="fragment">Funcionalidad sin estado</p>
+          <p class="fragment">Podemos hacerla con un FaaS</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Serverless</h2>
+          <p class="fragment">Ventajas</p>
+          <ul>
+            <li class="fragment">Pricing</li>
+            <li class="fragment">Simplicidad en el despliegue</li>
+          </ul>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Ejemplo 3-tier</h2>
+          <img
+            src="img/3-tier-traditional-arq.svg"
+            alt="arquitectura tradicional 3-tier"
+          />
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Serverless</h2>
+          <img
+            src="img/serverless-arq.svg"
+            alt="arquitectura tradicional 3-tier"
+            style="width: 70%"
+          />
+          <footer></footer>
+        </section>
+      </div>
+    </div>
+
+    <script src="../../reveal/reveal.js"></script>
+    <script src="../../reveal/plugin/zoom/zoom.js"></script>
+    <script src="../../reveal/plugin/notes/notes.js"></script>
+    <script src="../../reveal/plugin/search/search.js"></script>
+    <script src="../../reveal/plugin/markdown/markdown.js"></script>
+    <script src="../../reveal/plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        width: 1920,
+        height: 1080,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [
+          RevealZoom,
+          RevealNotes,
+          RevealSearch,
+          RevealMarkdown,
+          RevealHighlight,
+        ],
+      });
+
+      //Configuro el Plugin Highlight para que los tab se reemplacen por 2 espacios
+      Reveal.getPlugin("highlight").hljs.configure({
+        tabReplace: "  ",
+      });
+
+      Reveal.on("slidechanged", (event) => {
+        document.querySelector(".paw-comision").innerHTML =
+          // pregunto si la presentacion tiene subtitulo
+          document.querySelector(".paw-presentacion .paw-tituloContenido h2")
+            ? //Si tiene lo incorporo a la cabecera de la slide
+              // Titulo | Subtitulo
+              [
+                document.querySelector(
+                  ".paw-presentacion .paw-tituloContenido h1"
+                ).textContent,
+                " | ",
+                document.querySelector(
+                  ".paw-presentacion .paw-tituloContenido h2"
+                ).textContent,
+              ].join(" ")
+            : //Sino solo uso el titulo
+              document.querySelector(
+                ".paw-presentacion .paw-tituloContenido h1"
+              ).textContent;
+      });
+    </script>
+  </body>
+</html>
