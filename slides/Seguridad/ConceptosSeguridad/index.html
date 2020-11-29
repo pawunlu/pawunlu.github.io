@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conceptos de Seguridad</title>
+    <link rel="stylesheet" href="../../reveal/reset.css" />
+    <link rel="stylesheet" href="../../reveal/reveal.css" />
+    <link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
+    <link rel="stylesheet" href="../../style/paw.css" id="theme" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link
+      rel="stylesheet"
+      href="../../reveal/plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+  </head>
+  <body>
+    <!-- Encabezado de diaspos NO TOCAR -->
+    <header class="paw-encabezado">
+      <img src="../../images/logoPAW.svg" alt="" />
+      <h2 class="paw-asignatura">PAW</h2>
+      <h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+    </header>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Diapositiva PRESENTACION NO TOCAR -->
+        <section class="paw-presentacion">
+          <div class="paw-logo">
+            <img src="../../images/logoPAW.svg" alt="" />
+          </div>
+          <div class="paw-asignatura">
+            <h1>PAW</h1>
+          </div>
+          <div class="paw-comision">
+            <h2>Lic. en Sistemas de Información</h2>
+          </div>
+          <div class="paw-autor">
+            <p class="paw-speaker">Speaker:</p>
+            <p class="paw-docente">Tomás DELVECHIO</p>
+            <address>
+              <a href="mailto:tdelvechio@unlu.edu.ar">tdelvechio@unlu.edu.ar</a>
+            </address>
+          </div>
+          <div class="paw-tituloContenido">
+            <!-- TITULO de las SLIDES -->
+            <h1>Conceptos de Seguridad</h1>
+          </div>
+        </section>
+
+        <section data-auto-animate>
+          <h1>Contexto</h1>
+          <p></p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h1>Contexto</h1>
+          <p>En la carrera</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h1>Contexto</h1>
+          <p>En la carrera</p>
+          <p>En la industria</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h1>Introducción</h1>
+          <p></p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h1>Introducción</h1>
+          <p>¿Que buscamos con la seguridad?</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h1>Introducción</h1>
+          <p>¿Que buscamos con la seguridad?</p>
+          <p>Seguridad como requisito no funcional</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h1>Introducción</h1>
+          <p>¿Que buscamos con la seguridad?</p>
+          <p>Seguridad como requisito no funcional</p>
+          <p>Riesgos - Acciones Maliciosas</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h1>Introducción</h1>
+          <p>Riesgos - Acciones posibles</p>
+          <p class="fragment">Evitarlo</p>
+          <p class="fragment">Mitigarlo</p>
+          <p class="fragment">Transferirlo</p>
+          <p class="fragment">Aceptarlo</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Objetivos de implementar una política de seguridad</h2>
+          <p class="fragment">Confidencialidad</p>
+          <p class="fragment">Integridad</p>
+          <p class="fragment">Availability (Disponibilidad)</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Objetivos de implementar una política de seguridad</h2>
+          <p><strong>C</strong>onfidencialidad</p>
+          <p><strong>I</strong>ntegridad</p>
+          <p><strong>A</strong>vailability (Disponibilidad)</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Objetivos de implementar una política de seguridad</h2>
+          <p><strong>C</strong>onfidencialidad</p>
+          <p><strong>I</strong>ntegridad</p>
+          <p><strong>A</strong>vailability (Disponibilidad)</p>
+          <p>C.I.A</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Otros Elementos</h2>
+          <p class="fragment">Autenticación</p>
+          <p class="fragment">Autorización</p>
+          <p class="fragment">Privacidad</p>
+          <p class="fragment">Anonimato</p>
+          <p class="fragment">No Repudio</p>
+          <p class="fragment">Auditoria</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Variables involucradas al implementar seguridad</h2>
+          <p class="fragment">Regla de la Cadena</p>
+          <p class="fragment">Complejidad (Legal y Técnica)</p>
+          <p class="fragment">Heterogeneidad de plataformas</p>
+          <p class="fragment">Medición</p>
+          <p class="fragment">Costos</p>
+          <p class="fragment">Nuevas amenazas</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Algunos conceptos</h2>
+          <p>Modelado de amenazas</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Algunos conceptos</h2>
+          <p>Evaluación de riesgos</p>
+          <img
+            src="img/evaluacion_de_riesgos.png"
+            alt="Evaluación de Riesgos"
+          />
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Algunos conceptos</h2>
+          <p>Conocer los ataques</p>
+          <p class="fragment">Black Hat</p>
+          <p class="fragment">White Hat</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Algunos conceptos</h2>
+          <p>Ciclo de Trabajo</p>
+          <ul>
+            <li class="fragment">Protección</li>
+            <li class="fragment">Detección</li>
+            <li class="fragment">Reacción</li>
+          </ul>
+          <p class="fragment">Protección total no existe.</p>
+          <p class="fragment">
+            Si no se va a reaccionar, no tiene sentido detectar tampoco.
+          </p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Seguridad Total</h2>
+          <p>Compromiso con:</p>
+          <ul>
+            <li class="fragment">Costos</li>
+            <li class="fragment">Usabilidad</li>
+          </ul>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Seguridad Total</h2>
+          <p>Medidas Invisibles</p>
+          <p>Ejemplo: Redirect http -> https en vez de poner link</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Seguridad Total</h2>
+          <p>Jefe Irritable</p>
+          <p>Usuarios saltean medidas para seguir con sus trabajos</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Seguridad Total</h2>
+          <p>
+            Debe evaluarse nivel de seguridad segun necesidad de organización
+          </p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Seguridad por Oscuridad</h2>
+          <p>Algo que es inseguro pero de acceso muy dificil o desconocido</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Seguridad por Oscuridad</h2>
+          <p>Algo que es inseguro pero de acceso muy dificil o desconocido</p>
+          <p>¿Entonces es seguro o invulnerable?</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Seguridad por Oscuridad</h2>
+          <p>Algo que es inseguro pero de acceso muy dificil o desconocido</p>
+          <p><strike>¿Entonces es seguro o invulnerable?</strike></p>
+          <p>FALSO</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Seguridad por Oscuridad</h2>
+          <p>Se busca la seguridad por diseño, no por oscuridad</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Seguridad por Oscuridad</h2>
+          <p>Se busca la seguridad por diseño, no por oscuridad</p>
+          <p>
+            Ejemplo: Página de Login bien conocida, pero buena politica de
+            Autenticación
+          </p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Seguridad por Oscuridad</h2>
+          <p>Se busca la seguridad por diseño, no por oscuridad</p>
+          <p>
+            Ejemplo: Página de Login bien conocida, pero buena politica de
+            Autenticación
+          </p>
+          <p>
+            Otro Ejemplo: Los algoritmos de encriptación son raros y no los
+            entiendo, voy a hacer el mio.
+          </p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Seguridad por Oscuridad</h2>
+          <p>Se busca la seguridad por diseño, no por oscuridad</p>
+          <p>Uno puede "oscurecer" tanto como le da su "inteligencia"</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Seguridad por Oscuridad</h2>
+          <p>Se busca la seguridad por diseño, no por oscuridad</p>
+          <p>Uno puede "oscurecer" tanto como le da su "inteligencia"</p>
+          <p>Ejemplo: Esconder plata en la casa</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Seguridad por Oscuridad</h2>
+          <p>Seguridad + Oscuridad suelen ser buenas combinaciones</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Seguridad por Oscuridad</h2>
+          <p>Seguridad + Oscuridad suelen ser buenas combinaciones</p>
+          <p>Ejemplo: Contraseña</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Criptografía</h2>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Criptografía</h2>
+          <p>No resuelve todos los problemas de seguridad</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Criptografía</h2>
+          <p>No resuelve todos los problemas de seguridad</p>
+          <p>De ser posible, implementar con estandares</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Criptografía</h2>
+          <p>¿Cual algoritmo usar?</p>
+          <p class="fragment">Van cambiando</p>
+          <p class="fragment">Se van haciendo vulnerables</p>
+          <p class="fragment">
+            Lo ideal es leer del tema cada tanto, mantenerse actualizado
+          </p>
+          <p class="fragment">
+            En general, los lenguajes modernos prestan atención y sus librerias
+            populares
+          </p>
+          <p class="fragment">
+            Como concepto, claves mas largas implican mejor seguridad (RSA 4096
+            >> 1024)
+          </p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Ingeniería Social</h2>
+          <p class="fragment">Explota el factor humano</p>
+          <p class="fragment">
+            El Humano es vulnerable<span class="fragment"
+              >: Confianza excesiva</span
+            ><span class="fragment">, miedo</span
+            ><span class="fragment">, desconocimiento.</span>
+          </p>
+          <p class="fragment">
+            Engaño o manipulación para obtener acceso o Información
+          </p>
+          <p class="fragment">Mitigación:</p>
+          <ul>
+            <li class="fragment">Procedimientos claros</li>
+            <li class="fragment">Educación / Entrenamiento</li>
+            <li class="fragment">Software Claro, intuitivo, sin ambigüedad</li>
+          </ul>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Seguridad como proceso</h2>
+          <p class="fragment">No se puede "comprar" la seguridad</p>
+          <p class="fragment">
+            Intervención de factores humanos, técnicos, etc...
+          </p>
+          <p class="fragment">Actualizaciones de plataformas</p>
+          <p class="fragment">
+            La seguridad se tiene que pensar en todas las fases del ciclo de
+            vida
+          </p>
+          <p class="fragment">Es dificil y requiere experiencia</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Conclusiones</h2>
+          <p class="fragment">Es un proceso</p>
+          <p class="fragment">No es una capa al final del desarrollo</p>
+          <p class="fragment">Desarrollo seguro es solo una parte</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Referencias Bibliográficas</h2>
+          <p>
+            Mitnick, K. D., & Simon, W. L. (2011). *The art of deception:
+            Controlling the human element of security*. John Wiley & Sons.
+          </p>
+          <p>Tori, C. (2008). *Hacking ético*.</p>
+          <p>
+            Viega, J., & McGraw, G. R. (2001). *Building secure software: how to
+            avoid security problems the right way*. Pearson Education.
+          </p>
+          <footer></footer>
+        </section>
+      </div>
+    </div>
+
+    <script src="../../reveal/reveal.js"></script>
+    <script src="../../reveal/plugin/zoom/zoom.js"></script>
+    <script src="../../reveal/plugin/notes/notes.js"></script>
+    <script src="../../reveal/plugin/search/search.js"></script>
+    <script src="../../reveal/plugin/markdown/markdown.js"></script>
+    <script src="../../reveal/plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        width: 1920,
+        height: 1080,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [
+          RevealZoom,
+          RevealNotes,
+          RevealSearch,
+          RevealMarkdown,
+          RevealHighlight,
+        ],
+      });
+
+      //Configuro el Plugin Highlight para que los tab se reemplacen por 2 espacios
+      Reveal.getPlugin("highlight").hljs.configure({
+        tabReplace: "  ",
+      });
+
+      Reveal.on("slidechanged", (event) => {
+        document.querySelector(".paw-comision").innerHTML =
+          // pregunto si la presentacion tiene subtitulo
+          document.querySelector(".paw-presentacion .paw-tituloContenido h2")
+            ? //Si tiene lo incorporo a la cabecera de la slide
+              // Titulo | Subtitulo
+              [
+                document.querySelector(
+                  ".paw-presentacion .paw-tituloContenido h1"
+                ).textContent,
+                " | ",
+                document.querySelector(
+                  ".paw-presentacion .paw-tituloContenido h2"
+                ).textContent,
+              ].join(" ")
+            : //Sino solo uso el titulo
+              document.querySelector(
+                ".paw-presentacion .paw-tituloContenido h1"
+              ).textContent;
+      });
+    </script>
+  </body>
+</html>

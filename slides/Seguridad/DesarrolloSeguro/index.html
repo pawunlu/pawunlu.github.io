@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desarrollo Seguro</title>
+    <link rel="stylesheet" href="../../reveal/reset.css" />
+    <link rel="stylesheet" href="../../reveal/reveal.css" />
+    <link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
+    <link rel="stylesheet" href="../../style/paw.css" id="theme" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link
+      rel="stylesheet"
+      href="../../reveal/plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+  </head>
+  <body>
+    <!-- Encabezado de diaspos NO TOCAR -->
+    <header class="paw-encabezado">
+      <img src="../../images/logoPAW.svg" alt="" />
+      <h2 class="paw-asignatura">PAW</h2>
+      <h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+    </header>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Diapositiva PRESENTACION NO TOCAR -->
+        <section class="paw-presentacion">
+          <div class="paw-logo">
+            <img src="../../images/logoPAW.svg" alt="" />
+          </div>
+          <div class="paw-asignatura">
+            <h1>PAW</h1>
+          </div>
+          <div class="paw-comision">
+            <h2>Lic. en Sistemas de Información</h2>
+          </div>
+          <div class="paw-autor">
+            <p class="paw-speaker">Speaker:</p>
+            <p class="paw-docente">Tomás DELVECHIO</p>
+            <address>
+              <a href="mailto:tdelvechio@unlu.edu.ar">tdelvechio@unlu.edu.ar</a>
+            </address>
+          </div>
+          <div class="paw-tituloContenido">
+            <!-- TITULO de las SLIDES -->
+            <h1>Desarrollo Seguro</h1>
+          </div>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Desarrollo Seguro</h2>
+          <p class="fragment">Estrategias, Librerias, Estandares</p>
+          <p class="fragment">Algunos tips. Disciplina en sí misma.</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Conceptos</h2>
+          <p class="fragment">Origen de las vulnerabilidades</p>
+          <p class="fragment">Objetivo del atacante</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>¿Que hacer?</h2>
+          <p class="fragment">Documentación de Plataforma o Lenguaje</p>
+          <p class="fragment">Reutilización</p>
+          <ul>
+            <li class="fragment">Frameworks</li>
+            <li class="fragment">Librerías</li>
+            <li class="fragment">Plugines</li>
+            <li class="fragment">Software Libre</li>
+          </ul>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>¿Que hacer?</h2>
+          <p class="fragment">Buenas Prácticas</p>
+          <p class="fragment">Mejora indirecta</p>
+          <p class="fragment">Calidad general del producto</p>
+          <p class="fragment">Mejora Legibilidad (fácil de corregir)</p>
+          <p class="fragment">Mantenible / Modificable</p>
+          <p class="fragment">CÓDIGO COMPLEJO = DIFICL CORREGIR</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Consejos</h2>
+          <p>Validar Entradas</p>
+          <pre><code data-line-numbers data-trim data-noescape class="php">
+              filter_var(45, FILTER_VALIDATE_INT); # true
+              filter_var('bob@example.com', FILTER_VALIDATE_EMAIL); # true
+              filter_var('http://example.com', FILTER_VALIDATE_URL, FILTER_FLAG_PATH_REQUIRED); # false
+          </code></pre>
+          <footer>
+            <p>
+              <a href="https://www.php.net/manual/en/function.filter-var.php"
+                >Función filter_var()</a
+              >
+            </p>
+            <p>
+              <a
+                href="https://www.php.net/manual/en/filter.filters.validate.php"
+                >Filtros de Validación</a
+              >
+            </p>
+          </footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Consejos</h2>
+          <p>Sanitizar Salidas</p>
+          <pre><code data-line-numbers data-trim data-noescape class="php">
+              $a = 'joe@example.org';
+              $b = 'bogus - at - example dot org';
+              $c = '(bogus@example.org)';
+
+              filter_var($a, FILTER_SANITIZE_EMAIL); # 'joe@example.org'
+              filter_var($b, FILTER_SANITIZE_EMAIL); # false
+              filter_var($c, FILTER_SANITIZE_EMAIL); # 'bogus@example.org'
+          </code></pre>
+          <footer>
+            <p>
+              <a href="https://www.php.net/manual/en/function.filter-var.php"
+                >Función filter_var()</a
+              >
+            </p>
+            <p>
+              <a
+                href="https://www.php.net/manual/en/filter.filters.sanitize.php"
+                >Filtros de Sanitización</a
+              >
+            </p>
+          </footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Consejos</h2>
+          <p>Contexto o Entorno</p>
+          <ul>
+            <li>
+              Dentro del proyecto, referencias relativas (usar
+              <code>__DIR__</code>)
+            </li>
+            <li>
+              Si un archivo, directorio o path debe existir para que funcione,
+              hacer el control (funciones como <code>file_exists()</code>)
+            </li>
+            <li>Si los permisos son importantes, tambien chequearlos.</li>
+            <li>
+              Todo lo que es dependiente de mi sistema, chequearlo al principio
+              (variables de entorno, conexión a la base)
+            </li>
+            <li>En mi Maquina funciona</li>
+          </ul>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Consejos</h2>
+          <p>Ejecutar Comandos Externos</p>
+          <pre><code data-line-numbers data-trim data-noescape class="php">
+            exec($command);
+            system($command);
+            # Lo siguiente definitivamente NO
+            $command = $_POST['command']; 
+            exec($command);
+          </code></pre>
+          <p>
+            ¿Como crear un archivo cuyo nombre sea parte de la entrada del
+            usuario?
+          </p>
+          <footer>
+            <p>
+              <a href="https://www.php.net/manual/es/function.exec.php"
+                >Función <code>exec()</code></a
+              >
+            </p>
+            <p>
+              <a href="https://www.php.net/manual/es/function.system.php"
+                >Función <code>system()</code></a
+              >
+            </p>
+          </footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Consejos</h2>
+          <p>Sentencias Preparadas</p>
+          <pre><code data-line-numbers data-trim data-noescape class="php">
+              $sentencia = $pdo->prepare("INSERT INTO CLIENT (name, age) VALUES (:name, :age)");
+              $sentencia->bindParam(':name', $nombre);
+              $sentencia->bindParam(':age', $edad);
+
+              $nombre = 'Jerry Smith';
+              $edad = 40;
+              $sentencia->execute();
+
+              $nombre = 'Beth Smith';
+              $edad = 38;
+              $sentencia->execute();
+          </code></pre>
+          <footer>
+            <p>
+              <a
+                href="https://www.php.net/manual/es/pdo.prepared-statements.php"
+                >Sentencias preparadas</a
+              >
+            </p>
+          </footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Buffer Overflow</h2>
+          <p>
+            Esto pasa mas en C, los lenguajes de alto nivel lo controlan pero
+            pueden tener bugs.
+          </p>
+          <p>
+            Ojo al usar extensiones de terceros en bajo nivel (se puede ejecutar
+            código C en PHP, Python)
+          </p>
+          <p class="fragment"></p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Consejos</h2>
+          <p>Excepciones</p>
+          <p>Es tedioso pero capturar la mayor cantidad posible</p>
+          <p>
+            Premisa:
+            <a href="https://www.youtube.com/watch?v=0riSpvps4mA"
+              >Todo el Software esta Roto</a
+            >
+          </p>
+          <pre><code data-line-numbers data-trim data-noescape class="php">
+              try {
+                  echo awesome_function(5) . "\n";
+                  echo awesome_function(0) . "\n";
+              } catch (AnException $e) {
+                  // alguna accion
+              } catch (AnotherException $e) {
+                  // otra accion
+              } catch (Exception $e) {
+                  // accion cuando no se que fallo
+              }
+          </code></pre>
+          <p>¿Que se muestra al usuario?</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Consejos</h2>
+          <p>Excepciones</p>
+          <p>¿Que se muestra al usuario?</p>
+          <img src="img/errors_show_frontend.png" alt="" />
+          <p>Ocultar errores no los ARREGLA</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Logging</h2>
+          <p>
+            Loguear es un tema [mas complejo de lo que
+            parece](https://www.youtube.com/watch?v=wUXamWPhtpE)
+          </p>
+          <ul>
+            <li class="fragment">Loguear las excepciones</li>
+            <li class="fragment">Loguear valores no esperados</li>
+            <li class="fragment">Usar bien los niveles de log</li>
+            <li class="fragment">
+              El log es lo que debe mirar el dev/sysadmin
+            </li>
+          </ul>
+          <p class="fragment"></p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Datos "Importantes"</h2>
+          <p class="fragment">Restricciones Legales, Eticas</p>
+          <p class="fragment">Encriptar datos importantes</p>
+          <p class="fragment">No es necesario almacenar todo</p>
+          <p class="fragment">
+            ¿Cual es la diferencia entre Encriptar vs Hash?
+          </p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Code Review</h2>
+        </section>
+
+        <section data-auto-animate>
+          <h2>¿Bugs de Terceros?</h2>
+          <h2>¿Bugs Propios?</h2>
+        </section>
+
+        <section data-auto-animate>
+          <h2>¿Open Source garantiza seguridad?</h2>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Análisis Estatico de Código</h2>
+          <ul>
+            <li><a href="https://psalm.dev/">Psalm</a></li>
+            <li><a href="https://github.com/phan/phan">Phan</a></li>
+            <li><a href="https://phpstan.org/">PHPStan</a></li>
+          </ul>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Conclusiones</h2>
+          <p class="fragment">Código de alta calidad</p>
+          <p class="fragment">Guías Relevantes</p>
+          <p class="fragment">Estandares de Seguridad</p>
+          <footer></footer>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Referencias Bibliográficas</h2>
+          <p>
+            Mitnick, K. D., & Simon, W. L. (2011).
+            <em
+              >The art of deception: Controlling the human element of
+              security</em
+            >. John Wiley & Sons.
+          </p>
+          <p>Tori, C. (2008). <em>Hacking ético</em>.</p>
+          <p>
+            Viega, J., & McGraw, G. R. (2001).
+            <em
+              >Building secure software: how to avoid security problems the
+              right way</em
+            >. Pearson Education.
+          </p>
+          <footer></footer>
+        </section>
+      </div>
+    </div>
+
+    <script src="../../reveal/reveal.js"></script>
+    <script src="../../reveal/plugin/zoom/zoom.js"></script>
+    <script src="../../reveal/plugin/notes/notes.js"></script>
+    <script src="../../reveal/plugin/search/search.js"></script>
+    <script src="../../reveal/plugin/markdown/markdown.js"></script>
+    <script src="../../reveal/plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        width: 1920,
+        height: 1080,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [
+          RevealZoom,
+          RevealNotes,
+          RevealSearch,
+          RevealMarkdown,
+          RevealHighlight,
+        ],
+      });
+
+      //Configuro el Plugin Highlight para que los tab se reemplacen por 2 espacios
+      Reveal.getPlugin("highlight").hljs.configure({
+        tabReplace: "  ",
+      });
+
+      Reveal.on("slidechanged", (event) => {
+        document.querySelector(".paw-comision").innerHTML =
+          // pregunto si la presentacion tiene subtitulo
+          document.querySelector(".paw-presentacion .paw-tituloContenido h2")
+            ? //Si tiene lo incorporo a la cabecera de la slide
+              // Titulo | Subtitulo
+              [
+                document.querySelector(
+                  ".paw-presentacion .paw-tituloContenido h1"
+                ).textContent,
+                " | ",
+                document.querySelector(
+                  ".paw-presentacion .paw-tituloContenido h2"
+                ).textContent,
+              ].join(" ")
+            : //Sino solo uso el titulo
+              document.querySelector(
+                ".paw-presentacion .paw-tituloContenido h1"
+              ).textContent;
+      });
+    </script>
+  </body>
+</html>

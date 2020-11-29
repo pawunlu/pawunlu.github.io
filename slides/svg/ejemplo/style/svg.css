@@ -1,0 +1,139 @@
+.bordeAmarillo {
+    fill: white;
+    stroke: #fbc808;
+    stroke-width: 61.94;
+    stroke-miterlimit: 22.9256;
+}
+.escudoVerde {
+    fill: #014026;
+}
+.unluGris,
+.gris {
+    fill: #e6e6e6;
+}
+.unluBlanco,
+.blanco {
+    fill: white;
+}
+.mitadEscudoClaro {
+    fill: white;
+    fill-opacity: 0.2;
+}
+
+.paw-visible {
+    opacity: 1;
+}
+
+.paw-transparente {
+    opacity: 0;
+}
+
+#fenix {
+    transform: rotate3d(0, 0, 0, 0) scale(1) ;
+    transform-origin: center;
+    transition: transform;
+}
+
+.paw-logo { 
+    filter: blur(6px) grayscale();
+    transition: all 1s;
+}
+
+.paw-logo:hover #fenix {
+    animation: animacion-late 8s infinite;
+}
+
+.paw-logo:hover {
+    filter: blur(0);
+    transform: scale(1.3);
+    transform-origin: center;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.paw-logo #unlu {
+    transform: scale(1);
+    transition: all 1s;
+}
+.paw-logo:hover #unlu {
+    transform: scale(1.1);
+    transform-origin: center;
+    transition: all 1s;
+}
+
+.paw-logo .fuego {
+    fill: white;
+    transition: all 1s;
+    stroke-width: 0;
+    filter: blur(0);
+}
+
+.paw-logo:hover .fuego {
+    fill: darkred;
+    stroke: darkorange;
+    stroke-width: 15px;
+    transition: all 1s;
+    filter: blur(20px);
+}
+
+
+@keyframes animacion-late {
+    0% {
+		transform: rotate3d(0, 0, 0, 0) scale(1) ;
+	}
+	50% {
+		transform: rotate3d(0, 0, 0, 0) scale(1);
+	}
+	62.5% {
+		transform: rotate3d(0, 1, 0.1, 30deg) scale(1.2);
+	}
+	75% {
+		transform: rotate3d(0, 0, 0, 0) scale(1);
+	}
+	87.5% {
+		transform: rotate3d(0, 1, 0.1, -30deg) scale(1.2);
+	}
+	100% {
+		transform: rotate3d(0, 0, 0, 0) scale(1);
+	}
+}
+
+
+/*          PAW Brillos               */
+
+.paw-panelDestello {
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.paw-brillo {
+    stroke-width: 4px;
+    filter: blur(2px);
+    opacity: 0;
+    transition: all 2s;
+}
+
+.paw-brillo.aparece { 
+    filter: blur(10px);
+    opacity: 0.9;
+    transition: all 1s;
+}
+
+.brillo0 {
+    stroke: rgba(184, 134, 11, 0.85);
+    fill: rgba(253, 216, 157, 0.25);
+}
+
+.brillo1 {
+    stroke: rgba(184, 134, 11, 0.85);
+    fill: rgba(226, 218, 205, 0.25);
+}
+
+.brillo2 {
+    stroke: rgba(255,255,255, 0.85);
+    fill: rgba(233, 224, 168, 0.23);
+}

@@ -1,0 +1,55 @@
+@import url(reset.css);
+
+:root {
+	font-size: 15px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	/*Variables PAW */
+	--paw-verde-oscuro: #1d6625;
+	--paw-verde-medio-oscuro: #3f8434;
+	--paw-verde-medio-claro: #65af26;
+	--paw-verde-claro: #84bf51;
+	--paw-amarillo: #fbc808;
+	--paw-amarillo-oscuro: orange;
+	--paw-rojo: #b0291e;
+}
+
+body > header {
+	height: 20vh;
+	background-image: linear-gradient(
+		var(--paw-verde-medio-claro),
+		var(--paw-verde-oscuro)
+	);
+	position: sticky;
+	top: 0;
+	border-bottom: 3px solid white;
+	outline: 3px solid black;
+	box-shadow: 0 5px 5px grey;
+}
+
+h1 img {
+	padding: 2.5vh;
+	height: 15vh;
+}
+
+nav {
+	float: left;
+	height: calc(100vh - 5vh - 20vh);
+	padding: 1rem 0;
+}
+
+body > footer {
+	position: fixed;
+	display: flex;
+	background-color: black;
+	color: white;
+	height: 5vh;
+	min-height: 25px;
+	width: 100vw;
+	bottom: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+	border-top: 3px solid white;
+	outline: 3px solid var(--paw-verde-medio-oscuro);
+	box-shadow: 0 -5px 7px grey;
+}

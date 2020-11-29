@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PAW | JS - Introducción</title>
+		<link rel="stylesheet" href="../../reveal/reset.css" />
+		<link rel="stylesheet" href="../../reveal/reveal.css" />
+		<link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
+		<link rel="stylesheet" href="../../style/paw.css" id="paw-theme" />
+		<link rel="stylesheet" href="../style/slidesJS.css" />
+		<link rel="stylesheet" href="style/ejemplos.css" />
+		<!-- Theme used for syntax highlighting of code -->
+		<link
+			rel="stylesheet"
+			href="../../reveal/plugin/highlight/monokai.css"
+			id="highlight-theme"
+		/>
+	</head>
+	<body>
+		<!-- Encabezado de diaspos NO TOCAR -->
+		<header class="paw-encabezado">
+			<img src="../../images/logoPAW.svg" alt="" />
+			<h2 class="paw-asignatura">PAW</h2>
+			<h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+		</header>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Diapositiva PRESENTACION NO TOCAR -->
+				<section class="paw-presentacion">
+					<div class="paw-logo">
+						<img src="../../images/logoPAW.svg" alt="" />
+					</div>
+					<div class="paw-asignatura">
+						<h1>PAW</h1>
+					</div>
+					<div class="paw-comision">
+						<h2>Lic. en Sistemas de Información</h2>
+					</div>
+					<div class="paw-autor">
+						<p class="paw-speaker">Speaker:</p>
+						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
+						<address>
+							<a href="mailto:pcchale@gmail.com">pcchale@gmail.com</a>
+						</address>
+					</div>
+					<div class="paw-tituloContenido">
+						<!-- TITULO de las SLIDES -->
+						<h1>JS</h1>
+						<h2>Introducción</h2>
+					</div>
+				</section>
+				<!-- Indice -->
+				<section id="indice">
+					<img src="images/HTML5.png" alt="" />
+					<h2 style="margin-bottom: 0">Índice:</h2>
+					<ol class="paw-indice">
+						<li><strong>Introducción</strong></li>
+						<li>Eventos</li>
+					</ol>
+				</section>
+				<section>
+					European Computer Manufacturers Association (ECMA) Ecma International
+					en 1994 ECMA-262: especificación del lenguaje de programación
+					ECMAScript. ECMA-334: especificación de C#. ECMA-335: especificación
+					del CLI. http://www.ecma-international.org/
+				</section>
+				<section>
+					Diseñado para darle interactividad a paginas HTML Lenguaje de
+					Scripting que corre del lado del cliente Pensado Simple, para
+					diseñadores, pero con gran evolución
+				</section>
+				<section>
+					Server side es necesaria una conexión al servidor para correr el
+					script se concentra el procesamiento en los sevidores
+				</section>
+				<section>
+					Client side con, casi, el mismo potencial que los scripts en el
+					servidor. usan el poder de computo del cliente permiten manejar los
+					datos antes de mandarlos al servidor conocen el cliente: pueden ser
+					mas responsivos.
+				</section>
+				<section>
+					lenguaje de programación Interpretado he browser effectively reads the
+					code the same way we do and interprets it on the fly JiT (Just in time
+					compiled) dynamic and loosely typed
+				</section>
+				<section>JavaScript as a way to add interactivity to a page</section>
+				<section>Javascript implementation ECMAScript + DOM + BOM</section>
+				<section>
+					Embedded Script &lt;script> ... JavaScript code goes here&lt;/script>
+				</section>
+				<section>
+					External Scripts &lt;script src="URLmyScript.js">&lt;/script>
+				</section>
+				<section>
+					Script Placement
+					En el HEAD 
+					 putting it in the head will result in better per-formance.
+					 o al final del BODY
+					 Cuando interactua con el DOM
+				</section>
+			</div>
+		</div>
+		<script src="../../reveal/reveal.js"></script>
+		<script src="../../reveal/plugin/zoom/zoom.js"></script>
+		<script src="../../reveal/plugin/notes/notes.js"></script>
+		<script src="../../reveal/plugin/search/search.js"></script>
+		<script src="../../reveal/plugin/markdown/markdown.js"></script>
+		<script src="../../reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				width: 1920,
+				height: 1080,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [
+					RevealZoom,
+					RevealNotes,
+					RevealSearch,
+					RevealMarkdown,
+					RevealHighlight,
+				],
+			});
+
+			//Configuro el Plugin Highlight para que los tab se reemplacen por 2 espacios
+			Reveal.getPlugin("highlight").hljs.configure({
+				tabReplace: "  ",
+			});
+
+			Reveal.on("slidechanged", (event) => {
+				document.querySelector(".paw-comision").innerHTML =
+					// pregunto si la presentacion tiene subtitulo
+					document.querySelector(".paw-presentacion .paw-tituloContenido h2")
+						? //Si tiene lo incorporo a la cabecera de la slide
+						  // Titulo | Subtitulo
+						  [
+								document.querySelector(
+									".paw-presentacion .paw-tituloContenido h1"
+								).textContent,
+								" | ",
+								document.querySelector(
+									".paw-presentacion .paw-tituloContenido h2"
+								).textContent,
+						  ].join(" ")
+						: //Sino solo uso el titulo
+						  document.querySelector(
+								".paw-presentacion .paw-tituloContenido h1"
+						  ).textContent;
+			});
+		</script>
+	</body>
+</html>

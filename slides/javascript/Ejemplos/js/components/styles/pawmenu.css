@@ -1,0 +1,118 @@
+.PAW-Menu {
+	background-color: var(--paw-verde-medio-claro);
+	color: white;
+	width: 3rem;
+
+	border-right: 3px solid black;
+	overflow: hidden;
+}
+
+.PAW-Menu.PAW-MenuCerrado {
+	width: 3rem;
+	transition-duration: 1s;
+	transition-property: width;
+}
+
+.PAW-Menu.PAW-MenuCerrado ul {
+	opacity: 0;
+	transition: 1s all;
+}
+
+.PAW-Menu.PAW-MenuAbierto {
+	width: 20rem;
+	transition-duration: 1s;
+	transition-property: width;
+}
+.PAW-Menu.PAW-MenuAbierto ul {
+	opacity: 1;
+	transition: 1s all;
+}
+
+.PAW-Menu ul {
+	background-color: var(--paw-verde-oscuro);
+	padding-left: 2rem;
+	cursor: pointer;
+	clear: both;
+}
+
+.PAW-Menu ul li ul {
+	max-height: 0;
+	overflow: hidden;
+	transition: 1s all;
+}
+
+.PAW-Menu ul li:hover ul {
+	max-height: 100vh;
+	transition: 1s all;
+}
+
+.PAW-Menu ul li {
+	display: block;
+	padding: 0.5rem;
+}
+
+.PAW-Menu p {
+	display: block;
+	padding: 0.5rem;
+	border-bottom: 2ps solid black;
+}
+
+.PAW-Menu > ul > li:hover {
+	border: black solid 3px;
+	border-width: 3px 0;
+}
+
+.PAW-Menu > ul > li {
+	background-color: var(--paw-verde-medio-oscuro);
+}
+
+/* Funcionalidad Botón Hamburguesa */
+.PAW-Menu button {
+	float: right;
+	border: 0;
+
+	width: 2rem;
+	height: 2rem;
+	margin: 0.5rem;
+	padding: 0;
+	cursor: pointer;
+	background-color: transparent;
+	position: relative;
+	overflow: hidden;
+}
+
+.PAW-Menu button:hover,
+.PAW-Menu button:focus {
+	margin-left: 0;
+}
+
+.PAW-Menu button::before,
+.PAW-Menu button::after {
+	display: block;
+	position: absolute;
+	content: " ";
+	width: 2rem;
+	height: 0.2rem;
+	background-color: white;
+	transition-property: all;
+	transition-duration: 1s;
+	border-radius: 0.2rem;
+}
+
+.PAW-Menu button.PAW-MenuAbrir::before {
+	transform: translateY(-1rem) rotate(0);
+	box-shadow: 0 0.6rem 0 white;
+}
+
+.PAW-Menu button.PAW-MenuAbrir::after {
+	transform: translateY(0.2rem) rotate(0);
+}
+
+.PAW-Menu button.PAW-MenuCerrar::before {
+	transform: translateY(0) rotate(45deg);
+	box-shadow: 0 0.6rem 0 transparent;
+}
+
+.PAW-Menu button.PAW-MenuCerrar::after {
+	transform: translateY(0) rotate(-45deg);
+}
