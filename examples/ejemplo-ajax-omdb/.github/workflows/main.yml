@@ -1,0 +1,21 @@
+on: [push]
+
+jobs:
+  sync-with-gh-page:
+    runs-on: ubuntu-latest
+    name: Sync this repo with GH pages
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        path: source-repo
+    - uses: actions/checkout@v2
+      with:
+        repository: pawunlu/pawunlu.github.io
+        path: target-repo
+        token: ${{ secrets.API_TOKEN_GITHUB }}
+    - name: Sync the repo
+      id: sync
+      uses:  tomasdelvechio/actions-push-repo-to-subdir@v1.2.0
+      with:
+        github-username: 'tomasdelvechio'
+        target-subdir-name: 'examples/ejemplo-ajax-omdb'

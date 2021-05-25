@@ -1,0 +1,518 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+:root {
+	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+	min-width: 360px;
+}
+
+*,
+:after,
+:before {
+	transition-duration: 1s;
+	transition-property: all;
+}
+/*Encabezado */
+
+header {
+	animation: encabezado 60s infinite linear;
+	background-size: cover;
+	background-position: center 10%;
+	padding: 4vh;
+	position: relative;
+}
+
+@keyframes encabezado {
+	0% {
+		background-image: url(../images/1.jpg);
+		background-position: center 0%;
+	}
+	32.9% {
+		background-image: url(../images/1.jpg);
+		background-position: center 15%;
+	}
+	33% {
+		background-image: url(../images/2.jpg);
+		background-position: center 20%;
+	}
+	65.9% {
+		background-image: url(../images/2.jpg);
+		background-position: center 15%;
+	}
+	66% {
+		background-image: url(../images/3.jpg);
+		background-position: center 10%;
+	}
+	99.9% {
+		background-image: url(../images/3.jpg);
+		background-position: center 25%;
+	}
+	100% {
+		background-image: url(../images/1.jpg);
+		background-position: center 0%;
+	}
+}
+
+h1 {
+	font-size: calc(1rem + 1vw);
+	font-weight: 900;
+	line-height: 1.8;
+	padding: 2vh;
+	text-align: center;
+
+	/* Color fallback */
+	color: white;
+	border: 2vh solid rgba(255, 255, 255, 0.7);
+	outline: 2vh solid rgba(0, 0, 0, 0.7);
+	letter-spacing: 1rem;
+	text-shadow: 1rem 1rem 20px black, 0 0 3px black;
+}
+
+header h2,
+header small {
+	color: white;
+	width: calc(100% - 8vh);
+	text-align: right;
+	padding-right: 4vh;
+	font-size: 0.8rem;
+}
+
+/* Buscador */
+
+form {
+	background-color: black;
+	border-top: 0.3rem solid gray;
+	border-bottom: 0.3rem solid gray;
+	padding: 1rem;
+}
+
+fieldset {
+	text-align: left;
+	padding: 0.5rem;
+}
+
+fieldset:focus-within {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+label {
+	color: white;
+	font-size: 0.7rem;
+	text-align: left;
+	display: block;
+}
+
+input:not([type="radio"]) {
+	background-color: darkgray;
+	border: 0.2rem solid rgba(255, 255, 255, 0.8);
+	width: calc(100% - 3rem);
+	margin: 0.5rem 1rem;
+	padding: 0.2rem;
+	box-sizing: content-box;
+}
+
+p.search,
+p.boton {
+	display: inline-block;
+}
+p.search, p.radios {
+	width: calc(100% - 3rem);
+}
+
+p.radios {
+	display: inline-block;
+	text-align: center;
+	margin: auto
+}
+
+p.radios label{
+	display: inline-block;
+	margin: 0 1rem;
+}
+
+
+fieldset small {
+	display: block;
+	text-align: right;
+	font-size: 0.7rem
+}
+
+fieldset small a:visited,
+fieldset small a {
+	color: white;
+	text-decoration: none;
+}
+
+fieldset small a:active,
+fieldset small a:hover {
+	border-bottom: 1px solid white;
+	letter-spacing: 1px;
+}
+
+
+
+/* Comienzo Lupa */
+button {
+	background-color: rgba(255, 255, 255, 0.3);
+	border: 3px solid rgba(255, 255, 255, 0.8);
+	width: 1rem;
+	height: 1rem;
+	margin: 0.5rem;
+	padding: 0.2rem;
+	border-radius: 100%;
+	color: transparent;
+	position: relative;
+	cursor: pointer;
+}
+
+button:after {
+	width: 0.5rem;
+	height: 0.1rem;
+	background-color: rgba(255, 255, 255, 0.3);
+	border: 3px solid rgba(255, 255, 255, 0.8);
+	content: " ";
+	display: block;
+	transform: rotate(45deg) translate(0%, -90%);
+}
+
+button:active,
+button:hover {
+	transform: scale(1.2);
+}
+
+button:active:before,
+button:hover:before {
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 100%;
+	left: 0;
+	box-shadow: 0 -0.3rem 2px rgba(255, 255, 255, 1),
+		0 0.3rem 2px rgba(255, 255, 255, 1);
+}
+
+button:before {
+	content: "";
+	height: 2px;
+	width: 0%;
+	position: absolute;
+	top: 0.3rem;
+	left: 0.5rem;
+	background-color: rgba(255, 255, 255, 0);
+	border: none;
+}
+
+/* Fin Lupa */
+
+/* Resultados */
+
+section.resultados {
+	padding: 0.2rem;
+}
+
+section.resultados.vacio h2 {
+    display: none;
+}
+
+section.resultados h2 {
+	padding: 1rem;
+	margin-top: 1.5rem;
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+section.resultadosProcesados {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+section.resultadosProcesados article {
+	width: 75vw;
+	min-height: 100vw;
+	border: 0.2vw solid black;
+	overflow: hidden;
+	margin: 2vw;
+	padding: 0.6rem;
+	justify-content: center;
+	cursor: pointer;
+    transform-style: preserve-3d;
+    perspective: 40rem;
+}
+
+section.resultadosProcesados article:active,
+section.resultadosProcesados article:hover {
+	box-shadow: 0.4rem 0.4rem 0.4rem black;
+	transform: translate(-0.2rem, -0.2rem) 
+                perspective(10rem)
+		        rotate3D(1, 1, 0, 2deg);
+	transform-style: preserve-3d;
+
+}
+
+section.resultadosProcesados article section {
+    position: relative;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    z-index: 2;
+	min-height: 20rem;
+}
+
+
+
+section.resultadosProcesados article section.adelante {
+	display: flex;
+	align-items: center; 
+}
+
+section.resultadosProcesados article section.atras { 
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    transform: rotateY(180deg);
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+    padding: 1rem;
+}
+
+section.resultadosProcesados article.masInfo { 
+    transform: rotateY(-180deg);
+}
+
+section.resultadosProcesados section.atras { 
+    color: white;
+}
+
+section.resultadosProcesados article.masInfo section.atras{ 
+    z-index: 3;
+    background-color: rgba(0,0,0,0.8);
+}
+
+section.resultadosProcesados picture {
+	width: 100%;
+	position: relative;
+    backface-visibility: hidden;
+    background-color: black;
+}
+
+section.resultadosProcesados img {
+	width: 100%;
+}
+
+section.resultadosProcesados figcaption {
+	box-sizing: border-box;
+    width: 100%;
+	background-image: linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 1),
+		rgba(0, 0, 0, 0.6),
+		rgba(0, 0, 0, 0)
+	);
+	font-weight: 700;
+	color: white;
+	text-align: center;
+	text-shadow: 0 0 0 rgba(0, 0, 0, 1);
+	padding: 0.5rem 3rem;
+	position: absolute;
+    left:0;
+	bottom: 0;
+}
+
+section.resultadosProcesados article:active figcaption,
+section.resultadosProcesados article:hover figcaption {
+	letter-spacing: 0.2rem;
+	padding-top: 1rem;
+	line-height: 1.2;
+}
+
+section.resultadosProcesados article:active .anio,
+section.resultadosProcesados article:hover .anio { 
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+section.resultadosProcesados .seasons {
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.5);
+	color: white;
+	right: 0.6rem;
+	top: 0.6rem;
+	padding: 0.5rem;
+	letter-spacing: 1px;
+}
+
+section.resultadosProcesados .anio {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	right: 0.6rem;
+	top: 0.6rem;
+	padding: 0.5rem;
+}
+
+section.resultadosProcesados article:active img,
+section.resultadosProcesados article:hover img {
+	filter: grayscale(0);
+	transform: scale(1.1) rotate3D(1, 1, 0, 3deg);
+}
+
+section.resultadosProcesados p {
+	font-size: 0.8rem;
+}
+
+.plot, .actores  {
+    text-align: justify;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+    margin: 1rem 0;
+}
+
+
+
+/* Pie */
+
+footer {
+	background-color: black;
+	border-top: 0.3rem solid gray;
+	padding: 0.5rem;
+	color: white;
+	text-align: center;
+}
+
+@media (min-width: 650px) {
+	:root {
+		font-size: 12px;
+	}
+
+	header h1 {
+		font-size: calc(2rem + 2.5vw);
+	}
+
+	header h2 {
+		position: absolute;
+		top: 2.4vh;
+	}
+
+	header small {
+		position: absolute;
+		bottom: 2.5vh;
+	}
+
+	fieldset {
+		width: 40vw;
+	}
+
+	label {
+		font-size: 1rem;
+		display: inline-block;
+	}
+
+	fieldset:first-of-type {
+		float: right;
+	}
+
+	input:not([type="radio"]) {
+		width: calc(100% - 3rem);
+		margin: 0.5rem;
+	}
+
+	button {
+		width: 1.5rem;
+		height: 1.5rem;
+	
+	}
+	
+	button:after {
+		transform: rotate(45deg) translate(0%, -100%);
+	}
+
+	section.resultados h2 {
+		padding: 1rem;
+		font-size: 2.5rem;
+		font-weight: 700;
+	}
+
+	section.resultadosProcesados article {
+		width: 26vw;
+		min-height: 39vw;
+	}
+
+	section.resultadosProcesados img {
+		filter: grayscale(1);
+	}
+
+	footer {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+	}
+}
+
+@media (min-width: 1280px) {
+	:root {
+		font-size: 15px;
+	}
+
+	section.resultadosProcesados article {
+		width: 15vw;
+		min-height: 20vw;
+	}
+
+	button:after {
+		transform: rotate(45deg) translate(30%, -110%);
+	}
+}
+
+/* Loader */
+.loader, .loader:after, .loader:before {
+    background-color: transparent;
+    border: 5px solid rgba(0,183,229,0.9);
+    opacity: .9;
+    border-top: 5px solid rgba(0,0,0,0);
+    border-left: 5px solid rgba(0,0,0,0);
+    border-radius: 100%;
+    box-shadow: 0 0 35px #2187e7;
+    width: 60px;
+    height: 60px;
+	margin: 0 auto;
+    animation: spin 1s infinite linear;
+	position: relative;
+	box-sizing: content-box;
+
+}
+
+.loader:before {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+	top: 5px;
+	left: 5px;
+	content:'';
+	animation: spin 1.5s infinite linear;
+}
+.loader:after {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+	top: 15px;
+	left: 15px;
+	content:'';
+	animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
