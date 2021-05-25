@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 class Buscador {
 	tamanoMinimo = 3;
 	apikey = "";
-	urlAPI = "http://www.omdbapi.com/";
+	urlAPI = "https://www.omdbapi.com/";
 
 	loader = PAW.nuevoElemento("div", { class: "loader" });
 
