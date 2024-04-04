@@ -15,7 +15,7 @@ jobs:
         token: ${{ secrets.API_TOKEN_GITHUB }}
     - name: Sync the repo
       id: sync
-      uses:  sriccisoft/actions-push-repo-to-subdir@0.1.3
+      uses:  sriccisoft/actions-push-repo-to-subdir@1.0.0
       with:
-        github-username: 'sricci.soft'
+        github-username: 'sriccisoft'
         target-subdir-name: 'slides'
