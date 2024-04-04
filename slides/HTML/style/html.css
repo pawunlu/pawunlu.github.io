@@ -18,12 +18,6 @@
 	max-height: 15rem;
 }
 
-.reveal #indice img {
-	position: absolute;
-	right: 2rem;
-	height: 7rem;
-}
-
 .reveal #elementosHTML svg {
 	font: bold 18px sans-serif;
 	text-anchor: middle;

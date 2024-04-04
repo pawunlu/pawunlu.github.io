@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PAW | CSS - Media Query</title>
+		<link rel="stylesheet" href="../../reveal/reset.css" />
+		<link rel="stylesheet" href="../../reveal/reveal.css" />
+		<link rel="stylesheet" href="../../reveal/theme/pawTheme.css" id="theme" />
+		<link rel="stylesheet" href="../../style/paw.css" id="paw-theme" />
+		<link rel="stylesheet" href="../style/slidesCSS.css" />
+		<link rel="stylesheet" href="style/ejemplos.css" />
+		<!-- Theme used for syntax highlighting of code -->
+		<link
+			rel="stylesheet"
+			href="../../reveal/plugin/highlight/monokai.css"
+			id="highlight-theme"
+		/>
+	</head>
+	<body>
+		<!-- Encabezado de diaspos NO TOCAR -->
+		<header class="paw-encabezado">
+			<img src="../../images/logoPAW.svg" alt="" />
+			<h2 class="paw-asignatura">PAW</h2>
+			<h3 class="paw-comision">Lic. en Sistemas de Información</h3>
+		</header>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Diapositiva PRESENTACION NO TOCAR -->
+				<section class="paw-presentacion">
+					<div class="paw-logo">
+						<img src="../../images/logoPAW.svg" alt="" />
+					</div>
+					<div class="paw-asignatura">
+						<h1>PAW</h1>
+					</div>
+					<div class="paw-comision">
+						<h2>Lic. en Sistemas de Información</h2>
+					</div>
+					<div class="paw-autor">
+						<p class="paw-speaker">Speaker:</p>
+						<p class="paw-docente">A.S. Pablo Cesar CHALE</p>
+						<address>
+							<a href="mailto:pcchale@gmail.com">pcchale@gmail.com</a>
+						</address>
+					</div>
+					<div class="paw-tituloContenido">
+						<!-- TITULO de las SLIDES -->
+						<h1>CSS</h1>
+						<h2>Media Query</h2>
+					</div>
+				</section>
+				<!-- Indice -->
+				<section id="indice">
+					<img src="images/HTML5.png" alt="" />
+					<h2 style="margin-bottom: 0">Índice:</h2>
+					<ol class="paw-indice">
+						<li>Introducción</li>
+						<li>Selectores</li>
+						<li>Formato de Texto</li>
+						<li>El modelo de caja</li>
+						<li>Layouts</li>
+						<li><strong> Media Querys</strong></li>
+						<li>Animaciones</li>
+					</ol>
+				</section>
+				<section id="introduccion">
+					<h2>¿Qué es el Diseño Responsivo?</h2>
+					<p>
+						Hacer que los sitios se <br />
+						<span Style="font-size: 1.5em">
+							vean <strong>y se comporten</strong>
+						</span>
+						<br />
+						de manera óptima <br />en todos los dispositivos informáticos
+					</p>
+					<footer>
+						<a
+							href="https://developer.mozilla.org/es/docs/Glossary/Responsive_web_design"
+							>MDN Responsive Web Design</a
+						>
+					</footer>
+				</section>
+				<section id="deteccion">
+					<h2>¿Cómo se a qué dispositivo adaptarme?</h2>
+					<h3><code>@media rule;</code></h3>
+					<p>
+						Es un método para probar <br />
+						<strong>aspectos del agente de usuario o dispositivo</strong> <br />
+						en el que se renderiza el documento.
+					</p>
+				</section>
+				<section id="medias">
+					<h2>Media Type</h2>
+					<h3>all</h3>
+					<p>Para todos los dispositivos</p>
+					<h3>print</h3>
+					<p>
+						Impresoras y dispositivos destinados a reproducir una pantalla
+						impresa,<br />
+						como un navegador web que muestra un documento<br />
+						en “Vista previa de impresión”.
+					</p>
+					<h3>screen</h3>
+					<p>
+						Todos los dispositivos que no matcheen con
+						<strong>media: print</strong>
+					</p>
+				</section>
+				<section id="caracteristicas">
+					<h2>Media Features</h2>
+					<p>¿Qué cosas puedo saber de un dispositivo?</p>
+					<h3>Las más comunes</h3>
+					<h4>orientation</h4>
+					<p>
+						Landscape (paisaje / horizontal) or portrait (retrato / vertical)
+					</p>
+					<h4>max-height y min-height</h4>
+					<p>Alto máximo / mínimo del vieport</p>
+					<h4>max-width y min-width</h4>
+					<p>Ancho máximo / mínimo del vieport</p>
+				</section>
+				<section id="caracteristicas2">
+					<h2>Media Features</h2>
+					<p>¿Qué cosas puedo saber de un dispositivo?</p>
+					<h3>Las más comunes (OJO)</h3>
+					<h4>height / width</h4>
+					<p>
+						alto o ancho del viewport (incluyendo la barra de scroll)<br />
+						<strong>[Sintaxis de Rango]</strong>
+					</p>
+				</section>
+				<section id="ejComunesHojas">
+					<h2>Ejemplos básicos:</h2>
+					<h3>Hojas de estilos específicas</h3>
+					<pre
+						style="width: 100vw; margin: auto"
+					><code><link rel="stylesheet" media="print" href="print.css" />
+<link rel="stylesheet" media="screen" href="screen.css" />
+<link rel="stylesheet" media="screen and (orientation: portrait)" href="verticalMobile.css" />
+<link rel="stylesheet" media="screen and (min-width: 701px) and (max-width: 900px)"	href="example2.css"	/>
+<link rel="stylesheet" media="screen and (700px < width < 900px)" href="example1.css" />
+</code></pre>
+					<br />
+					<br />
+				</section>
+				<section id="ejComunesRegla">
+					<h2>Ejemplos básicos:</h2>
+					<h3>Regla CSS</h3>
+					<pre style="width: 70vw; margin: auto"><code>
+@media only screen and (min-width: 576px) {
+    // aplicar los estilos aquí a partir de este ancho mínimo de
+    // 576px (dispositivos con tamaño de pantalla medio)
+    // Sería el equivalente a 
+	                    (width >= 576px)
+}
+</code></pre>
+				</section>
+				<section>
+					<h3>Modificadores</h3>
+					<h4>not:</h4>
+					<p>Invierte el significado de una media query</p>
+					<h4>only:</h4>
+					<p>
+						evita que los navegadores antiguos que no admiten consultas de
+						<br />
+						medios con funciones multimedia apliquen los estilos especificados.
+						<br />
+						<strong>No tiene ningún efecto en los navegadores modernos.</strong>
+					</p>
+					<h3>Conectores</h3>
+					<h4>and:</h4>
+					<p>
+						Combina una característica de medios con <br />
+						un tipo de medio u otra características de los medios.
+					</p>
+				</section>
+				<section id="aspect">
+					<h2>Caracteristicas del Viewport</h2>
+					<h3>aspect-ratio</h3>
+					<pre><code>@media (max-aspect-ratio: 3/2) { ... }
+						
+@media (aspect-ratio: 1/1) { ... }
+					</code></pre>
+				</section>
+				<section id="color">
+					<h2>Caracteristicas del Viewport</h2>
+					<h3>color / color-index / monochrome</h3>
+					<pre><code>@media (color) { ... }
+
+@media (min-color: 8) { ... }
+
+@media (monochrome) { ... }</code></pre>
+				</section>
+				<section id="resolution">
+					<h2>Caracteristicas del Viewport</h2>
+					<h3>
+						resolution <br />
+						min-resolution / max-resolution
+					</h3>
+					<pre><code>@media (resolution: 150dpi) { ... }
+
+@media (min-resolution: 72dpi) { ... }
+
+@media (max-resolution: 300dpi) { ... }
+					</code></pre>
+				</section>
+				<section id="pointer">
+					<h2>Caracteristicas de interacción</h2>
+					<h3>pointer / hover</h3>
+					<pre style="margin: auto"><code>@media (pointer: fine) { //fino
+  input[type="checkbox"] {  
+	width: 15px; height: 15px;
+    border-width: 1px; border-color: blue;
+  }
+}
+
+@media (pointer: coarse) { //grueso
+  input[type="checkbox"] {
+    width: 30px; height: 30px;
+    border-width: 2px;  border-color: red;
+  }
+}</code></pre>
+				</section>
+				<section id="agentui">
+					<h2>Características del UA</h2>
+					<h3>scripting</h3>
+					<p>none | initial-only | enabled</p>
+					<h3>prefers-color-scheme</h3>
+					<p>light | dark</p>
+					<h3>prefers-reduce-motion</h3>
+					<h3>prefers-contrast</h3>
+					<p>no-preference | less | more | custom</p>
+				</section>
+				<section id="html">
+					<h2>En elementos HTML</h2>
+					<h3>Picture</h3>
+					<p>Atributo media de la etiqueta <code>&lt;source&gt;</code></p>
+					<p>
+						una media query y el punto de quiebre que deseamos <br />
+						para que se muestren diferentes imagenes.
+					</p>
+				</section>
+				<section id="layers">
+					<h2>En elementos HTML</h2>
+					<h3>Medias responsivas</h3>
+					<h4>clamp(min, val, max);</h4>
+					<p><strong>min:</strong> cota inferior.</p>
+					<p>
+						<strong>val:</strong> dentro del rango, como calcular la medida.
+					</p>
+					<p><strong>max:</strong> cota superior.</p>
+				</section>
+				<section id="ejClamp">
+					<h2>Caracteristicas de interacción</h2>
+					<h3>pointer / hover</h3>
+					<pre style="margin: auto"><code>article {
+	width: clamp(min(10vw, 20rem), 300px, max(90vw, 55rem));
+}
+
+article.otros {
+	width: clamp(100px, calc(30% / 2rem + 10px), 900px);
+}
+				</code></pre>
+				</section>
+			</div>
+		</div>
+		<script src="../../reveal/reveal.js"></script>
+		<script src="../../reveal/plugin/zoom/zoom.js"></script>
+		<script src="../../reveal/plugin/notes/notes.js"></script>
+		<script src="../../reveal/plugin/search/search.js"></script>
+		<script src="../../reveal/plugin/markdown/markdown.js"></script>
+		<script src="../../reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				width: 1920,
+				height: 1080,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [
+					RevealZoom,
+					RevealNotes,
+					RevealSearch,
+					RevealMarkdown,
+					RevealHighlight,
+				],
+			});
+
+			//Configuro el Plugin Highlight para que los tab se reemplacen por 2 espacios
+			Reveal.getPlugin("highlight").hljs.configure({
+				tabReplace: "  ",
+			});
+
+			Reveal.on("slidechanged", (event) => {
+				document.querySelector(".paw-comision").innerHTML =
+					// pregunto si la presentacion tiene subtitulo
+					document.querySelector(".paw-presentacion .paw-tituloContenido h2")
+						? //Si tiene lo incorporo a la cabecera de la slide
+						  // Titulo | Subtitulo
+						  [
+								document.querySelector(
+									".paw-presentacion .paw-tituloContenido h1"
+								).textContent,
+								" | ",
+								document.querySelector(
+									".paw-presentacion .paw-tituloContenido h2"
+								).textContent,
+						  ].join(" ")
+						: //Sino solo uso el titulo
+						  document.querySelector(
+								".paw-presentacion .paw-tituloContenido h1"
+						  ).textContent;
+			});
+		</script>
+	</body>
+</html>

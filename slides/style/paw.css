@@ -19,18 +19,23 @@ header.paw-encabezado {
 	0% {
 		transform: rotate3d(0, 0, 0, 0);
 	}
+
 	50% {
 		transform: rotate3d(0, 0, 0, 0);
 	}
+
 	62.5% {
 		transform: rotate3d(0, 1, 0.1, 20deg);
 	}
+
 	75% {
 		transform: rotate3d(0);
 	}
+
 	87.5% {
 		transform: rotate3d(0, 1, 0.1, -20deg);
 	}
+
 	100% {
 		transform: rotate3d(0);
 	}
@@ -67,18 +72,16 @@ header.paw-encabezado {
 	/*Acomodo el margin top: 2% por un borde que queda y 8rem por el tamaño del header de las otras diapositivas*/
 	margin-left: -10%;
 	margin-top: -4.5%;
-	background: linear-gradient(
-		var(--paw-verde-oscuro) 0%,
-		var(--paw-verde-oscuro) 24.75%,
-		var(--paw-verde-medio-oscuro) 24.75%,
-		var(--paw-verde-medio-oscuro) 49.5%,
-		var(--paw-rojo) 49.5%,
-		var(--paw-rojo) 50.5%,
-		var(--paw-verde-medio-claro) 50.5%,
-		var(--paw-verde-medio-claro) 75.75%,
-		var(--paw-verde-claro) 75.75%,
-		var(--paw-verde-claro) 100%
-	);
+	background: linear-gradient(var(--paw-verde-oscuro) 0%,
+			var(--paw-verde-oscuro) 24.75%,
+			var(--paw-verde-medio-oscuro) 24.75%,
+			var(--paw-verde-medio-oscuro) 49.5%,
+			var(--paw-rojo) 49.5%,
+			var(--paw-rojo) 50.5%,
+			var(--paw-verde-medio-claro) 50.5%,
+			var(--paw-verde-medio-claro) 75.75%,
+			var(--paw-verde-claro) 75.75%,
+			var(--paw-verde-claro) 100%);
 	display: grid !important;
 	grid-template-rows: 35% 15% 15% 35%;
 	grid-template-columns: 25% 1.5fr 3fr 25%;
@@ -108,6 +111,7 @@ header.paw-encabezado {
 	margin: 0;
 	margin-bottom: 0.15rem;
 }
+
 .reveal .paw-presentacion .paw-asignatura {
 	z-index: 10;
 	position: relative;
@@ -137,6 +141,7 @@ header.paw-encabezado {
 	margin: 0;
 	text-transform: none;
 }
+
 .reveal .paw-presentacion .paw-autor {
 	grid-row: 1;
 	grid-column: 1/4;
@@ -203,6 +208,12 @@ header.paw-encabezado {
 .reveal li {
 	line-height: 2.2;
 	padding: 0 0.5rem;
+}
+
+.reveal #indice img {
+	position: absolute;
+	right: 2rem;
+	width: 6rem;
 }
 
 /***********************
